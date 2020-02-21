@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3451F48E7DB8EDD8D589FD84 /* Pods_nibm_events_nibm_eventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69CD602CEF17EF6905D2F4D /* Pods_nibm_events_nibm_eventsUITests.framework */; };
+		67AC3A2B8F9F0514F1782CF6 /* Pods_nibm_eventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* ViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Main.storyboard */; };
@@ -15,6 +17,11 @@
 		709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */; };
 		709B0A2423FF8C6700488BD2 /* nibm_eventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A2323FF8C6700488BD2 /* nibm_eventsTests.swift */; };
 		709B0A2F23FF8C6700488BD2 /* nibm_eventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A2E23FF8C6700488BD2 /* nibm_eventsUITests.swift */; };
+		709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */; };
+		709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */; };
+		709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */; };
+		709B0A4B23FFACAD00488BD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */; };
+		A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		709B0A0823FF8C6500488BD2 /* nibm-events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nibm-events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45347EA9B5470589249F7BEE /* Pods-nibm-events-nibm-eventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47F345C4DC07F22EE0461867 /* Pods-nibm-eventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.release.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_eventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		709B0A1023FF8C6500488BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +60,18 @@
 		709B0A2A23FF8C6700488BD2 /* nibm-eventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nibm-eventsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A2E23FF8C6700488BD2 /* nibm_eventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nibm_eventsUITests.swift; sourceTree = "<group>"; };
 		709B0A3023FF8C6700488BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevConfig.xcconfig; sourceTree = "<group>"; };
+		709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QAConfig.xcconfig; sourceTree = "<group>"; };
+		709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdConfig.xcconfig; sourceTree = "<group>"; };
+		709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.qa.xcconfig"; sourceTree = "<group>"; };
+		A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C69CD602CEF17EF6905D2F4D /* Pods_nibm_events_nibm_eventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_events_nibm_eventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09B181DAB036946700A509F /* Pods-nibm-events.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events.release.xcconfig"; path = "Target Support Files/Pods-nibm-events/Pods-nibm-events.release.xcconfig"; sourceTree = "<group>"; };
+		D88CD5050DB6EF08603C7D89 /* Pods-nibm-events.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events.debug.xcconfig"; path = "Target Support Files/Pods-nibm-events/Pods-nibm-events.debug.xcconfig"; sourceTree = "<group>"; };
+		EB79ED714BE6A7B48BF5AA96 /* Pods-nibm-events-nibm-eventsUITests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.qa.xcconfig"; sourceTree = "<group>"; };
+		ECDA6A81293983DD0DD734A9 /* Pods-nibm-events.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events.qa.xcconfig"; path = "Target Support Files/Pods-nibm-events/Pods-nibm-events.qa.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AC3A2B8F9F0514F1782CF6 /* Pods_nibm_eventsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3451F48E7DB8EDD8D589FD84 /* Pods_nibm_events_nibm_eventsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,13 +109,15 @@
 				709B0A2223FF8C6700488BD2 /* nibm-eventsTests */,
 				709B0A2D23FF8C6700488BD2 /* nibm-eventsUITests */,
 				709B0A0923FF8C6500488BD2 /* Products */,
+				FF5A668321F45836ACCC55EB /* Pods */,
+				E5B849023DCEACC9E2FDAA19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		709B0A0923FF8C6500488BD2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				709B0A0823FF8C6500488BD2 /* nibm-events.app */,
+				709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */,
 				709B0A1F23FF8C6700488BD2 /* nibm-eventsTests.xctest */,
 				709B0A2A23FF8C6700488BD2 /* nibm-eventsUITests.xctest */,
 			);
@@ -99,12 +127,13 @@
 		709B0A0A23FF8C6500488BD2 /* nibm-events */ = {
 			isa = PBXGroup;
 			children = (
+				709B0A4023FF8DBC00488BD2 /* env-configs */,
 				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
 				709B0A0D23FF8C6500488BD2 /* ViewController.swift */,
 				709B0A0F23FF8C6500488BD2 /* Main.storyboard */,
 				709B0A1523FF8C6700488BD2 /* Assets.xcassets */,
 				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
-				709B0A1A23FF8C6700488BD2 /* Info.plist */,
+				709B0A4723FF92A000488BD2 /* supporting-files */,
 				709B0A1223FF8C6500488BD2 /* nibm_events.xcdatamodeld */,
 			);
 			path = "nibm-events";
@@ -128,6 +157,51 @@
 			path = "nibm-eventsUITests";
 			sourceTree = "<group>";
 		};
+		709B0A4023FF8DBC00488BD2 /* env-configs */ = {
+			isa = PBXGroup;
+			children = (
+				709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */,
+				709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */,
+				709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */,
+			);
+			path = "env-configs";
+			sourceTree = "<group>";
+		};
+		709B0A4723FF92A000488BD2 /* supporting-files */ = {
+			isa = PBXGroup;
+			children = (
+				709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */,
+				709B0A1A23FF8C6700488BD2 /* Info.plist */,
+			);
+			path = "supporting-files";
+			sourceTree = "<group>";
+		};
+		E5B849023DCEACC9E2FDAA19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */,
+				C69CD602CEF17EF6905D2F4D /* Pods_nibm_events_nibm_eventsUITests.framework */,
+				6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF5A668321F45836ACCC55EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D88CD5050DB6EF08603C7D89 /* Pods-nibm-events.debug.xcconfig */,
+				D09B181DAB036946700A509F /* Pods-nibm-events.release.xcconfig */,
+				45347EA9B5470589249F7BEE /* Pods-nibm-events-nibm-eventsUITests.debug.xcconfig */,
+				AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */,
+				A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */,
+				47F345C4DC07F22EE0461867 /* Pods-nibm-eventsTests.release.xcconfig */,
+				ECDA6A81293983DD0DD734A9 /* Pods-nibm-events.qa.xcconfig */,
+				EB79ED714BE6A7B48BF5AA96 /* Pods-nibm-events-nibm-eventsUITests.qa.xcconfig */,
+				75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709B0A3323FF8C6700488BD2 /* Build configuration list for PBXNativeTarget "nibm-events" */;
 			buildPhases = (
+				A0826593778DCAA3338E45C6 /* [CP] Check Pods Manifest.lock */,
 				709B0A0423FF8C6500488BD2 /* Sources */,
 				709B0A0523FF8C6500488BD2 /* Frameworks */,
 				709B0A0623FF8C6500488BD2 /* Resources */,
+				96C3327FE6261218024DF8CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,13 +221,14 @@
 			);
 			name = "nibm-events";
 			productName = "nibm-events";
-			productReference = 709B0A0823FF8C6500488BD2 /* nibm-events.app */;
+			productReference = 709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		709B0A1E23FF8C6700488BD2 /* nibm-eventsTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709B0A3623FF8C6700488BD2 /* Build configuration list for PBXNativeTarget "nibm-eventsTests" */;
 			buildPhases = (
+				A4AA54A29D5858FC82FCA0CC /* [CP] Check Pods Manifest.lock */,
 				709B0A1B23FF8C6700488BD2 /* Sources */,
 				709B0A1C23FF8C6700488BD2 /* Frameworks */,
 				709B0A1D23FF8C6700488BD2 /* Resources */,
@@ -170,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709B0A3923FF8C6700488BD2 /* Build configuration list for PBXNativeTarget "nibm-eventsUITests" */;
 			buildPhases = (
+				81231A063BF9748BE726CB50 /* [CP] Check Pods Manifest.lock */,
 				709B0A2623FF8C6700488BD2 /* Sources */,
 				709B0A2723FF8C6700488BD2 /* Frameworks */,
 				709B0A2823FF8C6700488BD2 /* Resources */,
+				C5D4D54C6A47D0A0A1EC1BFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */,
+				709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */,
+				709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */,
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
+				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Main.storyboard in Resources */,
+				709B0A4B23FFACAD00488BD2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +336,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81231A063BF9748BE726CB50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nibm-events-nibm-eventsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96C3327FE6261218024DF8CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nibm-events/Pods-nibm-events-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nibm-events/Pods-nibm-events-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nibm-events/Pods-nibm-events-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0826593778DCAA3338E45C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nibm-events-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4AA54A29D5858FC82FCA0CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nibm-eventsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5D4D54C6A47D0A0A1EC1BFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		709B0A0423FF8C6500488BD2 /* Sources */ = {
@@ -318,6 +504,7 @@
 /* Begin XCBuildConfiguration section */
 		709B0A3123FF8C6700488BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -379,6 +566,7 @@
 		};
 		709B0A3223FF8C6700488BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -434,42 +622,45 @@
 		};
 		709B0A3423FF8C6700488BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
-				INFOPLIST_FILE = "nibm-events/Info.plist";
+				INFOPLIST_FILE = "nibm-events/supporting-files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-events";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-events.dev";
+				PRODUCT_NAME = "$(NE_APP_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		709B0A3523FF8C6700488BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
-				INFOPLIST_FILE = "nibm-events/Info.plist";
+				INFOPLIST_FILE = "nibm-events/supporting-files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-events";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-events.dev";
+				PRODUCT_NAME = "$(NE_APP_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		709B0A3723FF8C6700488BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +682,7 @@
 		};
 		709B0A3823FF8C6700488BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F345C4DC07F22EE0461867 /* Pods-nibm-eventsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +704,7 @@
 		};
 		709B0A3A23FF8C6700488BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45347EA9B5470589249F7BEE /* Pods-nibm-events-nibm-eventsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +725,7 @@
 		};
 		709B0A3B23FF8C6700488BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +744,130 @@
 			};
 			name = Release;
 		};
+		709B0A3C23FF8D3700488BD2 /* QA */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = QA;
+		};
+		709B0A3D23FF8D3700488BD2 /* QA */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F27WR2NMVN;
+				INFOPLIST_FILE = "nibm-events/supporting-files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-events.dev";
+				PRODUCT_NAME = "$(NE_APP_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = QA;
+		};
+		709B0A3E23FF8D3700488BD2 /* QA */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F27WR2NMVN;
+				INFOPLIST_FILE = "nibm-eventsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-eventsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nibm-events.app/nibm-events";
+			};
+			name = QA;
+		};
+		709B0A3F23FF8D3700488BD2 /* QA */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB79ED714BE6A7B48BF5AA96 /* Pods-nibm-events-nibm-eventsUITests.qa.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F27WR2NMVN;
+				INFOPLIST_FILE = "nibm-eventsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aravindakr95.nibm-eventsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "nibm-events";
+			};
+			name = QA;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +875,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709B0A3123FF8C6700488BD2 /* Debug */,
+				709B0A3C23FF8D3700488BD2 /* QA */,
 				709B0A3223FF8C6700488BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -566,6 +885,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709B0A3423FF8C6700488BD2 /* Debug */,
+				709B0A3D23FF8D3700488BD2 /* QA */,
 				709B0A3523FF8C6700488BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -575,6 +895,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709B0A3723FF8C6700488BD2 /* Debug */,
+				709B0A3E23FF8D3700488BD2 /* QA */,
 				709B0A3823FF8C6700488BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -584,6 +905,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709B0A3A23FF8C6700488BD2 /* Debug */,
+				709B0A3F23FF8D3700488BD2 /* QA */,
 				709B0A3B23FF8C6700488BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
