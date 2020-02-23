@@ -28,7 +28,6 @@
 		709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */; };
 		709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */; };
 		709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */; };
-		709B0A4B23FFACAD00488BD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */; };
 		A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +78,6 @@
 		709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevConfig.xcconfig; sourceTree = "<group>"; };
 		709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QAConfig.xcconfig; sourceTree = "<group>"; };
 		709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdConfig.xcconfig; sourceTree = "<group>"; };
-		709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.qa.xcconfig"; sourceTree = "<group>"; };
 		A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 		709B0A4723FF92A000488BD2 /* supporting-files */ = {
 			isa = PBXGroup;
 			children = (
-				709B0A4A23FFACAD00488BD2 /* GoogleService-Info.plist */,
 				709B0A1A23FF8C6700488BD2 /* Info.plist */,
 			);
 			path = "supporting-files";
@@ -381,7 +378,6 @@
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
-				709B0A4B23FFACAD00488BD2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
