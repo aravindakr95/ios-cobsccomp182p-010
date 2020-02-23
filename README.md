@@ -8,7 +8,7 @@ This application is used to simulates how students can manage and share a event 
 
 This application is built on top of Swift combined with several 3rd party libraries, serving as a single application.
 
-#### Product Stack
+## Product Stack
 
 Usage          	            | Technology   
 --------------------------	| --------------------------
@@ -23,11 +23,11 @@ Keyboard Manager            | IQKeyboardManagerSwift
 Dependency Management Tool 	| CocoaPods
 Development IDE             | XCode 10.3
 
-#### Supported Devices
+## Supported Devices
 
 From iPhone 6 to all the Latest released models.
 
-#### Getting Started
+## Getting Started
 
 Development and build dependencies are managed via cocoapods repository.
 
