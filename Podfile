@@ -10,6 +10,7 @@ target 'nibm-events' do
   pod 'Firebase/Auth'
   pod 'Firebase'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
   
   target 'nibm-eventsTests' do
     inherit! :search_paths

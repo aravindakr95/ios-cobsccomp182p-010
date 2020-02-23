@@ -9,9 +9,16 @@
 /* Begin PBXBuildFile section */
 		3451F48E7DB8EDD8D589FD84 /* Pods_nibm_events_nibm_eventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69CD602CEF17EF6905D2F4D /* Pods_nibm_events_nibm_eventsUITests.framework */; };
 		67AC3A2B8F9F0514F1782CF6 /* Pods_nibm_eventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */; };
+		70310BD42402D08C004C81ED /* NEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD32402D08C004C81ED /* NEButton.swift */; };
+		70310BD62402D097004C81ED /* NETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD52402D097004C81ED /* NETextField.swift */; };
+		70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC42402E142005264E5 /* NETextFieldExtension.swift */; };
+		70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC62402E8EC005264E5 /* SignInViewController.swift */; };
+		70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC82402ED37005264E5 /* SignUpViewController.swift */; };
+		70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECheckBox.swift */; };
+		70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
-		709B0A0E23FF8C6500488BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* ViewController.swift */; };
-		709B0A1123FF8C6500488BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Main.storyboard */; };
+		709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* MainViewController.swift */; };
+		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
 		709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A1223FF8C6500488BD2 /* nibm_events.xcdatamodeld */; };
 		709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A1523FF8C6700488BD2 /* Assets.xcassets */; };
 		709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */; };
@@ -46,10 +53,17 @@
 		47F345C4DC07F22EE0461867 /* Pods-nibm-eventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.release.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_eventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70310BD32402D08C004C81ED /* NEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEButton.swift; sourceTree = "<group>"; };
+		70310BD52402D097004C81ED /* NETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextField.swift; sourceTree = "<group>"; };
+		70575EC42402E142005264E5 /* NETextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextFieldExtension.swift; sourceTree = "<group>"; };
+		70575EC62402E8EC005264E5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		70575EC82402ED37005264E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		70575ECA2402F54C005264E5 /* NECheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECheckBox.swift; sourceTree = "<group>"; };
+		70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		709B0A0D23FF8C6500488BD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		709B0A1023FF8C6500488BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		709B0A0D23FF8C6500488BD2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		709B0A1023FF8C6500488BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		709B0A1323FF8C6500488BD2 /* nibm_events.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nibm_events.xcdatamodel; sourceTree = "<group>"; };
 		709B0A1523FF8C6700488BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709B0A1823FF8C6700488BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +116,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70310BCF2402D01A004C81ED /* views */ = {
+			isa = PBXGroup;
+			children = (
+				70310BD12402D038004C81ED /* storyboards */,
+				70310BD02402D031004C81ED /* custom */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		70310BD02402D031004C81ED /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				70310BD32402D08C004C81ED /* NEButton.swift */,
+				70310BD52402D097004C81ED /* NETextField.swift */,
+				70575ECA2402F54C005264E5 /* NECheckBox.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		70310BD12402D038004C81ED /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				709B0A0F23FF8C6500488BD2 /* Auth.storyboard */,
+				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		70310BD22402D047004C81ED /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
+				709B0A0D23FF8C6500488BD2 /* MainViewController.swift */,
+				70575EC62402E8EC005264E5 /* SignInViewController.swift */,
+				70575EC82402ED37005264E5 /* SignUpViewController.swift */,
+				70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		70575EC32402E121005264E5 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70575EC42402E142005264E5 /* NETextFieldExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		709B09FF23FF8C6500488BD2 = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +189,11 @@
 		709B0A0A23FF8C6500488BD2 /* nibm-events */ = {
 			isa = PBXGroup;
 			children = (
+				70575EC32402E121005264E5 /* extensions */,
+				70310BD22402D047004C81ED /* controllers */,
+				70310BCF2402D01A004C81ED /* views */,
 				709B0A4023FF8DBC00488BD2 /* env-configs */,
-				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
-				709B0A0D23FF8C6500488BD2 /* ViewController.swift */,
-				709B0A0F23FF8C6500488BD2 /* Main.storyboard */,
 				709B0A1523FF8C6700488BD2 /* Assets.xcassets */,
-				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
 				709B0A4723FF92A000488BD2 /* supporting-files */,
 				709B0A1223FF8C6500488BD2 /* nibm_events.xcdatamodeld */,
 			);
@@ -316,7 +377,7 @@
 				709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */,
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
-				709B0A1123FF8C6500488BD2 /* Main.storyboard in Resources */,
+				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
 				709B0A4B23FFACAD00488BD2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,9 +506,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709B0A0E23FF8C6500488BD2 /* ViewController.swift in Sources */,
+				70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */,
+				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
+				70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */,
+				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
+				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
+				709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */,
 				709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */,
+				70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */,
 				709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */,
+				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,12 +551,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		709B0A0F23FF8C6500488BD2 /* Main.storyboard */ = {
+		709B0A0F23FF8C6500488BD2 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				709B0A1023FF8C6500488BD2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */ = {
