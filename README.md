@@ -1,8 +1,8 @@
 # NIBM Events
 
-Share and communicate with bachelors while Events at NIBM
+Share and communicate with bachelors during a Event at NIBM.
 
-This application is used to build a application that simulates and allow students to manage and share Events at NIBM with other friends and staff.
+This application is used to simulates how students can manage and share a event at NIBM with other friends and staff.
 
 ## Technologies
 
@@ -23,7 +23,11 @@ Keyboard Manager            | IQKeyboardManagerSwift
 Dependency Management Tool 	| CocoaPods
 Development IDE             | XCode 10.3
 
-#### Frontend
+#### Supported Devices
+
+From iPhone 6 to all the Latest released models.
+
+#### Getting Started
 
 Development and build dependencies are managed via cocoapods repository.
 
