@@ -17,6 +17,14 @@
 		70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECheckBox.swift */; };
 		70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */; };
 		70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */; };
+		70575ED524030E25005264E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70575ED424030E25005264E5 /* GoogleService-Info.plist */; };
+		7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CC9F240370FE004F0A58 /* TransitionManager.swift */; };
+		7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA124039F96004F0A58 /* AuthManager.swift */; };
+		7072CCA424039FF4004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA324039FF4004F0A58 /* FieldValidator.swift */; };
+		7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA52403A06F004F0A58 /* NotificationManager.swift */; };
+		7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7072CCA72403A31D004F0A58 /* Home.storyboard */; };
+		7072CCAC2403A652004F0A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAB2403A652004F0A58 /* HomeViewController.swift */; };
+		7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* MainViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -61,6 +69,14 @@
 		70575ECA2402F54C005264E5 /* NECheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECheckBox.swift; sourceTree = "<group>"; };
 		70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricsBlockedViewController.swift; sourceTree = "<group>"; };
+		70575ED424030E25005264E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7072CC9F240370FE004F0A58 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		7072CCA124039F96004F0A58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		7072CCA324039FF4004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		7072CCA52403A06F004F0A58 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		7072CCA72403A31D004F0A58 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		7072CCAB2403A652004F0A58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +156,7 @@
 			children = (
 				709B0A0F23FF8C6500488BD2 /* Auth.storyboard */,
 				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
+				7072CCA72403A31D004F0A58 /* Home.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -148,11 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
-				709B0A0D23FF8C6500488BD2 /* MainViewController.swift */,
-				70575EC62402E8EC005264E5 /* SignInViewController.swift */,
-				70575EC82402ED37005264E5 /* SignUpViewController.swift */,
-				70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */,
-				70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */,
+				7072CCA92403A625004F0A58 /* auth */,
+				7072CCAA2403A639004F0A58 /* home */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -163,6 +177,59 @@
 				70575EC42402E142005264E5 /* NETextFieldExtension.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		7072CC9B24037063004F0A58 /* utitilites */ = {
+			isa = PBXGroup;
+			children = (
+				7072CCA324039FF4004F0A58 /* FieldValidator.swift */,
+			);
+			path = utitilites;
+			sourceTree = "<group>";
+		};
+		7072CC9C24037081004F0A58 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		7072CC9D24037091004F0A58 /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		7072CC9E240370A6004F0A58 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				7072CC9F240370FE004F0A58 /* TransitionManager.swift */,
+				7072CCA124039F96004F0A58 /* AuthManager.swift */,
+				7072CCA52403A06F004F0A58 /* NotificationManager.swift */,
+				7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		7072CCA92403A625004F0A58 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				709B0A0D23FF8C6500488BD2 /* MainViewController.swift */,
+				70575EC62402E8EC005264E5 /* SignInViewController.swift */,
+				70575EC82402ED37005264E5 /* SignUpViewController.swift */,
+				70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */,
+				70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		7072CCAA2403A639004F0A58 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				7072CCAB2403A652004F0A58 /* HomeViewController.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		709B09FF23FF8C6500488BD2 = {
@@ -190,6 +257,10 @@
 		709B0A0A23FF8C6500488BD2 /* nibm-events */ = {
 			isa = PBXGroup;
 			children = (
+				7072CC9E240370A6004F0A58 /* managers */,
+				7072CC9D24037091004F0A58 /* services */,
+				7072CC9C24037081004F0A58 /* models */,
+				7072CC9B24037063004F0A58 /* utitilites */,
 				70575EC32402E121005264E5 /* extensions */,
 				70310BD22402D047004C81ED /* controllers */,
 				70310BCF2402D01A004C81ED /* views */,
@@ -233,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				709B0A1A23FF8C6700488BD2 /* Info.plist */,
+				70575ED424030E25005264E5 /* GoogleService-Info.plist */,
 			);
 			path = "supporting-files";
 			sourceTree = "<group>";
@@ -378,6 +450,8 @@
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
+				70575ED524030E25005264E5 /* GoogleService-Info.plist in Resources */,
+				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,8 +579,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */,
 				70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */,
 				70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */,
+				7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */,
+				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
 				70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
@@ -514,8 +591,11 @@
 				709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */,
 				709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */,
 				70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */,
+				7072CCAC2403A652004F0A58 /* HomeViewController.swift in Sources */,
 				709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */,
+				7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */,
 				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
+				7072CCA424039FF4004F0A58 /* FieldValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
