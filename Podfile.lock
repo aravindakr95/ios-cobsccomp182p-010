@@ -283,6 +283,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - RxSwift (5.0.1)
+  - SVProgressHUD (2.2.5)
   - SwiftLint (0.39.1)
   - SwiftyBeaver (1.8.4)
 
@@ -293,6 +294,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - IQKeyboardManagerSwift
   - RxSwift
+  - SVProgressHUD
   - SwiftLint
   - SwiftyBeaver
 
@@ -322,6 +324,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - RxSwift
+    - SVProgressHUD
     - SwiftLint
     - SwiftyBeaver
 
@@ -350,9 +353,10 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
 
-PODFILE CHECKSUM: 87b6643cceb3182bfaf99011ec5828edd5242b78
+PODFILE CHECKSUM: b4bf07e8a3791f7358f973cfe2f2f7a9c9879630
 
 COCOAPODS: 1.8.4

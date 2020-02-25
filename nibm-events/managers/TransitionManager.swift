@@ -13,21 +13,10 @@ class TransitionManager {
         sender.performSegue(withIdentifier: identifier, sender: sender)
     }
 
-    public static func pushViewController(storyBoardName: String, vcIdentifier: String, context: UINavigationController) {
+    public static func showViewController(storyBoardName: String, vcIdentifier: String, context: UIViewController) {
         let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: vcIdentifier)
 
-        context.pushViewController(viewController, animated: true)
-    }
-
-    public static func popToViewController(storyBoardName: String, vcIdentifier: String, context: UINavigationController) {
-        let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: vcIdentifier)
-
-        context.popToViewController(viewController, animated: true)
-    }
-
-    public static func popToRootViewController(context: UINavigationController) {
-        context.popToRootViewController(animated: true)
+        context.show(viewController, sender: context)
     }
 }

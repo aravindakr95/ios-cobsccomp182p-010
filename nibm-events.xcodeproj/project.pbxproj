@@ -155,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				709B0A0F23FF8C6500488BD2 /* Auth.storyboard */,
-				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
 				7072CCA72403A31D004F0A58 /* Home.storyboard */,
+				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -326,8 +326,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709B0A3323FF8C6700488BD2 /* Build configuration list for PBXNativeTarget "nibm-events" */;
 			buildPhases = (
-				7072CCB42405014F004F0A58 /* ShellScript */,
 				A0826593778DCAA3338E45C6 /* [CP] Check Pods Manifest.lock */,
+				7072CCB42405014F004F0A58 /* ShellScript */,
 				709B0A0423FF8C6500488BD2 /* Sources */,
 				709B0A0523FF8C6500488BD2 /* Frameworks */,
 				709B0A0623FF8C6500488BD2 /* Resources */,

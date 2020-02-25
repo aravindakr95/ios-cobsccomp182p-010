@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var txtEmail: NETextField!
@@ -27,6 +28,10 @@ class SignInViewController: UIViewController {
 
         self.txtPassword.setLeftPaddingPoints(5)
         self.txtPassword.setRightPaddingPoints(5)
+    }
+
+    @IBAction func onResetPassword(_ sender: UIButton) {
+        self.transition(sbName: "Auth", identifier: "ResetPasswordVC")
     }
 
     @IBAction func onSignIn(_ sender: NEButton) {
@@ -66,16 +71,16 @@ class SignInViewController: UIViewController {
                 self.present(self.alert, animated: true, completion: nil)
             } else {
                 UserDefaults.standard.set(true, forKey: "isAuthorized")
-                self.transitionToHome()
+                self.transition(sbName: "Home", identifier: "HomeVC")
             }
 
             self.btnSignIn.hideLoading()
         }
     }
 
-    private func transitionToHome() {
+    private func transition(sbName: String, identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: "Home", vcIdentifier: "HomeVC", context: self.navigationController!)
+            TransitionManager.showViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
         }
     }
 }

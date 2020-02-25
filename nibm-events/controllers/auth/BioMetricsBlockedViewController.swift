@@ -58,7 +58,7 @@ class BioMetricsBlockedViewController: UIViewController {
 
     private func transitionToHome() {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: "Home", vcIdentifier: "HomeVC", context: self.navigationController!)
+            TransitionManager.showViewController(storyBoardName: "Home", vcIdentifier: "HomeVC", context: self)
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BaO-BD-bVL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kAi-IV-0Jv" kind="show" identifier="MainToSignUpSegue" id="AgU-jQ-9Oc"/>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8G-8W-zOF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hTF-rU-y81" kind="show" identifier="MainToSignInSegue" id="4n1-Pc-Hjk"/>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uN8-8Z-wZq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
@@ -50,6 +50,9 @@
                                 <state key="normal" title="GUEST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPl-Ae-udf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
                                 <rect key="frame" x="191" y="599" width="33" height="29"/>
@@ -75,7 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4MS-z0-Mjw"/>
                     <connections>
-                        <segue destination="l4y-EF-Kdq" kind="show" identifier="MainToBMBlockedSegue" id="dmQ-S0-do7"/>
+                        <segue destination="l4y-EF-Kdq" kind="show" identifier="MainToBMBlockedSegue" id="kQP-5I-fQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,7 +150,7 @@
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fD7-qe-1ua" kind="show" identifier="SignInToResetPWSegue" id="ato-Cm-jX2"/>
+                                    <action selector="onResetPassword:" destination="hTF-rU-y81" eventType="touchUpInside" id="62W-up-ehj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -344,7 +347,7 @@
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hTF-rU-y81" kind="show" identifier="SignUpToSignInSegue" id="glX-iU-PAE"/>
+                                    <action selector="onSignIn:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="GSM-qx-24N"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Y0-gF8">
@@ -486,26 +489,6 @@
             </objects>
             <point key="canvasLocation" x="887" y="743"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DM2-lZ-SLd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BaO-BD-bVL" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7NN-Le-MmG">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ocs-yO-xjY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ota-ho-0cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="-82"/>
-        </scene>
     </scenes>
     <resources>
         <image name="checkbox-deselected" width="64" height="64"/>
@@ -513,7 +496,4 @@
         <image name="events-logo" width="1200" height="1200"/>
         <image name="padlock" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="glX-iU-PAE"/>
-    </inferredMetricsTieBreakers>
 </document>

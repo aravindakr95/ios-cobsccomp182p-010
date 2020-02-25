@@ -10,6 +10,7 @@ import UIKit
 import LocalAuthentication
 
 class MainViewController: UIViewController {
+
     let localAuthContext: LAContext = LAContext()
     let authManager: AuthManager = AuthManager()
 
@@ -26,6 +27,15 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func onGuest(_ sender: NEButton) {}
+
+    @IBAction func onSignUp(_ sender: NEButton) {
+        self.transition(sbName: "Auth", identifier: "SignUpVC")
+    }
+
+    @IBAction func onSignIn(_ sender: NEButton) {
+        self.transition(sbName: "Auth", identifier: "SignInVC")
+    }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -71,7 +81,7 @@ class MainViewController: UIViewController {
 
     private func transition(sbName: String, identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self.navigationController!)
+            TransitionManager.showViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
         }
     }
 }

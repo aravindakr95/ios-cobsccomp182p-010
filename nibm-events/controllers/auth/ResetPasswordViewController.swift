@@ -53,7 +53,7 @@ class ResetPasswordViewController: UIViewController {
 
     private func transitionToMain() {
         DispatchQueue.main.async {
-            TransitionManager.popToRootViewController(context: self.navigationController!)
+            TransitionManager.showViewController(storyBoardName: "Auth", vcIdentifier: "MainVC", context: self)
         }
     }
 

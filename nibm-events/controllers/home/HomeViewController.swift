@@ -10,4 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBAction func onLogout(_ sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "isAuthorized")
+        self.transitionToMain()
+    }
+
+    private func transitionToMain() {
+        DispatchQueue.main.async {
+            TransitionManager.showViewController(storyBoardName: "Auth", vcIdentifier: "MainVC", context: self)
+        }
+    }
 }

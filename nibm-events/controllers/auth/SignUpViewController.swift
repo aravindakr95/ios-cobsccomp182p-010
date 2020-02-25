@@ -51,6 +51,10 @@ class SignUpViewController: UIViewController {
         self.txtFacebookIdentifier.setRightPaddingPoints(5)
     }
 
+    @IBAction func onSignIn(_ sender: NEButton) {
+        self.transitionToSignIn()
+    }
+
     @IBAction func onSignUp(_ sender: NEButton) {
         var fields: [String: NETextField] = [:]
         var fieldErrors = [String: String]()
@@ -97,14 +101,14 @@ class SignUpViewController: UIViewController {
         if isChecked {
             alert = NotificationManager.showAlert(
                 header: "Registration Failed",
-                body: "Please read our Privacy Policy and agree to the Terms and Conditions.", action: "Okay")
+                body: "Please read our privacy policy and agree to the terms and conditions.", action: "Okay")
 
             self.present(alert, animated: true, completion: nil)
 
             return
         }
 
-        btnSignUp.showLoading()
+        self.btnSignUp.showLoading()
 
         authManager.createUser(emailField: txtEmail, passwordField: txtPassword) {[weak self] (userData, error) in
             guard let `self` = self else { return }
@@ -147,7 +151,7 @@ class SignUpViewController: UIViewController {
 
     private func transitionToSignIn() {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: "Auth", vcIdentifier: "SignInVC", context: self.navigationController!)
+            TransitionManager.showViewController(storyBoardName: "Auth", vcIdentifier: "SignInVC", context: self)
         }
     }
 }

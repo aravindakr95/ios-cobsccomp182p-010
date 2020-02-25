@@ -14,6 +14,7 @@ target 'nibm-events' do
   pod 'SwiftyBeaver'
   pod 'RxSwift'
   pod 'SwiftLint'
+  pod 'SVProgressHUD'
   
   target 'nibm-eventsTests' do
     inherit! :search_paths
