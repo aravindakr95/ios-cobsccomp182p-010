@@ -77,9 +77,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4MS-z0-Mjw"/>
-                    <connections>
-                        <segue destination="l4y-EF-Kdq" kind="show" identifier="MainToBMBlockedSegue" id="kQP-5I-fQZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
