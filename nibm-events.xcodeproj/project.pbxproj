@@ -20,11 +20,11 @@
 		70575ED524030E25005264E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70575ED424030E25005264E5 /* GoogleService-Info.plist */; };
 		7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CC9F240370FE004F0A58 /* TransitionManager.swift */; };
 		7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA124039F96004F0A58 /* AuthManager.swift */; };
-		7072CCA424039FF4004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA324039FF4004F0A58 /* FieldValidator.swift */; };
 		7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA52403A06F004F0A58 /* NotificationManager.swift */; };
 		7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7072CCA72403A31D004F0A58 /* Home.storyboard */; };
 		7072CCAC2403A652004F0A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAB2403A652004F0A58 /* HomeViewController.swift */; };
 		7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */; };
+		7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB2240416E2004F0A58 /* FieldValidator.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* MainViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -72,11 +72,11 @@
 		70575ED424030E25005264E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7072CC9F240370FE004F0A58 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		7072CCA124039F96004F0A58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		7072CCA324039FF4004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		7072CCA52403A06F004F0A58 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		7072CCA72403A31D004F0A58 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		7072CCAB2403A652004F0A58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7072CCB2240416E2004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -179,28 +179,6 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
-		7072CC9B24037063004F0A58 /* utitilites */ = {
-			isa = PBXGroup;
-			children = (
-				7072CCA324039FF4004F0A58 /* FieldValidator.swift */,
-			);
-			path = utitilites;
-			sourceTree = "<group>";
-		};
-		7072CC9C24037081004F0A58 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		7072CC9D24037091004F0A58 /* services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = services;
-			sourceTree = "<group>";
-		};
 		7072CC9E240370A6004F0A58 /* managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +210,14 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		7072CCB1240416D0004F0A58 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7072CCB2240416E2004F0A58 /* FieldValidator.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
 		709B09FF23FF8C6500488BD2 = {
 			isa = PBXGroup;
 			children = (
@@ -257,10 +243,8 @@
 		709B0A0A23FF8C6500488BD2 /* nibm-events */ = {
 			isa = PBXGroup;
 			children = (
+				7072CCB1240416D0004F0A58 /* utilities */,
 				7072CC9E240370A6004F0A58 /* managers */,
-				7072CC9D24037091004F0A58 /* services */,
-				7072CC9C24037081004F0A58 /* models */,
-				7072CC9B24037063004F0A58 /* utitilites */,
 				70575EC32402E121005264E5 /* extensions */,
 				70310BD22402D047004C81ED /* controllers */,
 				70310BCF2402D01A004C81ED /* views */,
@@ -342,6 +326,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709B0A3323FF8C6700488BD2 /* Build configuration list for PBXNativeTarget "nibm-events" */;
 			buildPhases = (
+				7072CCB42405014F004F0A58 /* ShellScript */,
 				A0826593778DCAA3338E45C6 /* [CP] Check Pods Manifest.lock */,
 				709B0A0423FF8C6500488BD2 /* Sources */,
 				709B0A0523FF8C6500488BD2 /* Frameworks */,
@@ -472,6 +457,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7072CCB42405014F004F0A58 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		81231A063BF9748BE726CB50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -582,6 +584,7 @@
 				7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */,
 				70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */,
 				70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */,
+				7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */,
 				7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */,
 				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
@@ -595,7 +598,6 @@
 				709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */,
 				7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */,
 				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
-				7072CCA424039FF4004F0A58 /* FieldValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

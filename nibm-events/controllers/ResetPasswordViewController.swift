@@ -10,12 +10,12 @@ import UIKit
 
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var txtResetPassword: NETextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureStyles()
     }
-    
+
     private func configureStyles() {
         self.txtResetPassword.setLeftPaddingPoints(5)
         self.txtResetPassword.setRightPaddingPoints(5)

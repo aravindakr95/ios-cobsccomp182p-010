@@ -282,6 +282,9 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - RxSwift (5.0.1)
+  - SwiftLint (0.39.1)
+  - SwiftyBeaver (1.8.4)
 
 DEPENDENCIES:
   - Firebase
@@ -289,6 +292,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift
+  - RxSwift
+  - SwiftLint
+  - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
@@ -315,6 +321,9 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - RxSwift
+    - SwiftLint
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -340,7 +349,10 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
 
-PODFILE CHECKSUM: 9cdc525f2bd398f2a454b6d0a94bb7fa26877401
+PODFILE CHECKSUM: 87b6643cceb3182bfaf99011ec5828edd5242b78
 
 COCOAPODS: 1.8.4

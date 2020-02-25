@@ -13,12 +13,12 @@ class NETextField: UITextField {
         super.init(frame: frame)
         setupTextField()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupTextField()
     }
-    
+
     private func setupTextField() {
         clipsToBounds = true
     }

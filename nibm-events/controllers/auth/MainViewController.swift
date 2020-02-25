@@ -12,51 +12,66 @@ import LocalAuthentication
 class MainViewController: UIViewController {
     let localAuthContext: LAContext = LAContext()
     let authManager: AuthManager = AuthManager()
-    
+
+    var bioMetricsType: String = ""
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.isAuthorized()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "MainToBMBlockedSegue") {
+            let viewController = segue.destination as? BioMetricsBlockedViewController
+            viewController!.bioMetricsType = self.bioMetricsType
+        }
+    }
+
     private func isAuthorized() {
-        AuthManager().currentUser {(userData, error) in
-            let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
-            if userData != nil && isAuthorized {
+        self.authManager.isAuthorized {[weak self] (_ success, error) in
+            guard let `self` = self else { return }
+
+            if (error == nil) {
                 self.canPerformBioMetricsVerification()
             }
         }
     }
-    
+
     private func canPerformBioMetricsVerification() {
-        self.authManager.authWithBioMetrics {[weak self] (success, error) in
+        self.authManager.authWithBioMetrics {[weak self] (type, _ success, error) in
             guard let `self` = self else { return }
-            
+
             if (error != nil) {
-                let alert = NotificationManager.showAlert(header: "Authentication Failed", body: error!, action: "Okay")
+                let alert = NotificationManager.showAlert(
+                    header: "Authentication Failed",
+                    body: error!, action: "Okay", handler: {(_: UIAlertAction!) in
+                    self.bioMetricsType = type!
+
+                    if (self.bioMetricsType != "Not Supported") {
+                        TransitionManager.transitionSegue(sender: self, identifier: "MainToBMBlockedSegue")
+                    }
+                })
                 self.present(alert, animated: true, completion: nil)
-                
-                self.transition(sbName: "Auth", identifier: "BioMetricsBlockedVC")
             } else {
                 self.transition(sbName: "Home", identifier: "HomeVC")
             }
         }
     }
-    
+
     private func transition(sbName: String, identifier: String) {
         DispatchQueue.main.async {
             TransitionManager.pushViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self.navigationController!)
         }
     }
 }
-

@@ -11,8 +11,9 @@ import Firebase
 
 final class DatabaseManager {
     let database: Firestore = Firestore.firestore()
-    
-    public func insert(collection: String, data: Dictionary<String, String>, completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
+
+    public func insert(collection: String, data: [String: String],
+                       completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         self.database.collection(collection).addDocument(data: data) { (error) in
             if error != nil {
                 completion(nil, error?.localizedDescription)
