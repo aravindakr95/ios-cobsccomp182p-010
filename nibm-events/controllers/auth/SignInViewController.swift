@@ -71,7 +71,7 @@ class SignInViewController: UIViewController {
                 self.present(self.alert, animated: true, completion: nil)
             } else {
                 UserDefaults.standard.set(true, forKey: "isAuthorized")
-                self.transition(sbName: "Home", identifier: "HomeVC")
+                self.transition(sbName: "Home", identifier: "HomeTab")
             }
 
             self.btnSignIn.hideLoading()

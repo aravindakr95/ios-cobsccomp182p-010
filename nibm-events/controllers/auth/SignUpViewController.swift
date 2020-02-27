@@ -127,7 +127,7 @@ class SignUpViewController: UIViewController {
                     "indexNumber": self.txtContactNumber.text!
                 ]
 
-                databaseManager.insert(collection: "users", data: data) {[weak self] (_ success, error) in
+                databaseManager.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in
                     guard let `self` = self else { return }
 
                     if (error != nil) {

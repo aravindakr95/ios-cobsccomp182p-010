@@ -17,14 +17,15 @@
 		70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECheckBox.swift */; };
 		70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */; };
 		70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */; };
-		70575ED524030E25005264E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70575ED424030E25005264E5 /* GoogleService-Info.plist */; };
 		7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CC9F240370FE004F0A58 /* TransitionManager.swift */; };
 		7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA124039F96004F0A58 /* AuthManager.swift */; };
 		7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA52403A06F004F0A58 /* NotificationManager.swift */; };
 		7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7072CCA72403A31D004F0A58 /* Home.storyboard */; };
-		7072CCAC2403A652004F0A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAB2403A652004F0A58 /* HomeViewController.swift */; };
+		7072CCAC2403A652004F0A58 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */; };
 		7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */; };
 		7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB2240416E2004F0A58 /* FieldValidator.swift */; };
+		7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB52405964C004F0A58 /* EventsTableViewController.swift */; };
+		7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* MainViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -36,6 +37,12 @@
 		709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */; };
 		709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */; };
 		709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */; };
+		709BD479240673A20032E739 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709BD478240673A20032E739 /* UserProfile.swift */; };
+		709BD47B240673AF0032E739 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709BD47A240673AF0032E739 /* Event.swift */; };
+		709BD47D240674AB0032E739 /* EventHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709BD47C240674AB0032E739 /* EventHeaderCell.swift */; };
+		709BD47F240674BF0032E739 /* EventBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709BD47E240674BF0032E739 /* EventBodyCell.swift */; };
+		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
+		70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BD2408074B00529625 /* DateExtension.swift */; };
 		A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,14 +76,15 @@
 		70575ECA2402F54C005264E5 /* NECheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECheckBox.swift; sourceTree = "<group>"; };
 		70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricsBlockedViewController.swift; sourceTree = "<group>"; };
-		70575ED424030E25005264E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7072CC9F240370FE004F0A58 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		7072CCA124039F96004F0A58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		7072CCA52403A06F004F0A58 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		7072CCA72403A31D004F0A58 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		7072CCAB2403A652004F0A58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7072CCB2240416E2004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		7072CCB52405964C004F0A58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,12 @@
 		709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevConfig.xcconfig; sourceTree = "<group>"; };
 		709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QAConfig.xcconfig; sourceTree = "<group>"; };
 		709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdConfig.xcconfig; sourceTree = "<group>"; };
+		709BD478240673A20032E739 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		709BD47A240673AF0032E739 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		709BD47C240674AB0032E739 /* EventHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderCell.swift; sourceTree = "<group>"; };
+		709BD47E240674BF0032E739 /* EventBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBodyCell.swift; sourceTree = "<group>"; };
+		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70F2C5BD2408074B00529625 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.qa.xcconfig"; sourceTree = "<group>"; };
 		A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +161,8 @@
 				70310BD32402D08C004C81ED /* NEButton.swift */,
 				70310BD52402D097004C81ED /* NETextField.swift */,
 				70575ECA2402F54C005264E5 /* NECheckBox.swift */,
+				709BD47C240674AB0032E739 /* EventHeaderCell.swift */,
+				709BD47E240674BF0032E739 /* EventBodyCell.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -175,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				70575EC42402E142005264E5 /* NETextFieldExtension.swift */,
+				70F2C5BD2408074B00529625 /* DateExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -205,7 +222,9 @@
 		7072CCAA2403A639004F0A58 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				7072CCAB2403A652004F0A58 /* HomeViewController.swift */,
+				7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */,
+				7072CCB52405964C004F0A58 /* EventsTableViewController.swift */,
+				7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -243,6 +262,7 @@
 		709B0A0A23FF8C6500488BD2 /* nibm-events */ = {
 			isa = PBXGroup;
 			children = (
+				709BD477240673900032E739 /* models */,
 				7072CCB1240416D0004F0A58 /* utilities */,
 				7072CC9E240370A6004F0A58 /* managers */,
 				70575EC32402E121005264E5 /* extensions */,
@@ -288,9 +308,18 @@
 			isa = PBXGroup;
 			children = (
 				709B0A1A23FF8C6700488BD2 /* Info.plist */,
-				70575ED424030E25005264E5 /* GoogleService-Info.plist */,
+				70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */,
 			);
 			path = "supporting-files";
+			sourceTree = "<group>";
+		};
+		709BD477240673900032E739 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				709BD478240673A20032E739 /* UserProfile.swift */,
+				709BD47A240673AF0032E739 /* Event.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		E5B849023DCEACC9E2FDAA19 /* Frameworks */ = {
@@ -430,12 +459,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */,
+				70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */,
 				709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */,
 				709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */,
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
-				70575ED524030E25005264E5 /* GoogleService-Info.plist in Resources */,
 				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */,
+				70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */,
 				70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */,
 				70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */,
 				7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */,
@@ -589,15 +619,21 @@
 				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
 				70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */,
+				709BD479240673A20032E739 /* UserProfile.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
+				7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */,
 				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
+				709BD47B240673AF0032E739 /* Event.swift in Sources */,
 				709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */,
+				709BD47D240674AB0032E739 /* EventHeaderCell.swift in Sources */,
 				709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */,
 				70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */,
-				7072CCAC2403A652004F0A58 /* HomeViewController.swift in Sources */,
+				7072CCAC2403A652004F0A58 /* HomeTableViewController.swift in Sources */,
 				709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */,
 				7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */,
 				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
+				709BD47F240674BF0032E739 /* EventBodyCell.swift in Sources */,
+				7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
