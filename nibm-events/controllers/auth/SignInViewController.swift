@@ -31,7 +31,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func onResetPassword(_ sender: UIButton) {
-        self.transition(sbName: "Auth", identifier: "ResetPasswordVC")
+        self.transition(identifier: "signInToResetPW")
     }
 
     @IBAction func onSignIn(_ sender: NEButton) {
@@ -72,16 +72,16 @@ class SignInViewController: UIViewController {
             } else {
                 UserDefaults.standard.set(true, forKey: "isAuthorized")
 //                self.transition(sbName: "Home", identifier: "HomeTab")
-                self.transition(sbName: "Home", identifier: "HomeTab")
+                self.transition(identifier: "signInToHomeTab")
             }
 
             self.btnSignIn.hideLoading()
         }
     }
 
-    private func transition(sbName: String, identifier: String) {
+    private func transition(identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
+            TransitionManager.transitionSegue(sender: self, identifier: identifier)
         }
     }
 }

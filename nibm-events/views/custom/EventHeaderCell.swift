@@ -12,6 +12,7 @@ class EventHeaderCell: UITableViewCell {
     @IBOutlet weak var imgProfileView: UIImageView!
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var btnBatch: UIButton!
+    @IBOutlet weak var lblLocation: UILabel!
     
     var event: Event! {
         didSet {
@@ -36,6 +37,7 @@ class EventHeaderCell: UITableViewCell {
         self.btnBatch.layer.masksToBounds = true
         
         self.btnBatch.setTitle(event.publisherBatch, for: .normal)
+        self.lblLocation.text = event.publishedLocation
     }
     
 }

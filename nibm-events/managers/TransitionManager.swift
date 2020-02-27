@@ -28,4 +28,8 @@ class TransitionManager {
         
         context.show(viewController, sender: context)
     }
+    
+    public static func popToRootViewController(storyBoardName: String, context: UIViewController) {
+        context.navigationController?.popToRootViewController(animated: true)
+    }
 }

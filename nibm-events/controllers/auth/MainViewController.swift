@@ -23,12 +23,6 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.isAuthorized()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLoad() {
@@ -38,11 +32,11 @@ class MainViewController: UIViewController {
     @IBAction func onGuest(_ sender: NEButton) {}
     
     @IBAction func onSignUp(_ sender: NEButton) {
-        self.transition(sbName: "Auth", identifier: "SignUpVC")
+        self.transition(identifier: "mainToSignUp")
     }
     
     @IBAction func onSignIn(_ sender: NEButton) {
-        self.transition(sbName: "Auth", identifier: "SignInVC")
+        self.transition(identifier: "mainToSignIn")
     }
     
     private func isAuthorized() {
@@ -66,19 +60,19 @@ class MainViewController: UIViewController {
                         
                         if (type != "Not Supported") {
                             self.bioMetric.onNext(type!)
-                            self.transition(sbName: "Auth", identifier: "BioMetricsBlockedVC")
+                            self.transition(identifier: "mainToBMBlocked")
                         }
                 })
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.transition(sbName: "Home", identifier: "MainTab")
+                self.transition(identifier: "mainToMainTab")
             }
         }
     }
     
-    private func transition(sbName: String, identifier: String) {
+    private func transition(identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.pushViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
+            TransitionManager.transitionSegue(sender: self, identifier: identifier)
         }
     }
 }

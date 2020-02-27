@@ -9,21 +9,33 @@
 import UIKit
 
 class ProfileTableViewController: UITableViewController {
-
+//    var alert: UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onLogout(_ sender: UIBarButtonItem) {
+        let authManager = AuthManager()
+        authManager.signOut { [weak self] (_ success, _ error) in
+            guard let `self` = self else { return }
+            if (error != nil) {
+                print("Something went wrong while signing out")
+            } else {
+                let alert = NotificationManager.showAlert(
+                    header: "Sign Out",
+                    body: "You are about to signing out.", action: "Okay", handler: {(_: UIAlertAction!) in
+                        self.transitionToRootView()
+                })
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
-    */
-
+    
+    private func transitionToRootView() {
+        DispatchQueue.main.async {
+            TransitionManager.transitionSegue(sender: self, identifier: "profileToMain")
+        }
+    }
 }

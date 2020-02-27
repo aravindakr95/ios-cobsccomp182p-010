@@ -29,17 +29,17 @@ class EventBodyCell: UITableViewCell {
         self.imgPostView.kf.setImage(with: imgUrl)
         
         self.lblPostBody.text = event.body
-        self.btnLikesCount.setTitle(updateLikeCount(), for: [])
+        self.btnLikesCount.setTitle(isParticipate(), for: [])
         
         
         self.lblPostTimeAgo.text = Date.timeAgo(event.timeStamp.dateValue())()
     }
     
-    private func updateLikeCount() -> String {
-        if (event.likesCount > 0) {
-            return "\u{2665} \(event.likesCount) Likes"
+    private func isParticipate() -> String {
+        if (event.isGoing) {
+            return "\u{2714} Going"
         } else {
-            return "Be the first one to like this"
+            return "\u{274C} Not Going"
         }
     }
 }

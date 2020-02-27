@@ -43,7 +43,7 @@
 		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
 		70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BD2408074B00529625 /* DateExtension.swift */; };
 		70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BF2408286500529625 /* MainTabBarController.swift */; };
-		70F2C5C224082ED600529625 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5C124082ED600529625 /* NSObjectExtension.swift */; };
+		70F2C5C62408359A00529625 /* NETextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5C52408359900529625 /* NETextFieldExtension.swift */; };
 		A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +109,7 @@
 		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F2C5BD2408074B00529625 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		70F2C5BF2408286500529625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		70F2C5C124082ED600529625 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		70F2C5C52408359900529625 /* NETextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETextFieldExtension.swift; sourceTree = "<group>"; };
 		75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.qa.xcconfig"; sourceTree = "<group>"; };
 		A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				70F2C5BD2408074B00529625 /* DateExtension.swift */,
-				70F2C5C124082ED600529625 /* NSObjectExtension.swift */,
+				70F2C5C52408359900529625 /* NETextFieldExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -625,10 +625,10 @@
 				709BD479240673A20032E739 /* UserProfile.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
 				7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */,
-				70F2C5C224082ED600529625 /* NSObjectExtension.swift in Sources */,
 				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
 				709BD47B240673AF0032E739 /* Event.swift in Sources */,
 				709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */,
+				70F2C5C62408359A00529625 /* NETextFieldExtension.swift in Sources */,
 				709BD47D240674AB0032E739 /* EventHeaderCell.swift in Sources */,
 				709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */,
 				70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */,

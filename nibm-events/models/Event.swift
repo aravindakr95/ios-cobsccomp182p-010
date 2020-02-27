@@ -16,9 +16,10 @@ struct Event {
     var publisher: String
     var publisherImageUrl: String
     var publisherBatch: String
+    var publishedLocation: String
     var body: String
     var eventImageUrl: String
-    var likesCount: Int
+    var isGoing: Bool
     
     init?(event: [String: Any]) {
         guard let uid = event["uid"] as? String,
@@ -27,9 +28,10 @@ struct Event {
             let publisher = event["publisher"] as? String,
             let publisherImageUrl = event["publisherImageUrl"] as? String,
             let publisherBatch = event["publisherBatch"] as? String,
+            let publishedLocation = event["publishedLocation"] as? String,
             let body = event["body"] as? String,
             let eventImageUrl = event["eventImageUrl"] as? String,
-            let likesCount = event["likesCount"] as? Int else { return nil }
+            let isGoing = event["isGoing"] as? Bool else { return nil }
         
         self.uid = uid
         self.eventId = eventId
@@ -37,8 +39,9 @@ struct Event {
         self.publisher = publisher
         self.publisherImageUrl = publisherImageUrl
         self.publisherBatch = publisherBatch
+        self.publishedLocation = publishedLocation
         self.body = body
         self.eventImageUrl = eventImageUrl
-        self.likesCount = likesCount
+        self.isGoing = isGoing
     }
 }
