@@ -11,7 +11,6 @@
 		67AC3A2B8F9F0514F1782CF6 /* Pods_nibm_eventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */; };
 		70310BD42402D08C004C81ED /* NEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD32402D08C004C81ED /* NEButton.swift */; };
 		70310BD62402D097004C81ED /* NETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD52402D097004C81ED /* NETextField.swift */; };
-		70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC42402E142005264E5 /* NETextFieldExtension.swift */; };
 		70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC62402E8EC005264E5 /* SignInViewController.swift */; };
 		70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC82402ED37005264E5 /* SignUpViewController.swift */; };
 		70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECheckBox.swift */; };
@@ -43,6 +42,8 @@
 		709BD47F240674BF0032E739 /* EventBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709BD47E240674BF0032E739 /* EventBodyCell.swift */; };
 		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
 		70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BD2408074B00529625 /* DateExtension.swift */; };
+		70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BF2408286500529625 /* MainTabBarController.swift */; };
+		70F2C5C224082ED600529625 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5C124082ED600529625 /* NSObjectExtension.swift */; };
 		A2BC9C4F5EAEFF59CD0BA0A8 /* Pods_nibm_events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +71,6 @@
 		6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_eventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70310BD32402D08C004C81ED /* NEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEButton.swift; sourceTree = "<group>"; };
 		70310BD52402D097004C81ED /* NETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextField.swift; sourceTree = "<group>"; };
-		70575EC42402E142005264E5 /* NETextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextFieldExtension.swift; sourceTree = "<group>"; };
 		70575EC62402E8EC005264E5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70575EC82402ED37005264E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		70575ECA2402F54C005264E5 /* NECheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECheckBox.swift; sourceTree = "<group>"; };
@@ -108,6 +108,8 @@
 		709BD47E240674BF0032E739 /* EventBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBodyCell.swift; sourceTree = "<group>"; };
 		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F2C5BD2408074B00529625 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		70F2C5BF2408286500529625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		70F2C5C124082ED600529625 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		75AAEE4734724B4D3CC77AC8 /* Pods-nibm-eventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.qa.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.qa.xcconfig"; sourceTree = "<group>"; };
 		A4A32239F0AD685E18583417 /* Pods-nibm-eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-nibm-eventsTests/Pods-nibm-eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD811D1791667BFD82AB90FF /* Pods-nibm-events-nibm-eventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; path = "Target Support Files/Pods-nibm-events-nibm-eventsUITests/Pods-nibm-events-nibm-eventsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,8 +192,8 @@
 		70575EC32402E121005264E5 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				70575EC42402E142005264E5 /* NETextFieldExtension.swift */,
 				70F2C5BD2408074B00529625 /* DateExtension.swift */,
+				70F2C5C124082ED600529625 /* NSObjectExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -225,6 +227,7 @@
 				7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */,
 				7072CCB52405964C004F0A58 /* EventsTableViewController.swift */,
 				7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */,
+				70F2C5BF2408286500529625 /* MainTabBarController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -612,16 +615,17 @@
 			files = (
 				7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */,
 				70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */,
+				70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */,
 				70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */,
 				70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */,
 				7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */,
 				7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */,
 				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
-				70575EC52402E142005264E5 /* NETextFieldExtension.swift in Sources */,
 				709BD479240673A20032E739 /* UserProfile.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
 				7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */,
+				70F2C5C224082ED600529625 /* NSObjectExtension.swift in Sources */,
 				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
 				709BD47B240673AF0032E739 /* Event.swift in Sources */,
 				709B0A0E23FF8C6500488BD2 /* MainViewController.swift in Sources */,

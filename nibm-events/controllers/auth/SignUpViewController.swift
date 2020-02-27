@@ -151,7 +151,7 @@ class SignUpViewController: UIViewController {
 
     private func transitionToSignIn() {
         DispatchQueue.main.async {
-            TransitionManager.showViewController(storyBoardName: "Auth", vcIdentifier: "SignInVC", context: self)
+            TransitionManager.pushViewController(storyBoardName: "Auth", vcIdentifier: "SignInVC", context: self)
         }
     }
 }

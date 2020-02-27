@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="GMC-o8-idu">
             <objects>
-                <tabBarController id="Xad-H2-53a" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTab" id="Xad-H2-53a" customClass="MainTabBarController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="L8W-DB-cj6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,7 +64,7 @@
         <!--NIBM Events-->
         <scene sceneID="LNs-5R-GcQ">
             <objects>
-                <tableViewController id="T5D-Gx-FeG" customClass="HomeTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeVC" id="T5D-Gx-FeG" customClass="HomeTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bC0-4T-xBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="nNV-k4-foN">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNV-k4-foN">
                                             <rect key="frame" x="12" y="10" width="36" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="F9x-Ej-NI7"/>
@@ -95,7 +95,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="64" id="rX8-1o-3HO"/>
                                             </constraints>
-                                            <state key="normal" title="Follow"/>
+                                            <state key="normal" title="Batch"/>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -111,9 +111,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="followButton" destination="OIe-O3-jIC" id="EPe-vl-amU"/>
-                                    <outlet property="profileImageView" destination="nNV-k4-foN" id="oWO-Nj-qCq"/>
-                                    <outlet property="usernameLabel" destination="weK-cc-ban" id="N20-Q4-ABP"/>
+                                    <outlet property="btnBatch" destination="OIe-O3-jIC" id="EPe-vl-amU"/>
+                                    <outlet property="imgProfileView" destination="nNV-k4-foN" id="oWO-Nj-qCq"/>
+                                    <outlet property="lblUsername" destination="weK-cc-ban" id="N20-Q4-ABP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventBodyCell" rowHeight="578" id="tYl-9g-SoI" customClass="EventBodyCell" customModule="NIBM_Events" customModuleProvider="target">
@@ -123,7 +123,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="577.66666666666663"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-post-image" translatesAutoresizingMaskIntoConstraints="NO" id="7B7-gO-c8F">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7B7-gO-c8F">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="7B7-gO-c8F" secondAttribute="height" multiplier="1:1" id="tzH-Ve-YMG"/>
@@ -213,10 +213,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="numberOfLikesButton" destination="5bD-C7-gS9" id="DS9-1y-jiP"/>
-                                    <outlet property="postCaptionLabel" destination="fCJ-QJ-shc" id="l06-GN-Tsn"/>
-                                    <outlet property="postImageView" destination="7B7-gO-c8F" id="UcR-ri-p5r"/>
-                                    <outlet property="timeAgoLabel" destination="cYX-Q8-bSu" id="pTw-mZ-3JT"/>
+                                    <outlet property="btnLikesCount" destination="5bD-C7-gS9" id="DS9-1y-jiP"/>
+                                    <outlet property="imgPostView" destination="7B7-gO-c8F" id="UcR-ri-p5r"/>
+                                    <outlet property="lblPostBody" destination="fCJ-QJ-shc" id="l06-GN-Tsn"/>
+                                    <outlet property="lblPostTimeAgo" destination="cYX-Q8-bSu" id="pTw-mZ-3JT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -236,7 +236,7 @@
         <!--New Event-->
         <scene sceneID="xGK-zv-lpG">
             <objects>
-                <tableViewController id="DIT-Ih-vfE" customClass="EventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventVC" id="DIT-Ih-vfE" customClass="EventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="bOM-6s-vSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,7 +437,7 @@
         <!--Profile-->
         <scene sceneID="z6I-bD-529">
             <objects>
-                <tableViewController id="qjT-VN-ZZ5" customClass="ProfileTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProfileVC" id="qjT-VN-ZZ5" customClass="ProfileTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="30S-U3-f1J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,8 +494,6 @@
     <resources>
         <image name="1" width="16" height="16"/>
         <image name="comment" width="30" height="30"/>
-        <image name="default-post-image" width="1000" height="1000"/>
-        <image name="default-user" width="512" height="512"/>
         <image name="event-tab" width="30" height="30"/>
         <image name="home-tab" width="30" height="30"/>
         <image name="icon-facebook" width="16" height="16"/>

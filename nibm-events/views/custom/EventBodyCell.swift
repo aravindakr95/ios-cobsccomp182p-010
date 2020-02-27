@@ -10,12 +10,12 @@ import UIKit
 import Kingfisher
 
 class EventBodyCell: UITableViewCell {
-    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var imgPostView: UIImageView!
     
-    @IBOutlet weak var numberOfLikesButton: UIButton!
+    @IBOutlet weak var btnLikesCount: UIButton!
     
-    @IBOutlet weak var postCaptionLabel: UILabel!
-    @IBOutlet weak var timeAgoLabel: UILabel!
+    @IBOutlet weak var lblPostBody: UILabel!
+    @IBOutlet weak var lblPostTimeAgo: UILabel!
     
     var event: Event! {
         didSet {
@@ -25,14 +25,14 @@ class EventBodyCell: UITableViewCell {
     
     private func updateUI() {
         let imgUrl = URL(string: event.eventImageUrl)
-        self.postImageView.kf.indicatorType = .activity
-        self.postImageView.kf.setImage(with: imgUrl)
+        self.imgPostView.kf.indicatorType = .activity
+        self.imgPostView.kf.setImage(with: imgUrl)
         
-        self.postCaptionLabel.text = event.body
-        self.numberOfLikesButton.setTitle(updateLikeCount(), for: [])
+        self.lblPostBody.text = event.body
+        self.btnLikesCount.setTitle(updateLikeCount(), for: [])
         
         
-        self.timeAgoLabel.text = Date.timeAgo(event.timeStamp.dateValue())()
+        self.lblPostTimeAgo.text = Date.timeAgo(event.timeStamp.dateValue())()
     }
     
     private func updateLikeCount() -> String {

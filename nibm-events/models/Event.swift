@@ -15,6 +15,7 @@ struct Event {
     var timeStamp: Timestamp
     var publisher: String
     var publisherImageUrl: String
+    var publisherBatch: String
     var body: String
     var eventImageUrl: String
     var likesCount: Int
@@ -25,6 +26,7 @@ struct Event {
             let timeStamp = event["timeStamp"] as? Timestamp,
             let publisher = event["publisher"] as? String,
             let publisherImageUrl = event["publisherImageUrl"] as? String,
+            let publisherBatch = event["publisherBatch"] as? String,
             let body = event["body"] as? String,
             let eventImageUrl = event["eventImageUrl"] as? String,
             let likesCount = event["likesCount"] as? Int else { return nil }
@@ -34,6 +36,7 @@ struct Event {
         self.timeStamp = timeStamp
         self.publisher = publisher
         self.publisherImageUrl = publisherImageUrl
+        self.publisherBatch = publisherBatch
         self.body = body
         self.eventImageUrl = eventImageUrl
         self.likesCount = likesCount

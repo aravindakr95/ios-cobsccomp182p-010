@@ -71,6 +71,7 @@ class SignInViewController: UIViewController {
                 self.present(self.alert, animated: true, completion: nil)
             } else {
                 UserDefaults.standard.set(true, forKey: "isAuthorized")
+//                self.transition(sbName: "Home", identifier: "HomeTab")
                 self.transition(sbName: "Home", identifier: "HomeTab")
             }
 
@@ -80,7 +81,7 @@ class SignInViewController: UIViewController {
 
     private func transition(sbName: String, identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.showViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
+            TransitionManager.pushViewController(storyBoardName: sbName, vcIdentifier: identifier, context: self)
         }
     }
 }

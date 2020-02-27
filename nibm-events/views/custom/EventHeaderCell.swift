@@ -9,9 +9,9 @@
 import UIKit
 
 class EventHeaderCell: UITableViewCell {
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var imgProfileView: UIImageView!
+    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var btnBatch: UIButton!
     
     var event: Event! {
         didSet {
@@ -21,18 +21,21 @@ class EventHeaderCell: UITableViewCell {
     
     private func updateUI() {
         let imgUrl = URL(string: event.publisherImageUrl)
-        self.profileImageView.kf.indicatorType = .activity
-        self.profileImageView.kf.setImage(with: imgUrl)
         
-        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
-        profileImageView.layer.masksToBounds = true
+        self.imgProfileView.kf.indicatorType = .activity
+        self.imgProfileView.kf.setImage(with: imgUrl)
         
-        usernameLabel.text = event.publisher
+        self.imgProfileView.layer.cornerRadius = imgProfileView.bounds.width / 2.0
+        self.imgProfileView.layer.masksToBounds = true
         
-        followButton.layer.borderWidth = 1.0
-        followButton.layer.cornerRadius = 2.0
-        followButton.layer.borderColor = followButton.tintColor.cgColor
-        followButton.layer.masksToBounds = true
+        self.lblUsername.text = event.publisher
+        
+        self.btnBatch.layer.borderWidth = 1.0
+        self.btnBatch.layer.cornerRadius = 2.0
+        self.btnBatch.layer.borderColor = btnBatch.tintColor.cgColor
+        self.btnBatch.layer.masksToBounds = true
+        
+        self.btnBatch.setTitle(event.publisherBatch, for: .normal)
     }
     
 }
