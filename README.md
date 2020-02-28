@@ -1,6 +1,6 @@
 # NIBM Events
 
-<img src="assets/logo-banner.png" height="200" width="400">
+<img src="assets/logo-banner.png" height="180" width="600">
 
 Share and communicate with bachelors during a Event at NIBM.
 
