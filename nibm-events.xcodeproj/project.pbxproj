@@ -12,6 +12,7 @@
 		70045621240920350021CB3A /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70045620240920350021CB3A /* AddEventViewController.swift */; };
 		70310BD42402D08C004C81ED /* NEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD32402D08C004C81ED /* NEButton.swift */; };
 		70310BD62402D097004C81ED /* NETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD52402D097004C81ED /* NETextField.swift */; };
+		704BE49C2409A202007D1570 /* logo-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 704BE49B2409A202007D1570 /* logo-banner.png */; };
 		70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC62402E8EC005264E5 /* SignInViewController.swift */; };
 		70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC82402ED37005264E5 /* SignUpViewController.swift */; };
 		70575ECB2402F54C005264E5 /* NECustomSwipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECustomSwipButton.swift */; };
@@ -78,6 +79,7 @@
 		70045620240920350021CB3A /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		70310BD32402D08C004C81ED /* NEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEButton.swift; sourceTree = "<group>"; };
 		70310BD52402D097004C81ED /* NETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextField.swift; sourceTree = "<group>"; };
+		704BE49B2409A202007D1570 /* logo-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-banner.png"; sourceTree = "<group>"; };
 		70575EC62402E8EC005264E5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70575EC82402ED37005264E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		70575ECA2402F54C005264E5 /* NECustomSwipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECustomSwipButton.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
+		704BE4982409A11D007D1570 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				704BE49B2409A202007D1570 /* logo-banner.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		70575EC32402E121005264E5 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +303,7 @@
 		709B09FF23FF8C6500488BD2 = {
 			isa = PBXGroup;
 			children = (
+				704BE4982409A11D007D1570 /* assets */,
 				709B0A0A23FF8C6500488BD2 /* nibm-events */,
 				709B0A2223FF8C6700488BD2 /* nibm-eventsTests */,
 				709B0A2D23FF8C6700488BD2 /* nibm-eventsUITests */,
@@ -520,6 +531,7 @@
 				706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
+				704BE49C2409A202007D1570 /* logo-banner.png in Resources */,
 				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
