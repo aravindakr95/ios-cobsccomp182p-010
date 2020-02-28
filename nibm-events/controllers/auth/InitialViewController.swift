@@ -8,17 +8,13 @@
 
 import UIKit
 import LocalAuthentication
-import RxSwift
 
 class InitialViewController: UIViewController {
     
     private let localAuthContext: LAContext = LAContext()
     private let authManager: AuthManager = AuthManager()
-    private let bioMetric: BehaviorSubject<String> = BehaviorSubject(value: "BioMetric")
     
-    var availableBioMetricType: Observable<String> {
-        return bioMetric.asObservable()
-    }
+    private var bioMetricType = "Not Supported"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,6 +23,14 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "initialToBMBlocked") {
+            if let viewController = segue.destination as? BioMetricsBlockedViewController {
+                viewController.bioMetricType = self.bioMetricType
+            }
+        }
     }
     
     @IBAction func onGuest(_ sender: NEButton) {}
@@ -59,7 +63,7 @@ class InitialViewController: UIViewController {
                     body: error!, action: "Okay", handler: {(_: UIAlertAction!) in
                         
                         if (type != "Not Supported") {
-                            self.bioMetric.onNext(type!)
+                            self.bioMetricType = type!
                             self.transition(identifier: "initialToBMBlocked")
                         }
                 })

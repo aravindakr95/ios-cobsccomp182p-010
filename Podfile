@@ -12,9 +12,7 @@ target 'nibm-events' do
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyBeaver'
-  pod 'RxSwift'
   pod 'SwiftLint'
-  pod 'SVProgressHUD'
   pod 'Kingfisher'
   
   target 'nibm-eventsTests' do

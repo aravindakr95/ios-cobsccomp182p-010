@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RxSwift
 
 class BioMetricsBlockedViewController: UIViewController {
     @IBOutlet weak var lblDescription: UILabel!
@@ -15,10 +14,12 @@ class BioMetricsBlockedViewController: UIViewController {
 
     private let authManager: AuthManager = AuthManager()
     private let disposeBag: DisposeBag = DisposeBag()
+    
+    var bioMetricType = ""
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setBioMetricsLables()
+        self.setBioMetricsLable()
     }
 
     override func viewDidLoad() {
@@ -29,15 +30,9 @@ class BioMetricsBlockedViewController: UIViewController {
         isAuthorized()
     }
 
-    private func setBioMetricsLables() {
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? InitialViewController
-
-        mainVC?.availableBioMetricType.subscribe(onNext: { [weak self] type in
-            guard let `self` = self else { return }
-
-            self.lblDescription.text = "Unlock with \(type) to open NIBM Events"
-            self.btnBioMetric.setTitle("Use \(type)", for: .normal)
-        }).disposed(by: disposeBag)
+    private func setBioMetricsLable() {
+        self.btnBioMetric.setTitle(self.bioMetricType, for: .normal)
+        self.lblDescription.text = "Unlock with \(self.bioMetricType) to open NIBM Events"
     }
 
     private func isAuthorized() {

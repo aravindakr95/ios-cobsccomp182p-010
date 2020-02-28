@@ -11,6 +11,8 @@ import LocalAuthentication
 import FirebaseAuth
 
 final class AuthManager {
+    public static var userProfile: User!
+    
     public func createUser(emailField: NETextField, passwordField: NETextField,
                            completion: @escaping (_ success: User?, _ error: String?) -> Void) {
         guard
@@ -22,6 +24,7 @@ final class AuthManager {
             if error != nil {
                 completion(nil, error?.localizedDescription)
             } else {
+                AuthManager.userProfile = authResult?.user
                 completion(authResult?.user, nil)
             }
         })
