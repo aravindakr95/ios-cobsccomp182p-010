@@ -11,6 +11,7 @@ import Firebase
 
 class HomeTableViewController: UITableViewController {
     let databaseManager = DatabaseManager()
+    var activityIndicator: UIAlertController?
     
     var eventsData: [Event] = [Event]()
     
@@ -32,7 +33,11 @@ class HomeTableViewController: UITableViewController {
         tableView.separatorColor = UIColor.clear
     }
     
-    func fetchPosts() {
+    @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
+        self.transitionToAddEvent()
+    }
+    
+    private func fetchPosts() {
         self.databaseManager.retrieveDocuments(collection: "events") { [weak self] (events, error) in
             guard let `self` = self else { return }
 
@@ -63,6 +68,12 @@ class HomeTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    private func transitionToAddEvent() {
+        DispatchQueue.main.async {
+            TransitionManager.transitionSegue(sender: self, identifier: "homeToAddEvent")
         }
     }
 }

@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblContactNumber: UILabel!
     @IBOutlet weak var lblFacebookIdentifier: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureStyles()

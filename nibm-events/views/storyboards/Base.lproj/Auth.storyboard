@@ -53,7 +53,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="20" y="643" width="374" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.44324627550000001" green="0.83071567359999998" blue="0.60447989209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.83137254901960778" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="GUEST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -294,10 +294,14 @@
                                     <action selector="onSignUp:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="qcK-Ne-uMy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECheckBox" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECustomSwipButton" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="23" y="575" width="19" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="checkbox-deselected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectImage" value="checkbox-selected"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="deSelectImage" value="checkbox-deselected"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-9U-gGa">
                                 <rect key="frame" x="49" y="561" width="346" height="48"/>
@@ -451,7 +455,20 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Facebook Identifier" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-RI-vgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="506" width="373" height="55"/>
+                                <rect key="frame" x="208" y="506" width="187" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Batch" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-gR-8yi" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="22" y="506" width="187" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="textColor"/>
@@ -470,6 +487,7 @@
                     <connections>
                         <outlet property="btnSignUp" destination="trQ-qD-xWe" id="Zhr-uo-H4k"/>
                         <outlet property="cbAgreement" destination="0A1-Ih-1bl" id="k6U-Oc-GqM"/>
+                        <outlet property="txtBatch" destination="RN9-gR-8yi" id="Y9X-fq-KFG"/>
                         <outlet property="txtConfirmPassword" destination="vQ3-5Z-e0y" id="jqt-tK-kQO"/>
                         <outlet property="txtContactNumber" destination="pTF-oT-RYI" id="DnS-RW-gUL"/>
                         <outlet property="txtEmail" destination="8H0-JZ-hgp" id="c1d-Tk-Cpn"/>
@@ -482,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVG-Lp-Tlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3257" y="47"/>
+            <point key="canvasLocation" x="3256.521739130435" y="46.467391304347828"/>
         </scene>
         <!--Bio Metrics Blocked View Controller-->
         <scene sceneID="4DF-8d-Aeg">

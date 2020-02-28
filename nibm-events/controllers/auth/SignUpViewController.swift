@@ -15,11 +15,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtPassword: NETextField!
     @IBOutlet weak var txtConfirmPassword: NETextField!
     @IBOutlet weak var txtContactNumber: NETextField!
+    @IBOutlet weak var txtBatch: NETextField!
     @IBOutlet weak var txtFacebookIdentifier: NETextField!
-
+    
     @IBOutlet weak var btnSignUp: NEButton!
 
-    @IBOutlet weak var cbAgreement: NECheckBox!
+    @IBOutlet weak var cbAgreement: NECustomSwipButton!
 
     var alert: UIViewController!
 
@@ -46,6 +47,9 @@ class SignUpViewController: UIViewController {
 
         self.txtContactNumber.setLeftPaddingPoints(5)
         self.txtContactNumber.setRightPaddingPoints(5)
+        
+        self.txtBatch.setLeftPaddingPoints(5)
+        self.txtBatch.setRightPaddingPoints(5)
 
         self.txtFacebookIdentifier.setLeftPaddingPoints(5)
         self.txtFacebookIdentifier.setRightPaddingPoints(5)
@@ -70,6 +74,7 @@ class SignUpViewController: UIViewController {
             "Email": txtEmail,
             "Password": txtPassword,
             "Contact Number": txtContactNumber,
+            "Batch": txtBatch,
             "Facebook Identifier": txtFacebookIdentifier
         ]
 
@@ -124,7 +129,9 @@ class SignUpViewController: UIViewController {
                     "uid": userData!.uid,
                     "firstName": self.txtFirstName.text!,
                     "lastName": self.txtLastName.text!,
-                    "indexNumber": self.txtContactNumber.text!
+                    "contactNumber": self.txtContactNumber.text!,
+                    "batch": self.txtBatch.text!.uppercased(),
+                    "facebookIdentifier": self.txtFacebookIdentifier.text!
                 ]
 
                 databaseManager.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in

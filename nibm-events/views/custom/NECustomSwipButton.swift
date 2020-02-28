@@ -1,5 +1,5 @@
 //
-//  NECheckBox.swift
+//  NECustomSwipButton.swift
 //  nibm-events
 //
 //  Created by Aravinda Rathnayake on 2/23/20.
@@ -8,14 +8,26 @@
 
 import UIKit
 
-class NECheckBox: UIButton {
-    let selectedCheckBox = UIImage(named: "checkbox-selected")
-    let unselectedCheckBox = UIImage(named: "checkbox-deselected")
+@IBDesignable class NECustomSwipButton: UIButton {
+    var selectedImage: UIImage!
+    var deSelectedImage: UIImage!
+    
+    @IBInspectable var selectImage: String = "checkbox-selected" {
+        didSet {
+            self.selectedImage = UIImage(named: selectImage)
+        }
+    }
+    
+    @IBInspectable var deSelectImage: String = "checkbox-deselected" {
+        didSet {
+            self.deSelectedImage = UIImage(named: deSelectImage)
+        }
+    }
 
     var isChecked: Bool = false {
         didSet {
             self.setImage(
-                self.isChecked ?  self.selectedCheckBox : self.unselectedCheckBox,
+                self.isChecked ?  self.selectedImage : self.deSelectedImage,
                 for: UIControl.State.normal
             )
         }
