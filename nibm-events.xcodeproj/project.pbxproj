@@ -16,15 +16,19 @@
 		70575ECB2402F54C005264E5 /* NECheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECheckBox.swift */; };
 		70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */; };
 		70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */; };
+		706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A22782408DF1D0079E9D0 /* Events.storyboard */; };
+		706A227B2408DF5D0079E9D0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A227A2408DF5D0079E9D0 /* Profile.storyboard */; };
+		706A227F2408E18A0079E9D0 /* MyEventHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */; };
+		706A22812408E1990079E9D0 /* MyEventBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A22802408E1990079E9D0 /* MyEventBodyCell.swift */; };
 		7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CC9F240370FE004F0A58 /* TransitionManager.swift */; };
 		7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA124039F96004F0A58 /* AuthManager.swift */; };
 		7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA52403A06F004F0A58 /* NotificationManager.swift */; };
-		7072CCA82403A31D004F0A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7072CCA72403A31D004F0A58 /* Main.storyboard */; };
+		7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7072CCA72403A31D004F0A58 /* Home.storyboard */; };
 		7072CCAC2403A652004F0A58 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */; };
 		7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */; };
 		7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB2240416E2004F0A58 /* FieldValidator.swift */; };
-		7072CCB62405964C004F0A58 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB52405964C004F0A58 /* MyEventsTableViewController.swift */; };
-		7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */; };
+		7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB52405964C004F0A58 /* EventsTableViewController.swift */; };
+		7072CCB82405965E004F0A58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB72405965E004F0A58 /* ProfileViewController.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -76,15 +80,19 @@
 		70575ECA2402F54C005264E5 /* NECheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECheckBox.swift; sourceTree = "<group>"; };
 		70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricsBlockedViewController.swift; sourceTree = "<group>"; };
+		706A22782408DF1D0079E9D0 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		706A227A2408DF5D0079E9D0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventHeaderCell.swift; sourceTree = "<group>"; };
+		706A22802408E1990079E9D0 /* MyEventBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventBodyCell.swift; sourceTree = "<group>"; };
 		7072CC9F240370FE004F0A58 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		7072CCA124039F96004F0A58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		7072CCA52403A06F004F0A58 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		7072CCA72403A31D004F0A58 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7072CCA72403A31D004F0A58 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7072CCB2240416E2004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
-		7072CCB52405964C004F0A58 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
-		7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		7072CCB52405964C004F0A58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		7072CCB72405965E004F0A58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -163,8 +171,8 @@
 				70310BD32402D08C004C81ED /* NEButton.swift */,
 				70310BD52402D097004C81ED /* NETextField.swift */,
 				70575ECA2402F54C005264E5 /* NECheckBox.swift */,
-				709BD47C240674AB0032E739 /* EventHeaderCell.swift */,
-				709BD47E240674BF0032E739 /* EventBodyCell.swift */,
+				706A22822408E1A10079E9D0 /* home */,
+				706A22832408E1AF0079E9D0 /* events */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -173,8 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				709B0A0F23FF8C6500488BD2 /* Auth.storyboard */,
-				7072CCA72403A31D004F0A58 /* Main.storyboard */,
+				7072CCA72403A31D004F0A58 /* Home.storyboard */,
 				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
+				706A22782408DF1D0079E9D0 /* Events.storyboard */,
+				706A227A2408DF5D0079E9D0 /* Profile.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -183,8 +193,11 @@
 			isa = PBXGroup;
 			children = (
 				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
+				70F2C5BF2408286500529625 /* MainTabBarController.swift */,
+				706A227D2408E0E70079E9D0 /* profile */,
+				706A227C2408E0E00079E9D0 /* events */,
 				7072CCA92403A625004F0A58 /* auth */,
-				7072CCAA2403A639004F0A58 /* main */,
+				7072CCAA2403A639004F0A58 /* home */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -196,6 +209,40 @@
 				70F2C5C52408359900529625 /* NETextFieldExtension.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		706A227C2408E0E00079E9D0 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				7072CCB52405964C004F0A58 /* EventsTableViewController.swift */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		706A227D2408E0E70079E9D0 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				7072CCB72405965E004F0A58 /* ProfileViewController.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		706A22822408E1A10079E9D0 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				709BD47C240674AB0032E739 /* EventHeaderCell.swift */,
+				709BD47E240674BF0032E739 /* EventBodyCell.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		706A22832408E1AF0079E9D0 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */,
+				706A22802408E1990079E9D0 /* MyEventBodyCell.swift */,
+			);
+			path = events;
 			sourceTree = "<group>";
 		};
 		7072CC9E240370A6004F0A58 /* managers */ = {
@@ -221,15 +268,12 @@
 			path = auth;
 			sourceTree = "<group>";
 		};
-		7072CCAA2403A639004F0A58 /* main */ = {
+		7072CCAA2403A639004F0A58 /* home */ = {
 			isa = PBXGroup;
 			children = (
 				7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */,
-				7072CCB52405964C004F0A58 /* MyEventsTableViewController.swift */,
-				7072CCB72405965E004F0A58 /* ProfileTableViewController.swift */,
-				70F2C5BF2408286500529625 /* MainTabBarController.swift */,
 			);
-			path = main;
+			path = home;
 			sourceTree = "<group>";
 		};
 		7072CCB1240416D0004F0A58 /* utilities */ = {
@@ -463,12 +507,14 @@
 			files = (
 				709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */,
 				70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */,
+				706A227B2408DF5D0079E9D0 /* Profile.storyboard in Resources */,
 				709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */,
 				709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */,
 				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
+				706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
-				7072CCA82403A31D004F0A58 /* Main.storyboard in Resources */,
+				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +670,7 @@
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
 				709BD479240673A20032E739 /* UserProfile.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
-				7072CCB82405965E004F0A58 /* ProfileTableViewController.swift in Sources */,
+				7072CCB82405965E004F0A58 /* ProfileViewController.swift in Sources */,
 				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
 				709BD47B240673AF0032E739 /* Event.swift in Sources */,
 				709B0A0E23FF8C6500488BD2 /* InitialViewController.swift in Sources */,
@@ -632,12 +678,14 @@
 				709BD47D240674AB0032E739 /* EventHeaderCell.swift in Sources */,
 				709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */,
 				70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */,
+				706A22812408E1990079E9D0 /* MyEventBodyCell.swift in Sources */,
 				7072CCAC2403A652004F0A58 /* HomeTableViewController.swift in Sources */,
 				709B0A1423FF8C6500488BD2 /* nibm_events.xcdatamodeld in Sources */,
+				706A227F2408E18A0079E9D0 /* MyEventHeaderCell.swift in Sources */,
 				7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */,
 				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
 				709BD47F240674BF0032E739 /* EventBodyCell.swift in Sources */,
-				7072CCB62405964C004F0A58 /* MyEventsTableViewController.swift in Sources */,
+				7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

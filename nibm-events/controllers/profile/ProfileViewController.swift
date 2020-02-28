@@ -1,5 +1,5 @@
 //
-//  ProfileTableViewController.swift
+//  ProfileViewController.swift
 //  nibm-events
 //
 //  Created by Aravinda Rathnayake on 2/25/20.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
+class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func onLogout(_ sender: UIBarButtonItem) {
+    @IBAction func onSignout(_ sender: NEButton) {
         let authManager = AuthManager()
         authManager.signOut { [weak self] (_ success, _ error) in
             guard let `self` = self else { return }
@@ -29,6 +28,8 @@ class ProfileTableViewController: UITableViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    @IBAction func onEditProfile(_ sender: UIBarButtonItem) {
     }
     
     private func transitionToRootView() {

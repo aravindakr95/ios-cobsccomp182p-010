@@ -65,7 +65,7 @@ class InitialViewController: UIViewController {
                 })
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.transition(identifier: "initialToMainTab")
+                self.transition(identifier: "initialToHome")
             }
         }
     }

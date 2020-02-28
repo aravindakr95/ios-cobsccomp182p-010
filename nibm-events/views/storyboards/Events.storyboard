@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6j-EM-6Q4">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Events-->
+        <scene sceneID="Wy3-oZ-kxf">
+            <objects>
+                <tableViewController storyboardIdentifier="MyEventVC" id="GNH-AN-xcT" customClass="EventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qaf-tg-67B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="FAy-Vw-97N">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAy-Vw-97N" id="esV-Cz-yEW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Aurudu Festival 2020" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-En-kyB">
+                                            <rect key="frame" x="20" y="7" width="205.5" height="42.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW1-4G-6VF">
+                                            <rect key="frame" x="344" y="16" width="50" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="CqK-yR-Zic"/>
+                                            </constraints>
+                                            <state key="normal" title="Edit" image="edit"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="topMargin" constant="5" id="LB4-Hn-kmS"/>
+                                        <constraint firstItem="vaO-En-kyB" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="top" constant="7" id="U6b-o2-NAc"/>
+                                        <constraint firstAttribute="bottom" secondItem="vaO-En-kyB" secondAttribute="bottom" constant="7" id="X3c-dp-FNG"/>
+                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="trailing" secondItem="esV-Cz-yEW" secondAttribute="trailingMargin" id="ZAl-bm-zxk"/>
+                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="leading" secondItem="vaO-En-kyB" secondAttribute="trailing" constant="118.67" id="ZNi-mj-bpZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JW1-4G-6VF" secondAttribute="bottom" constant="5" id="bxa-6A-wW7"/>
+                                        <constraint firstItem="vaO-En-kyB" firstAttribute="leading" secondItem="esV-Cz-yEW" secondAttribute="leading" constant="20" id="lN6-pn-jqA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="161" id="ki8-FK-Dqw">
+                                <rect key="frame" x="0.0" y="112.5" width="414" height="161"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ki8-FK-Dqw" id="zda-U4-COv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-QE-9vn">
+                                            <rect key="frame" x="76" y="12" width="330" height="140.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</string>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-8f-gxw">
+                                            <rect key="frame" x="12" y="25" width="56" height="56"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="56" id="f59-Xf-leU"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leading" constant="12" id="7TT-vO-rzf"/>
+                                        <constraint firstItem="Bfe-QE-9vn" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="12" id="8UV-0i-ugB"/>
+                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="25" id="JEU-cu-P9l"/>
+                                        <constraint firstAttribute="bottom" secondItem="Bfe-QE-9vn" secondAttribute="bottom" constant="8" id="TVF-LN-jFH"/>
+                                        <constraint firstAttribute="trailing" secondItem="Bfe-QE-9vn" secondAttribute="trailing" constant="8" id="b22-Bt-SVG"/>
+                                        <constraint firstItem="Bfe-QE-9vn" firstAttribute="leading" secondItem="DeN-8f-gxw" secondAttribute="trailing" constant="8" id="c5x-Qf-PDa"/>
+                                        <constraint firstAttribute="bottom" secondItem="DeN-8f-gxw" secondAttribute="bottom" constant="79.670000000000002" id="scu-8x-L2u"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="GNH-AN-xcT" id="7GR-lF-RbV"/>
+                            <outlet property="delegate" destination="GNH-AN-xcT" id="yhZ-MW-FUY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Events" id="voV-XT-tSY">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="close" id="MXn-h0-qQC">
+                            <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7j-Ky-nh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="181"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JXf-Er-TrM">
+            <objects>
+                <navigationController storyboardIdentifier="PostComposerNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="C6j-EM-6Q4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="event-tab" selectedImage="event-tab" id="J2d-wU-Ddb">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ISY-ON-YUM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GNH-AN-xcT" kind="relationship" relationship="rootViewController" id="40e-kX-MMj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKd-au-clU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="30" height="30"/>
+        <image name="edit" width="30" height="30"/>
+        <image name="event-tab" width="30" height="30"/>
+    </resources>
+</document>

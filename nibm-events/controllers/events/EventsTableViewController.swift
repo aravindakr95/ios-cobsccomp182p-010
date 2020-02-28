@@ -1,5 +1,5 @@
 //
-//  MyEventsTableViewController.swift
+//  EventsTableViewController.swift
 //  nibm-events
 //
 //  Created by Aravinda Rathnayake on 2/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyEventsTableViewController: UITableViewController {
+class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
