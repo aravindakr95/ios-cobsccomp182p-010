@@ -162,6 +162,9 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="selectImage" value="like-fill"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="deSelectImage" value="like-outline"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="onGoingPreferenceChange:" destination="tYl-9g-SoI" eventType="touchUpInside" id="Cy6-m7-S9m"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTM-qS-Zqc">
                                                     <rect key="frame" x="39" y="0.0" width="23" height="22"/>
@@ -190,9 +193,8 @@
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCJ-QJ-shc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu bonard." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCJ-QJ-shc">
                                             <rect key="frame" x="12" y="477" width="351" height="44.333333333333371"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -234,7 +236,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="btnGoingPreference" destination="hOP-5P-tYD" id="PSr-DI-eAo"/>
+                                    <outlet property="btnGoingPreference" destination="hOP-5P-tYD" id="mCD-Vm-oqY"/>
                                     <outlet property="btnGoingStatus" destination="5bD-C7-gS9" id="Dg5-fy-Ig7"/>
                                     <outlet property="imgPostView" destination="7B7-gO-c8F" id="UcR-ri-p5r"/>
                                     <outlet property="lblPostBody" destination="fCJ-QJ-shc" id="l06-GN-Tsn"/>

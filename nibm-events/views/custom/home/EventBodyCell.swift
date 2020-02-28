@@ -23,6 +23,8 @@ class EventBodyCell: UITableViewCell {
         }
     }
     
+    @IBAction func onGoingPreferenceChange(_ sender: NECustomSwipButton) {}
+    
     private func updateUI() {
         let imgUrl = URL(string: event.eventImageUrl)
         self.imgPostView.kf.indicatorType = .activity
@@ -31,8 +33,7 @@ class EventBodyCell: UITableViewCell {
         self.lblPostBody.text = event.body
         self.btnGoingStatus.setTitle(isParticipate(), for: .normal)
         
-        let now = Date()
-        self.lblPostTimeAgo.text = now.timeAgo()
+        self.lblPostTimeAgo.text = Date().timeAgo()
     }
     
     private func isParticipate() -> String {
@@ -46,4 +47,6 @@ class EventBodyCell: UITableViewCell {
             return "Not Going"
         }
     }
+    
+    
 }

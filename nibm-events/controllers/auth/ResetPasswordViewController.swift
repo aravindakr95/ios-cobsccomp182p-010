@@ -23,21 +23,19 @@ class ResetPasswordViewController: UIViewController {
     }
 
     @IBAction func onResetPassword(_ sender: NEButton) {
-        let authManager: AuthManager = AuthManager()
-
         self.btnResetPassword.showLoading()
 
-        authManager.sendPasswordReset(emailField: txtEmail) {[weak self] (_ success, error) in
+        AuthManager.sharedInstance.sendPasswordReset(emailField: txtEmail) {[weak self] (_ success, error) in
             guard let `self` = self else { return }
 
             var alert: UIViewController
 
             if (error != nil) {
-                alert = NotificationManager.showAlert(header: "Password Reset Failed", body: error!, action: "Okay")
+                alert = NotificationManager.sharedInstance.showAlert(header: "Password Reset Failed", body: error!, action: "Okay")
 
                 self.present(alert, animated: true, completion: nil)
             } else {
-                alert = NotificationManager.showAlert(
+                alert = NotificationManager.sharedInstance.showAlert(
                     header: "Email Sent",
                     body: "We have sent a password reset instructions to your \(self.txtEmail.text!) email address.",
                     action: "Okay", handler: {(_: UIAlertAction!) in
@@ -53,7 +51,7 @@ class ResetPasswordViewController: UIViewController {
 
     private func transitionToMain() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "resetPWToSignIn")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "resetPWToSignIn")
         }
     }
 

@@ -21,16 +21,15 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func onSignout(_ sender: NEButton) {
-        let authManager = AuthManager()
-        authManager.signOut { [weak self] (_ success, _ error) in
+        AuthManager.sharedInstance.signOut { [weak self] (_ success, _ error) in
             guard let `self` = self else { return }
             if (error != nil) {
                 print("Something went wrong while signing out.")
             } else {
-                let alert = NotificationManager.showAlert(
+                let alert = NotificationManager.sharedInstance.showAlert(
                     header: "Sign Out",
                     body: "You are about to signing out.", action: "Okay", handler: {(_: UIAlertAction!) in
-                        self.transitionToRootView()
+                        self.transition(identifier: "profileToAuth")
                 })
                 
                 self.present(alert, animated: true, completion: nil)
@@ -39,9 +38,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func onEditProfile(_ sender: UIBarButtonItem) {
-        DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "profileToEditProfile")
-        }
+        self.transition(identifier: "profileToEditProfile")
     }
     
     private func configureStyles() {
@@ -49,9 +46,9 @@ class ProfileViewController: UIViewController {
         self.profileImageView.layer.masksToBounds = true
     }
     
-    private func transitionToRootView() {
+    private func transition(identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "profileToAuth")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: identifier)
         }
     }
 }

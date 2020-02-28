@@ -10,10 +10,10 @@ import UIKit
 import Firebase
 
 class HomeTableViewController: UITableViewController {
-    let databaseManager = DatabaseManager()
     var activityIndicator: UIAlertController?
     
     var eventsData: [Event] = [Event]()
+    var index: Int = 0
     
     struct Storyboard {
         static let eventCell = "EventBodyCell"
@@ -25,22 +25,25 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureStyles()
         self.fetchPosts()
         self.listenUpdateEvents()
-        
-        tableView.estimatedRowHeight = Storyboard.postCellDefaultHeight
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorColor = UIColor.clear
     }
     
     @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
         self.transitionToAddEvent()
     }
     
+    private func configureStyles() {
+        self.tableView.estimatedRowHeight = Storyboard.postCellDefaultHeight
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.separatorColor = UIColor.clear
+    }
+    
     private func fetchPosts() {
-        self.databaseManager.retrieveDocuments(collection: "events") { [weak self] (events, error) in
+        DatabaseManager.sharedInstance.retrieveDocuments(collection: "events") { [weak self] (events, error) in
             guard let `self` = self else { return }
-
+            
             guard let events = events else {
                 print("Error fetching snapshot results: \(error!)")
                 return
@@ -55,7 +58,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     private func listenUpdateEvents() {
-        self.databaseManager.listenDocumentChanges(collection: "events") { [weak self] (event, error) in
+        DatabaseManager.sharedInstance.listenDocumentChanges(collection: "events") { [weak self] (event, error) in
             guard let `self` = self else { return }
             
             guard let event = event else {
@@ -73,7 +76,7 @@ class HomeTableViewController: UITableViewController {
     
     private func transitionToAddEvent() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "homeToAddEvent")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "homeToAddEvent")
         }
     }
 }
@@ -89,7 +92,6 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.eventCell, for: indexPath) as! EventBodyCell
-        
         cell.event = self.eventsData[indexPath.section]
         cell.selectionStyle = .none
         cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 0.8470588235)

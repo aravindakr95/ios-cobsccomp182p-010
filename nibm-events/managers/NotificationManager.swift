@@ -9,7 +9,9 @@
 import UIKit
 
 final class NotificationManager {
-    public static func showAlert(header: String, body: String, action: String,
+    public static let sharedInstance = NotificationManager()
+    
+    func showAlert(header: String, body: String, action: String,
                                  handler: ((UIAlertAction) -> Void)? = nil) -> UIViewController {
         let alert = UIAlertController(title: header, message: body, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: action, style: UIAlertAction.Style.default, handler: handler))

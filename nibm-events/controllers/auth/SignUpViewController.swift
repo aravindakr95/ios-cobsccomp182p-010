@@ -80,12 +80,12 @@ class SignUpViewController: UIViewController {
 
         for (type, field) in fields {
             if type == "Password" {
-                let (valid, message) = fieldValidator.validate(type: type, textField: field, optionalField: txtConfirmPassword)
+                let (valid, message) = FieldValidator.validate(type: type, textField: field, optionalField: txtConfirmPassword)
                 if (!valid ) {
                     fieldErrors.updateValue(message, forKey: type)
                 }
             } else {
-                let (valid, message) = fieldValidator.validate(type: type, textField: field)
+                let (valid, message) = FieldValidator.validate(type: type, textField: field)
                 if (!valid) {
                     fieldErrors.updateValue(message, forKey: type)
                 }
@@ -93,7 +93,7 @@ class SignUpViewController: UIViewController {
         }
 
         if !fieldErrors.isEmpty {
-            alert = NotificationManager.showAlert(
+            alert = NotificationManager.sharedInstance.showAlert(
                 header: "Registration Failed",
                 body: "The following \(fieldErrors.values.joined(separator: ", ")) field(s) are missing or invalid.", action: "Okay")
 
@@ -104,7 +104,7 @@ class SignUpViewController: UIViewController {
 
         // FIXME: cbAgreement isChecked method returns wrong state of the checkbox
         if isChecked {
-            alert = NotificationManager.showAlert(
+            alert = NotificationManager.sharedInstance.showAlert(
                 header: "Registration Failed",
                 body: "Please read our privacy policy and agree to the terms and conditions.", action: "Okay")
 
@@ -119,12 +119,10 @@ class SignUpViewController: UIViewController {
             guard let `self` = self else { return }
 
             if (error != nil) {
-                self.alert = NotificationManager.showAlert(header: "Registration Failed", body: error!, action: "Okay")
+                self.alert = NotificationManager.sharedInstance.showAlert(header: "Registration Failed", body: error!, action: "Okay")
 
                 self.present(self.alert, animated: true, completion: nil)
             } else {
-                let databaseManager: DatabaseManager = DatabaseManager()
-
                 let data: [String: String] = [
                     "uid": userData!.uid,
                     "firstName": self.txtFirstName.text!,
@@ -134,16 +132,16 @@ class SignUpViewController: UIViewController {
                     "facebookIdentifier": self.txtFacebookIdentifier.text!
                 ]
 
-                databaseManager.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in
+                DatabaseManager.sharedInstance.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in
                     guard let `self` = self else { return }
 
                     if (error != nil) {
-                        self.alert = NotificationManager.showAlert(header: "Registration Failed", body: error!, action: "Okay")
+                        self.alert = NotificationManager.sharedInstance.showAlert(header: "Registration Failed", body: error!, action: "Okay")
                         self.present(self.alert, animated: true, completion: nil)
 
                         return
                     } else {
-                        self.alert = NotificationManager.showAlert(
+                        self.alert = NotificationManager.sharedInstance.showAlert(
                             header: "Registration Success",
                             body: "Registration is Successful, Please Sign In.", action: "Okay", handler: {(_: UIAlertAction!) in
                             self.transitionToSignIn()
@@ -158,7 +156,7 @@ class SignUpViewController: UIViewController {
 
     private func transitionToSignIn() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "signUpToSignIn")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "signUpToSignIn")
         }
     }
 }

@@ -11,9 +11,6 @@ import UIKit
 class BioMetricsBlockedViewController: UIViewController {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnBioMetric: UIButton!
-
-    private let authManager: AuthManager = AuthManager()
-    private let disposeBag: DisposeBag = DisposeBag()
     
     var bioMetricType = ""
 
@@ -36,7 +33,7 @@ class BioMetricsBlockedViewController: UIViewController {
     }
 
     private func isAuthorized() {
-        self.authManager.isAuthorized {[weak self] (_ success, error) in
+        AuthManager.sharedInstance.isAuthorized {[weak self] (_ success, error) in
             guard let `self` = self else { return }
 
             if (error == nil) {
@@ -46,7 +43,7 @@ class BioMetricsBlockedViewController: UIViewController {
     }
 
     private func canPerformBioMetricsVerification() {
-        self.authManager.authWithBioMetrics {[weak self] (_ bioMetricType, _ success, error) in
+        AuthManager.sharedInstance.authWithBioMetrics {[weak self] (_ bioMetricType, _ success, error) in
             guard let `self` = self else { return }
 
             if (error == nil) {
@@ -57,7 +54,7 @@ class BioMetricsBlockedViewController: UIViewController {
 
     private func transitionToHome() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "bmBlockedToHome")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "bmBlockedToHome")
         }
     }
 }

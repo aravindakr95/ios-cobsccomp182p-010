@@ -13,7 +13,9 @@ final class DatabaseManager {
     private let database: Firestore = Firestore.firestore()
     private var events = [Event]()
     
-    public func insertDocument(collection: String,
+    public static let sharedInstance = DatabaseManager()
+    
+    func insertDocument(collection: String,
                                data: [String: String],
                                completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
@@ -27,7 +29,7 @@ final class DatabaseManager {
         }
     }
     
-    public func retrieveDocuments(collection: String,
+    func retrieveDocuments(collection: String,
                                   completion: @escaping (_ success: [Event]?, _ error: String?)
         -> Void) {
         self.database.collection(collection).getDocuments { (querySnapshot, error) in
@@ -48,7 +50,7 @@ final class DatabaseManager {
         }
     }
     
-    public func listenDocumentChanges(collection: String,
+    func listenDocumentChanges(collection: String,
                                       completion: @escaping (_ success: Event?, _ error: String?)
         -> Void) {
         self.database.collection(collection).whereField("timeStamp", isGreaterThan: Date())

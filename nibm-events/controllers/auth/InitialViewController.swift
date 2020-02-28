@@ -10,10 +10,7 @@ import UIKit
 import LocalAuthentication
 
 class InitialViewController: UIViewController {
-    
     private let localAuthContext: LAContext = LAContext()
-    private let authManager: AuthManager = AuthManager()
-    
     private var bioMetricType = "Not Supported"
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +41,7 @@ class InitialViewController: UIViewController {
     }
     
     private func isAuthorized() {
-        self.authManager.isAuthorized {[weak self] (_ success, error) in
+        AuthManager.sharedInstance.isAuthorized {[weak self] (_ success, error) in
             guard let `self` = self else { return }
             
             if (error == nil) {
@@ -54,11 +51,11 @@ class InitialViewController: UIViewController {
     }
     
     private func canPerformBioMetricsVerification() {
-        self.authManager.authWithBioMetrics {[weak self] (type, _ success, error) in
+        AuthManager.sharedInstance.authWithBioMetrics {[weak self] (type, _ success, error) in
             guard let `self` = self else { return }
             
             if (error != nil) {
-                let alert = NotificationManager.showAlert(
+                let alert = NotificationManager.sharedInstance.showAlert(
                     header: "Authentication Failed",
                     body: error!, action: "Okay", handler: {(_: UIAlertAction!) in
                         
@@ -76,7 +73,7 @@ class InitialViewController: UIViewController {
     
     private func transition(identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: identifier)
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: identifier)
         }
     }
 }

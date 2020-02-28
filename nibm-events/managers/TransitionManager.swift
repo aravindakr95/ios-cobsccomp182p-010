@@ -9,27 +9,9 @@
 import UIKit
 
 class TransitionManager {
-    public static func transitionSegue(sender: UIViewController, identifier: String) {
+    public static let sharedInstance = TransitionManager()
+    
+    func transitionSegue(sender: UIViewController, identifier: String) {
         sender.performSegue(withIdentifier: identifier, sender: sender)
-    }
-
-    public static func pushViewController(storyBoardName: String, vcIdentifier: String, context: UIViewController) {
-        let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: vcIdentifier)
-        context.navigationController?.pushViewController(viewController, animated: true)
-
-        context.show(viewController, sender: context)
-    }
-    
-    public static func popToViewController(storyBoardName: String, vcIdentifier: String, context: UIViewController) {
-        let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: vcIdentifier)
-        context.navigationController?.popToViewController(viewController, animated: true)
-        
-        context.show(viewController, sender: context)
-    }
-    
-    public static func popToRootViewController(storyBoardName: String, context: UIViewController) {
-        context.navigationController?.popToRootViewController(animated: true)
     }
 }

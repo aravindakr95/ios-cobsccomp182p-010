@@ -11,9 +11,10 @@ import LocalAuthentication
 import FirebaseAuth
 
 final class AuthManager {
-    public static var userProfile: User!
+    public static let sharedInstance = AuthManager()
+    private var userProfile: User!
     
-    public func createUser(emailField: NETextField, passwordField: NETextField,
+    func createUser(emailField: NETextField, passwordField: NETextField,
                            completion: @escaping (_ success: User?, _ error: String?) -> Void) {
         guard
             let email = emailField.text,
@@ -24,13 +25,13 @@ final class AuthManager {
             if error != nil {
                 completion(nil, error?.localizedDescription)
             } else {
-                AuthManager.userProfile = authResult?.user
+                AuthManager.sharedInstance.userProfile = authResult?.user
                 completion(authResult?.user, nil)
             }
         })
     }
 
-    public func signIn(emailField: NETextField, passwordField: NETextField,
+   func signIn(emailField: NETextField, passwordField: NETextField,
                        completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         guard
             let email = emailField.text,
@@ -47,7 +48,7 @@ final class AuthManager {
         })
     }
 
-    public func signOut(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
+    func signOut(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         let firebaseAuth = Auth.auth()
 
         do {
@@ -58,7 +59,7 @@ final class AuthManager {
         }
     }
 
-    public func currentUser(completion: @escaping (_ success: User?, _ error: String?) -> Void) {
+    func currentUser(completion: @escaping (_ success: User?, _ error: String?) -> Void) {
         let user = Auth.auth().currentUser
 
         if user != nil {
@@ -68,7 +69,7 @@ final class AuthManager {
         }
     }
 
-    public func sendPasswordReset(emailField: NETextField, completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
+    func sendPasswordReset(emailField: NETextField, completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         guard
             let email = emailField.text else { return }
 
@@ -81,7 +82,7 @@ final class AuthManager {
         })
     }
 
-    public func isAuthorized(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
+    func isAuthorized(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         self.currentUser {(userData, _ error) in
             let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
             if userData != nil && isAuthorized {
@@ -92,7 +93,7 @@ final class AuthManager {
         }
     }
 
-    public func authWithBioMetrics(completion: @escaping (_ type: String?, _ success: Bool?, _ error: String?) -> Void) {
+    func authWithBioMetrics(completion: @escaping (_ type: String?, _ success: Bool?, _ error: String?) -> Void) {
         let localAuthContext = LAContext()
         var error: NSError?
 

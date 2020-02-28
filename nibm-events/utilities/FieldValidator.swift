@@ -9,28 +9,28 @@
 import Foundation
 
 final class FieldValidator {
-    func isValidEmail(email: String) -> Bool {
+    static func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@student\\.nibm\\.lk${2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
 
-    func isValidPassword(password: String = "") -> Bool {
+    static func isValidPassword(password: String = "") -> Bool {
         // Minimum 8 characters at least 1 Uppercase, 1 Lowercase, 1 Number and 1 Special Character
         let passwordRegex = "^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8}$"
         let passwordPred = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordPred.evaluate(with: password)
     }
 
-    func isEqual(fieldOne: String, fieldTwo: String) -> Bool {
+    static func isEqual(fieldOne: String, fieldTwo: String) -> Bool {
         return fieldOne == fieldTwo
     }
 
-    func isNotEmpty(count: Int, required: Int) -> Bool {
+    static func isNotEmpty(count: Int, required: Int) -> Bool {
         return count >= required
     }
 
-    func isMatchFields(fieldOne: NETextField, fieldTwo: NETextField? = nil) -> Bool {
+    static func isMatchFields(fieldOne: NETextField, fieldTwo: NETextField? = nil) -> Bool {
         if (fieldTwo?.text != nil) {
             return fieldOne.text == fieldTwo?.text
         }
@@ -38,7 +38,7 @@ final class FieldValidator {
         return true
     }
 
-    func validate(type: String, textField: NETextField, optionalField: NETextField? = nil) -> (Bool, String) {
+    static func validate(type: String, textField: NETextField, optionalField: NETextField? = nil) -> (Bool, String) {
         var isValid = false
         var validateData: (Bool, String) = (false, "")
 
