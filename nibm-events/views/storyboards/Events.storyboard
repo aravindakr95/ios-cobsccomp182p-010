@@ -89,11 +89,7 @@
                             <outlet property="delegate" destination="GNH-AN-xcT" id="yhZ-MW-FUY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Events" id="voV-XT-tSY">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="close" id="MXn-h0-qQC">
-                            <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="My Events" id="voV-XT-tSY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7j-Ky-nh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="30" height="30"/>
         <image name="edit" width="30" height="30"/>
         <image name="event-tab" width="30" height="30"/>
     </resources>

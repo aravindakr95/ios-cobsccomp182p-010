@@ -9,9 +9,18 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var lblFullName: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblContactNumber: UILabel!
+    @IBOutlet weak var lblFacebookIdentifier: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureStyles()
     }
+    
     @IBAction func onSignout(_ sender: NEButton) {
         let authManager = AuthManager()
         authManager.signOut { [weak self] (_ success, _ error) in
@@ -29,7 +38,16 @@ class ProfileViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func onEditProfile(_ sender: UIBarButtonItem) {
+        DispatchQueue.main.async {
+            TransitionManager.transitionSegue(sender: self, identifier: "profileToEditProfile")
+        }
+    }
+    
+    private func configureStyles() {
+        self.profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
+        self.profileImageView.layer.masksToBounds = true
     }
     
     private func transitionToRootView() {

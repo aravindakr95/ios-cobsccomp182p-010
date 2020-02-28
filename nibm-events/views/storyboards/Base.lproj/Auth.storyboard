@@ -388,7 +388,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Already have an NIBM Events™ account">
-                                    <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20000000000000001" green="0.63529411764705879" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onSignIn:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="GSM-qx-24N"/>

@@ -20,6 +20,7 @@
 		706A227B2408DF5D0079E9D0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A227A2408DF5D0079E9D0 /* Profile.storyboard */; };
 		706A227F2408E18A0079E9D0 /* MyEventHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */; };
 		706A22812408E1990079E9D0 /* MyEventBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A22802408E1990079E9D0 /* MyEventBodyCell.swift */; };
+		706A22852408F7DC0079E9D0 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A22842408F7DC0079E9D0 /* ProfileEditViewController.swift */; };
 		7072CCA0240370FE004F0A58 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CC9F240370FE004F0A58 /* TransitionManager.swift */; };
 		7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA124039F96004F0A58 /* AuthManager.swift */; };
 		7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCA52403A06F004F0A58 /* NotificationManager.swift */; };
@@ -84,6 +85,7 @@
 		706A227A2408DF5D0079E9D0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventHeaderCell.swift; sourceTree = "<group>"; };
 		706A22802408E1990079E9D0 /* MyEventBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventBodyCell.swift; sourceTree = "<group>"; };
+		706A22842408F7DC0079E9D0 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		7072CC9F240370FE004F0A58 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		7072CCA124039F96004F0A58 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		7072CCA52403A06F004F0A58 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				7072CCB72405965E004F0A58 /* ProfileViewController.swift */,
+				706A22842408F7DC0079E9D0 /* ProfileEditViewController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */,
 				7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */,
 				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,
+				706A22852408F7DC0079E9D0 /* ProfileEditViewController.swift in Sources */,
 				70575EC72402E8EC005264E5 /* SignInViewController.swift in Sources */,
 				709BD479240673A20032E739 /* UserProfile.swift in Sources */,
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
