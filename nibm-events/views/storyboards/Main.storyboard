@@ -232,8 +232,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="NIBM Events" id="EgV-D8-eCn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="9We-2W-vd9"/>
-                        <barButtonItem key="rightBarButtonItem" title="New Event" id="kSE-U3-mGk"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Event" image="new-event" id="kSE-U3-mGk"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
@@ -242,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1294.9275362318842" y="-196.46739130434784"/>
         </scene>
-        <!--New Event-->
+        <!--My Events-->
         <scene sceneID="xGK-zv-lpG">
             <objects>
-                <tableViewController storyboardIdentifier="EventVC" id="DIT-Ih-vfE" customClass="EventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventVC" id="DIT-Ih-vfE" customClass="MyEventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="bOM-6s-vSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,9 +292,8 @@
                             <outlet property="delegate" destination="DIT-Ih-vfE" id="q4q-6p-xbA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Event" id="Tkl-nh-3Br">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="DG9-vy-ROg"/>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="CpN-mW-NtE"/>
+                    <navigationItem key="navigationItem" title="My Events" id="Tkl-nh-3Br">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="close" id="DG9-vy-ROg"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W08-Bm-3Oo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,14 +350,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Profile" id="K6C-cY-Yot">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="QmM-eJ-xEl">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" image="sign-out" id="QmM-eJ-xEl">
                             <connections>
                                 <action selector="onLogout:" destination="qjT-VN-ZZ5" id="8qI-IO-udp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="yvR-43-asJ" kind="presentation" identifier="profileToMain" id="0CO-Eh-ndb"/>
+                        <segue destination="yvR-43-asJ" kind="presentation" identifier="profileToAuth" id="0CO-Eh-ndb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPz-qI-HzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,10 +395,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="30" height="30"/>
         <image name="comment" width="30" height="30"/>
         <image name="event-tab" width="30" height="30"/>
         <image name="home-tab" width="30" height="30"/>
         <image name="like-outline" width="30" height="30"/>
+        <image name="new-event" width="30" height="30"/>
         <image name="profile-tab" width="30" height="30"/>
+        <image name="sign-out" width="30" height="30"/>
     </resources>
 </document>

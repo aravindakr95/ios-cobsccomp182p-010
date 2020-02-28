@@ -10,18 +10,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Main-->
         <scene sceneID="rV3-Hz-ywT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="ogQ-pb-e7K" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="ogQ-pb-e7K" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoW-lJ-D6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2961" y="743"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="InitialViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,9 +86,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="4MS-z0-Mjw"/>
                     <connections>
-                        <segue destination="ogQ-pb-e7K" kind="presentation" identifier="mainToMainTab" id="fan-a5-Q8a"/>
-                        <segue destination="kAi-IV-0Jv" kind="presentation" identifier="mainToSignUp" id="Ky8-1w-p7N"/>
-                        <segue destination="hTF-rU-y81" kind="presentation" identifier="mainToSignIn" id="V6S-ed-l1l"/>
+                        <segue destination="ogQ-pb-e7K" kind="presentation" identifier="initialToMainTab" id="fan-a5-Q8a"/>
+                        <segue destination="kAi-IV-0Jv" kind="presentation" identifier="initialToSignUp" id="Ky8-1w-p7N"/>
+                        <segue destination="hTF-rU-y81" kind="presentation" identifier="initialToSignIn" id="V6S-ed-l1l"/>
+                        <segue destination="l4y-EF-Kdq" kind="presentation" identifier="initialToBMBlocked" id="Bzm-9S-ejQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,21 +104,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
                                 <rect key="frame" x="82" y="73" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FFu-PA-g56"/>
+                                    <constraint firstAttribute="width" constant="250" id="WXc-vI-fbs"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
                                 <rect key="frame" x="57" y="267" width="300" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="20" y="354" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="bMO-A9-E0f"/>
+                                    <constraint firstAttribute="height" constant="55" id="blQ-sA-uNN"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -127,10 +133,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="20" y="417" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5Sx-Wd-J11"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -140,10 +148,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="20" y="498" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="gFx-g9-kpr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -152,9 +162,8 @@
                                     <action selector="onSignIn:" destination="hTF-rU-y81" eventType="touchUpInside" id="z0S-ir-pUu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
                                 <rect key="frame" x="138" y="582" width="139" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,6 +174,27 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="top" secondItem="sP5-Kc-pqa" secondAttribute="bottom" constant="26" id="0e1-8v-jc2"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" constant="53" id="2Ny-6b-Chk"/>
+                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="top" secondItem="vBe-Ug-Nmc" secondAttribute="bottom" constant="29" id="302-u1-yYw"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="rYN-20-A4X" secondAttribute="trailing" constant="20" id="8vv-ze-1h7"/>
+                            <constraint firstItem="rYN-20-A4X" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="BRn-JE-j7h"/>
+                            <constraint firstItem="sP5-Kc-pqa" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="GMg-6j-QYG"/>
+                            <constraint firstItem="rYN-20-A4X" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="31" id="L0M-nJ-a8P"/>
+                            <constraint firstItem="02A-5n-AzG" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="57" id="SiC-Lz-9NC"/>
+                            <constraint firstItem="sP5-Kc-pqa" firstAttribute="top" secondItem="rYN-20-A4X" secondAttribute="bottom" constant="8" id="SmP-Cc-ziM"/>
+                            <constraint firstItem="rYN-20-A4X" firstAttribute="top" secondItem="02A-5n-AzG" secondAttribute="bottom" constant="61" id="bh3-Kb-DD0"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sqY-k3-lu7" secondAttribute="trailing" constant="82" id="e5c-TK-tqq"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sP5-Kc-pqa" secondAttribute="trailing" constant="20" id="hwa-Qf-OGz"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="02A-5n-AzG" secondAttribute="trailing" constant="57" id="jqK-Nt-qKD"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="82" id="mV0-gs-ITX"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vXz-Ud-ogK" secondAttribute="trailing" constant="137" id="myw-J4-PWb"/>
+                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="138" id="oX0-fM-gVi"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="bottom" secondItem="vXz-Ud-ogK" secondAttribute="bottom" constant="116" id="rcS-DT-zzI"/>
+                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="vfl-f7-xFA"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vBe-Ug-Nmc" secondAttribute="trailing" constant="20" id="zcj-gl-uO1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mha-RP-4Pt"/>
                     </view>
                     <connections>
@@ -178,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-TW-CE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="1225"/>
+            <point key="canvasLocation" x="1738" y="1152"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="fcZ-DX-K6T">
@@ -513,7 +543,8 @@
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Bzm-9S-ejQ"/>
         <segue reference="aPh-om-mnu"/>
-        <segue reference="aU0-J9-Fx6"/>
+        <segue reference="fan-a5-Q8a"/>
     </inferredMetricsTieBreakers>
 </document>

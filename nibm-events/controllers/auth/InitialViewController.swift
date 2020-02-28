@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  InitialViewController.swift
 //  nibm-events
 //
 //  Created by Aravinda Rathnayake on 2/21/20.
@@ -10,7 +10,7 @@ import UIKit
 import LocalAuthentication
 import RxSwift
 
-class MainViewController: UIViewController {
+class InitialViewController: UIViewController {
     
     private let localAuthContext: LAContext = LAContext()
     private let authManager: AuthManager = AuthManager()
@@ -32,11 +32,11 @@ class MainViewController: UIViewController {
     @IBAction func onGuest(_ sender: NEButton) {}
     
     @IBAction func onSignUp(_ sender: NEButton) {
-        self.transition(identifier: "mainToSignUp")
+        self.transition(identifier: "initialToSignUp")
     }
     
     @IBAction func onSignIn(_ sender: NEButton) {
-        self.transition(identifier: "mainToSignIn")
+        self.transition(identifier: "initialToSignIn")
     }
     
     private func isAuthorized() {
@@ -60,12 +60,12 @@ class MainViewController: UIViewController {
                         
                         if (type != "Not Supported") {
                             self.bioMetric.onNext(type!)
-                            self.transition(identifier: "mainToBMBlocked")
+                            self.transition(identifier: "initialToBMBlocked")
                         }
                 })
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.transition(identifier: "mainToMainTab")
+                self.transition(identifier: "initialToMainTab")
             }
         }
     }

@@ -9,8 +9,6 @@
 import UIKit
 
 class ProfileTableViewController: UITableViewController {
-//    var alert: UIViewController
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,7 +18,7 @@ class ProfileTableViewController: UITableViewController {
         authManager.signOut { [weak self] (_ success, _ error) in
             guard let `self` = self else { return }
             if (error != nil) {
-                print("Something went wrong while signing out")
+                print("Something went wrong while signing out.")
             } else {
                 let alert = NotificationManager.showAlert(
                     header: "Sign Out",
@@ -35,7 +33,7 @@ class ProfileTableViewController: UITableViewController {
     
     private func transitionToRootView() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "profileToMain")
+            TransitionManager.transitionSegue(sender: self, identifier: "profileToAuth")
         }
     }
 }

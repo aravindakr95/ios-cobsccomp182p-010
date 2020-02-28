@@ -30,7 +30,7 @@ class BioMetricsBlockedViewController: UIViewController {
     }
 
     private func setBioMetricsLables() {
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? InitialViewController
 
         mainVC?.availableBioMetricType.subscribe(onNext: { [weak self] type in
             guard let `self` = self else { return }
@@ -62,7 +62,7 @@ class BioMetricsBlockedViewController: UIViewController {
 
     private func transitionToHome() {
         DispatchQueue.main.async {
-            TransitionManager.transitionSegue(sender: self, identifier: "BMBlockedToMainTab")
+            TransitionManager.transitionSegue(sender: self, identifier: "bmBlockedToMainTab")
         }
     }
 }
