@@ -29,6 +29,20 @@ final class DatabaseManager {
         }
     }
     
+    func mergeDocument(collection: String,
+                        documentId: String,
+                        data: [String: Any],
+                        completion: @escaping (_ success: String?, _ error: String?)
+        -> Void) {
+        self.database.collection(collection).document(documentId).setData(data, merge: true) { (error) in
+            if let error = error {
+                completion(nil, error.localizedDescription)
+            } else {
+                completion("Document succuessfully written.", nil)
+            }
+        }
+    }
+    
     func retrieveDocuments(collection: String,
                                   completion: @escaping (_ success: [Event]?, _ error: String?)
         -> Void) {
@@ -41,7 +55,7 @@ final class DatabaseManager {
                 completion(nil, error.localizedDescription)
             } else {
                 let models = snapshot.documents.map { (document) -> Event in
-                    return Event(event: document.data())!
+                    return Event(event: document.data(), id: document.documentID)!
                 }
                 
                 self.events = models
@@ -51,7 +65,7 @@ final class DatabaseManager {
     }
     
     func listenDocumentChanges(collection: String,
-                                      completion: @escaping (_ success: Event?, _ error: String?)
+                               completion: @escaping (_ success: Event?, _ error: String?)
         -> Void) {
         self.database.collection(collection).whereField("timeStamp", isGreaterThan: Date())
             .addSnapshotListener { (querySnapshot, _ error) in
@@ -62,8 +76,8 @@ final class DatabaseManager {
                 } else {
                     snapshot.documentChanges.forEach { diff in
                         if diff.type == .added {
-                            self.events.append(Event(event: diff.document.data())!)
-                            completion(Event(event: diff.document.data())!, nil)
+                            self.events.append(Event(event: diff.document.data(), id: diff.document.documentID)!)
+                            completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
                         }
                     }
                 }

@@ -187,9 +187,9 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bD-C7-gS9">
-                                            <rect key="frame" x="12" y="434" width="83" height="35"/>
+                                            <rect key="frame" x="12" y="434" width="30" height="35"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                            <state key="normal" title="Not Going">
+                                            <state key="normal">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             </state>
                                         </button>

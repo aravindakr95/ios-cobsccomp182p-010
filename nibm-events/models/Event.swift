@@ -11,7 +11,7 @@ import Firebase
 
 struct Event {
     var uid: String
-    var eventId: String
+    var documentId: String
     var timeStamp: Timestamp
     var publisher: String
     var publisherImageUrl: String
@@ -21,9 +21,9 @@ struct Event {
     var eventImageUrl: String
     var isGoing: Bool
     
-    init?(event: [String: Any]) {
+    init?(event: [String: Any], id: String) {
         guard let uid = event["uid"] as? String,
-            let eventId = event["eventId"] as? String,
+            let documentId = id as? String,
             let timeStamp = event["timeStamp"] as? Timestamp,
             let publisher = event["publisher"] as? String,
             let publisherImageUrl = event["publisherImageUrl"] as? String,
@@ -34,7 +34,7 @@ struct Event {
             let isGoing = event["isGoing"] as? Bool else { return nil }
         
         self.uid = uid
-        self.eventId = eventId
+        self.documentId = documentId
         self.timeStamp = timeStamp
         self.publisher = publisher
         self.publisherImageUrl = publisherImageUrl

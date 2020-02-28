@@ -8,12 +8,15 @@
 
 import UIKit
 import Firebase
+import RxSwift
 
 class HomeTableViewController: UITableViewController {
     var activityIndicator: UIAlertController?
     
+    let disposeBag: DisposeBag = DisposeBag()
+    
     var eventsData: [Event] = [Event]()
-    var index: Int = 0
+    var currentIndex: Int?
     
     struct Storyboard {
         static let eventCell = "EventBodyCell"
@@ -28,6 +31,7 @@ class HomeTableViewController: UITableViewController {
         self.configureStyles()
         self.fetchPosts()
         self.listenUpdateEvents()
+        self.updateEventPreference()
     }
     
     @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
@@ -57,12 +61,31 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
+    private func updateEventPreference() {
+        EventBodyCell.onEventPreferenceChange.subscribe(onNext: { [weak self] preference in
+            guard let `self` = self else { return }
+            guard let currentIndex = self.currentIndex else { return }
+                
+            let docId = self.eventsData[currentIndex].documentId
+            
+            DatabaseManager.sharedInstance.mergeDocument(collection: "events",
+                                                          documentId: docId,
+                                                          data: ["isGoing": preference]) { [weak self] (success, error) in
+                if error != nil {
+                    print(error!)
+                } else {
+                   print(success!)
+                }
+            }
+        }).disposed(by: self.disposeBag)
+    }
+    
     private func listenUpdateEvents() {
         DatabaseManager.sharedInstance.listenDocumentChanges(collection: "events") { [weak self] (event, error) in
             guard let `self` = self else { return }
             
             guard let event = event else {
-                print("Error fetching snapshot results: \(error!)")
+                print("Error fetching events: \(error!)")
                 return
             }
             
@@ -95,6 +118,8 @@ extension HomeTableViewController {
         cell.event = self.eventsData[indexPath.section]
         cell.selectionStyle = .none
         cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 0.8470588235)
+        
+        self.currentIndex = indexPath.section
         
         return cell
     }

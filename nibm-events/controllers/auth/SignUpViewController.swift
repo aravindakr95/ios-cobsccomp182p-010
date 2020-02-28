@@ -65,8 +65,6 @@ class SignUpViewController: UIViewController {
 
         // TODO: Refer usage comment
         let isChecked = !cbAgreement.isChecked
-        let authManager: AuthManager = AuthManager()
-        let fieldValidator = FieldValidator()
 
         fields = [
             "First Name": txtFirstName,
@@ -115,7 +113,7 @@ class SignUpViewController: UIViewController {
 
         self.btnSignUp.showLoading()
 
-        authManager.createUser(emailField: txtEmail, passwordField: txtPassword) {[weak self] (userData, error) in
+        AuthManager.sharedInstance.createUser(emailField: txtEmail, passwordField: txtPassword) {[weak self] (userData, error) in
             guard let `self` = self else { return }
 
             if (error != nil) {
