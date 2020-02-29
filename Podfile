@@ -6,10 +6,9 @@ target 'nibm-events' do
   use_frameworks!
 
   # Pods for nibm-events
-  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
-  pod 'Firebase'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyBeaver'
   pod 'SwiftLint'

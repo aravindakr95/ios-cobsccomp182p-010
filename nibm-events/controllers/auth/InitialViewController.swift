@@ -53,6 +53,7 @@ class InitialViewController: UIViewController {
     }
     
     private func canPerformBioMetricsVerification() {
+        self.blurBackground()
         AuthManager.sharedInstance.authWithBioMetrics {[weak self] (type, _ success, error) in
             guard let `self` = self else { return }
             
@@ -70,6 +71,19 @@ class InitialViewController: UIViewController {
             } else {
                 self.transition(identifier: "initialToHome")
             }
+            self.unBlurBackground()
+        }
+    }
+    
+    private func blurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.blur(context: self.view)
+        }
+    }
+    
+    private func unBlurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.removeBlur(context: self.view)
         }
     }
     

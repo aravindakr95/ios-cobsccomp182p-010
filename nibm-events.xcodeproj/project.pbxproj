@@ -10,6 +10,7 @@
 		3451F48E7DB8EDD8D589FD84 /* Pods_nibm_events_nibm_eventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69CD602CEF17EF6905D2F4D /* Pods_nibm_events_nibm_eventsUITests.framework */; };
 		67AC3A2B8F9F0514F1782CF6 /* Pods_nibm_eventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */; };
 		70045621240920350021CB3A /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70045620240920350021CB3A /* AddEventViewController.swift */; };
+		70160849240AB76B00DA127A /* UIEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70160848240AB76B00DA127A /* UIEffects.swift */; };
 		70310BD42402D08C004C81ED /* NEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD32402D08C004C81ED /* NEButton.swift */; };
 		70310BD62402D097004C81ED /* NETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD52402D097004C81ED /* NETextField.swift */; };
 		704BE49C2409A202007D1570 /* logo-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 704BE49B2409A202007D1570 /* logo-banner.png */; };
@@ -78,6 +79,7 @@
 		6C12FFCCB45FD1ADED0281B7 /* Pods_nibm_events.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_events.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1567D5C4768E87E2225428 /* Pods_nibm_eventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nibm_eventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70045620240920350021CB3A /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		70160848240AB76B00DA127A /* UIEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEffects.swift; sourceTree = "<group>"; };
 		70310BD32402D08C004C81ED /* NEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEButton.swift; sourceTree = "<group>"; };
 		70310BD52402D097004C81ED /* NETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextField.swift; sourceTree = "<group>"; };
 		704BE49B2409A202007D1570 /* logo-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-banner.png"; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				7072CCB2240416E2004F0A58 /* FieldValidator.swift */,
+				70160848240AB76B00DA127A /* UIEffects.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				706A227F2408E18A0079E9D0 /* MyEventHeaderCell.swift in Sources */,
 				7072CCA62403A06F004F0A58 /* NotificationManager.swift in Sources */,
 				70310BD62402D097004C81ED /* NETextField.swift in Sources */,
+				70160849240AB76B00DA127A /* UIEffects.swift in Sources */,
 				709BD47F240674BF0032E739 /* EventBodyCell.swift in Sources */,
 				7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */,
 			);

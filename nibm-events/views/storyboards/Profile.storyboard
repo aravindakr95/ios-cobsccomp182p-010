@@ -96,7 +96,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-sample" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-fq-uYv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-fq-uYv">
                                 <rect key="frame" x="82" y="89" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -143,7 +143,6 @@
         <!--Navigation Controller-->
         <scene sceneID="JGX-Nb-SAr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="icl-23-fy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W0g-ye-7uM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="profile-tab" selectedImage="profile-tab" id="WEK-f6-rFc">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
@@ -158,19 +157,19 @@
                         <segue destination="EIk-S9-dVx" kind="relationship" relationship="rootViewController" id="xrf-YK-52q"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icl-23-fy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="317" y="696"/>
         </scene>
         <!--Profile-->
         <scene sceneID="1wM-qG-Q1x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EpO-FS-vZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileVC" id="EIk-S9-dVx" customClass="ProfileViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERH-HJ-zNg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-sample" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-BB-4Tl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-BB-4Tl">
                                 <rect key="frame" x="82" y="97" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -236,6 +235,7 @@
                         <segue destination="6ff-Ls-P06" kind="presentation" identifier="profileToEditProfile" id="68m-SK-zjQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpO-FS-vZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1120" y="695"/>
         </scene>
@@ -261,8 +261,8 @@
     <resources>
         <image name="close" width="30" height="30"/>
         <image name="complete" width="30" height="30"/>
+        <image name="default-user" width="512" height="512"/>
         <image name="edit" width="30" height="30"/>
-        <image name="profile-sample" width="400" height="400"/>
         <image name="profile-tab" width="30" height="30"/>
     </resources>
 </document>
