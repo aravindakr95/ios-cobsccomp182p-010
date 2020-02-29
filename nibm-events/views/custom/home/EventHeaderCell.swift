@@ -39,5 +39,4 @@ class EventHeaderCell: UITableViewCell {
         self.btnBatch.setTitle(event.publisherBatch, for: .normal)
         self.lblLocation.text = event.publishedLocation
     }
-    
 }

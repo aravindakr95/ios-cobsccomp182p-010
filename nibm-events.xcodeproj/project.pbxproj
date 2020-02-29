@@ -32,6 +32,7 @@
 		7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB2240416E2004F0A58 /* FieldValidator.swift */; };
 		7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB52405964C004F0A58 /* EventsTableViewController.swift */; };
 		7072CCB82405965E004F0A58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB72405965E004F0A58 /* ProfileViewController.swift */; };
+		7079AAED240A20AB003C444C /* PublisherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079AAEC240A20AB003C444C /* PublisherProfileViewController.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -99,6 +100,7 @@
 		7072CCB2240416E2004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		7072CCB52405964C004F0A58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		7072CCB72405965E004F0A58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7079AAEC240A20AB003C444C /* PublisherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherProfileViewController.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBM Events-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */,
 				70045620240920350021CB3A /* AddEventViewController.swift */,
+				7079AAEC240A20AB003C444C /* PublisherProfileViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */,
 				7072CCB82405965E004F0A58 /* ProfileViewController.swift in Sources */,
 				70310BD42402D08C004C81ED /* NEButton.swift in Sources */,
+				7079AAED240A20AB003C444C /* PublisherProfileViewController.swift in Sources */,
 				709BD47B240673AF0032E739 /* Event.swift in Sources */,
 				709B0A0E23FF8C6500488BD2 /* InitialViewController.swift in Sources */,
 				70F2C5C62408359A00529625 /* NETextFieldExtension.swift in Sources */,

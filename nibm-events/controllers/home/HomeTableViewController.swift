@@ -34,8 +34,21 @@ class HomeTableViewController: UITableViewController {
         self.updateEventPreference()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "homeToPublisherProfile") {
+            let publisherProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "PublisherProfileVC") as? PublisherProfileViewController
+            guard let index = self.currentIndex else { return }
+            
+            publisherProfileVC!.profile = self.eventsData[index]
+        }
+    }
+    
     @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
-        self.transitionToAddEvent()
+        self.transition(identifier: "homeToAddEvent")
+    }
+    
+    @objc private func publisherProfileImageTapped() {
+        self.transition(identifier: "homeToPublisherProfile")
     }
     
     private func configureStyles() {
@@ -69,7 +82,7 @@ class HomeTableViewController: UITableViewController {
             let docId = self.eventsData[index].documentId
             
             DatabaseManager.sharedInstance.mergeDocument(collection: "events",
-                                                          documentId: docId,
+                                                         documentId: docId!,
                                                           data: ["isGoing": preference]) { [weak self] (success, error) in
                 if error != nil {
                     print(error!)
@@ -97,20 +110,24 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
-    private func transitionToAddEvent() {
+    private func transition(identifier: String) {
         DispatchQueue.main.async {
-            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "homeToAddEvent")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: identifier)
         }
     }
 }
 
 extension HomeTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return eventsData.count
+        if !self.eventsData.isEmpty {
+            return self.eventsData.count
+        } else { return 0 }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if !self.eventsData.isEmpty {
+            return 1
+        } else { return 0 }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -126,6 +143,10 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.eventHeaderCell) as! EventHeaderCell
+        cell.imgProfileView.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(publisherProfileImageTapped))
+        cell.imgProfileView.addGestureRecognizer(tapGesture)
         
         cell.event = self.eventsData[section]
         cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 1)

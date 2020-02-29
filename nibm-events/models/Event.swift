@@ -11,24 +11,26 @@ import Firebase
 
 struct Event {
     var uid: String
-    var documentId: String
+    var documentId: String?
     var timeStamp: Timestamp
     var publisher: String
     var publisherImageUrl: String
     var publisherBatch: String
     var publishedLocation: String
+    var publisherFacebookIdentifier: String
     var body: String
     var eventImageUrl: String
     var isGoing: Bool
     
-    init?(event: [String: Any], id: String) {
+    init?(event: [String: Any], id: String?) {
         guard let uid = event["uid"] as? String,
-            let documentId = id as? String,
+            let documentId = id,
             let timeStamp = event["timeStamp"] as? Timestamp,
             let publisher = event["publisher"] as? String,
             let publisherImageUrl = event["publisherImageUrl"] as? String,
             let publisherBatch = event["publisherBatch"] as? String,
             let publishedLocation = event["publishedLocation"] as? String,
+            let publisherFacebookIdentifier = event["publisherFacebookIdentifier"] as? String,
             let body = event["body"] as? String,
             let eventImageUrl = event["eventImageUrl"] as? String,
             let isGoing = event["isGoing"] as? Bool else { return nil }
@@ -40,6 +42,7 @@ struct Event {
         self.publisherImageUrl = publisherImageUrl
         self.publisherBatch = publisherBatch
         self.publishedLocation = publishedLocation
+        self.publisherFacebookIdentifier = publisherFacebookIdentifier
         self.body = body
         self.eventImageUrl = eventImageUrl
         self.isGoing = isGoing
