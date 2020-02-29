@@ -47,7 +47,7 @@ final class FieldValidator {
         }
 
         switch type {
-        case "Email":
+        case "Email", "Reset Password":
             isValid = isNotEmpty(count: text.count, required: 5) && isValidEmail(email: text)
             validateData = (isValid, type)
         case "Contact Number":

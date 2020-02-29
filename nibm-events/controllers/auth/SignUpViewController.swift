@@ -28,7 +28,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         self.configureStyles()
     }
-
+    
     private func configureStyles() {
         self.txtFirstName.setLeftPaddingPoints(5)
         self.txtFirstName.setRightPaddingPoints(5)
@@ -58,7 +58,7 @@ class SignUpViewController: UIViewController {
     @IBAction func onSignIn(_ sender: NEButton) {
         self.transitionToSignIn()
     }
-
+    
     @IBAction func onSignUp(_ sender: NEButton) {
         var fields: [String: NETextField] = [:]
         var fieldErrors = [String: String]()
@@ -150,6 +150,10 @@ class SignUpViewController: UIViewController {
             }
             self.btnSignUp.hideLoading()
         }
+    }
+    
+    @IBAction func unwindToInitial(_ sender: UIBarButtonItem) {
+        TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "unwindToInitial")
     }
 
     private func transitionToSignIn() {

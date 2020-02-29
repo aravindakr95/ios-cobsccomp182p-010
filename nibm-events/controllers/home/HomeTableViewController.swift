@@ -64,9 +64,9 @@ class HomeTableViewController: UITableViewController {
     private func updateEventPreference() {
         EventBodyCell.onEventPreferenceChange.subscribe(onNext: { [weak self] preference in
             guard let `self` = self else { return }
-            guard let currentIndex = self.currentIndex else { return }
-                
-            let docId = self.eventsData[currentIndex].documentId
+            guard let index = self.currentIndex else { return }
+
+            let docId = self.eventsData[index].documentId
             
             DatabaseManager.sharedInstance.mergeDocument(collection: "events",
                                                           documentId: docId,

@@ -30,6 +30,8 @@ class InitialViewController: UIViewController {
         }
     }
     
+    @IBAction func unwind(segue:UIStoryboardSegue) { }
+    
     @IBAction func onGuest(_ sender: NEButton) {}
     
     @IBAction func onSignUp(_ sender: NEButton) {

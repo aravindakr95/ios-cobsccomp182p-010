@@ -84,7 +84,6 @@
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4MS-z0-Mjw"/>
                     <connections>
                         <segue destination="ogQ-pb-e7K" kind="presentation" identifier="initialToHome" id="fan-a5-Q8a"/>
                         <segue destination="kAi-IV-0Jv" kind="presentation" identifier="initialToSignUp" id="Ky8-1w-p7N"/>
@@ -94,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="-285"/>
+            <point key="canvasLocation" x="3060.8695652173915" y="-285.32608695652175"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="ErM-sM-q2y">
@@ -172,6 +171,20 @@
                                     <action selector="onResetPassword:" destination="hTF-rU-y81" eventType="touchUpInside" id="62W-up-ehj"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-gN-J9h">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Sign In" id="VV0-kD-mRv">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="B1f-Nl-2hc">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="hTF-rU-y81" id="9WS-2d-eQD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -204,9 +217,11 @@
                         <segue destination="fD7-qe-1ua" kind="presentation" identifier="signInToResetPW" id="3FL-Ue-MYr"/>
                         <segue destination="l4y-EF-Kdq" kind="presentation" identifier="signInToBMBlocked" id="p7H-F0-jZq"/>
                         <segue destination="ogQ-pb-e7K" kind="presentation" identifier="signInToHome" id="UpH-Fe-M1j"/>
+                        <segue destination="Kfb-NY-jpV" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="htb-z6-B7A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-TW-CE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Kfb-NY-jpV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1738" y="1152"/>
         </scene>
@@ -260,6 +275,20 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-Uv-7Mg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Reset Password" id="s8e-gO-XCa">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="aLw-AZ-JHM">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="fD7-qe-1ua" id="4nf-lw-eeb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="rmG-21-Npj"/>
@@ -268,11 +297,13 @@
                         <outlet property="btnResetPassword" destination="yYj-RP-4OR" id="npr-fG-qNm"/>
                         <outlet property="txtEmail" destination="3I4-ZI-dv9" id="522-Ji-aJf"/>
                         <segue destination="hTF-rU-y81" kind="presentation" identifier="resetPWToSignIn" id="aPh-om-mnu"/>
+                        <segue destination="PTc-Vy-J68" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="ua2-Ct-i0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfW-3w-ZWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PTc-Vy-J68" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3601" y="950"/>
+            <point key="canvasLocation" x="3610" y="914"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="iRb-lK-TMO">
@@ -480,6 +511,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-Lz-bGh">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Registration" id="Vke-5a-tD7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="ucz-xY-TQ5">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="kAi-IV-0Jv" id="m4x-qN-2Oo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nBp-D8-UsZ"/>
@@ -496,11 +541,13 @@
                         <outlet property="txtLastName" destination="pxI-IC-ZOm" id="kJ8-WL-bIq"/>
                         <outlet property="txtPassword" destination="Bvy-Wz-bgs" id="EmJ-LM-KLu"/>
                         <segue destination="hTF-rU-y81" kind="presentation" identifier="signUpToSignIn" id="cxo-7x-TjM"/>
+                        <segue destination="zC2-Sk-P2m" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="sGb-ue-t3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVG-Lp-Tlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zC2-Sk-P2m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3256.521739130435" y="46.467391304347828"/>
+            <point key="canvasLocation" x="4163.768115942029" y="46.467391304347828"/>
         </scene>
         <!--Bio Metrics Blocked View Controller-->
         <scene sceneID="4DF-8d-Aeg">
@@ -561,8 +608,8 @@
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzm-9S-ejQ"/>
+        <segue reference="p7H-F0-jZq"/>
         <segue reference="cxo-7x-TjM"/>
-        <segue reference="fan-a5-Q8a"/>
+        <segue reference="UpH-Fe-M1j"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -73,6 +73,10 @@ class SignInViewController: UIViewController {
             self.btnSignIn.hideLoading()
         }
     }
+    
+    @IBAction func unwindToInitial(_ sender: UIBarButtonItem) {
+        TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "unwindToInitial")
+    }
 
     private func transition(identifier: String) {
         DispatchQueue.main.async {
