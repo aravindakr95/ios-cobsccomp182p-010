@@ -32,7 +32,7 @@ class HomeTableViewController: UITableViewController {
         super.viewWillAppear(true)
         self.isGuest = UserDefaults.standard.bool(forKey: "isGuest")
         self.btnBack.isEnabled = isGuest!
-        self.btnAddEvent.isEnabled = isGuest!
+        self.btnAddEvent.isEnabled = !isGuest!
         SVProgressHUD.setDefaultAnimationType(.native)
         SVProgressHUD.show(withStatus: "Loading Events")
     }
