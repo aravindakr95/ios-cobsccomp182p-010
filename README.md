@@ -23,13 +23,13 @@ Development IDE             | XCode 10.3
 
 ## Support
 
-From iPhone 6 to all the Latest iPhones with portrait mode.
+Constraints work with, iPhone 7 Plus, 8 Plus with portrait mode.
 
 ## Getting Started
 
 Development and build dependencies are managed via cocoapods repository.
 
-Commands under `nibm-events` directory.
+Commands under `ios-cobsccomp182p-010` directory.
 
 Run `pod install` to install development and build system dependencies.
 
