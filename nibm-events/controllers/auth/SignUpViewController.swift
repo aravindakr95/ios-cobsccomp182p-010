@@ -219,6 +219,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 return
                             } else {
                                 print("data inserted and complete")
+                                UserDefaults.standard.set(data, forKey: "userProfile")
                                 UserDefaults.standard.set(false, forKey: "isAuthorized")
                                 self.btnSignUp.hideLoading()
                                 self.alert = NotificationManager.sharedInstance.showAlert(

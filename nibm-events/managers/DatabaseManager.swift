@@ -12,7 +12,6 @@ import FirebaseStorage
 
 final class DatabaseManager {
     public static let sharedInstance = DatabaseManager()
-    var userProfile: UserProfile!
     
     private let database: Firestore = Firestore.firestore()
     private let storageRef = Storage.storage().reference()

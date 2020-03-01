@@ -50,6 +50,7 @@
 		70A4BE95240B69A8005A9C55 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE94240B69A8005A9C55 /* Publisher.swift */; };
 		70A4BE97240B7EED005A9C55 /* PublisherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */; };
 		70A4BE99240B9198005A9C55 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE98240B9198005A9C55 /* EditEventViewController.swift */; };
+		70A4BEA4240C34C4005A9C55 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BEA3240C34C4005A9C55 /* LoginTest.swift */; };
 		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
 		70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BD2408074B00529625 /* DateExtension.swift */; };
 		70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BF2408286500529625 /* MainTabBarController.swift */; };
@@ -131,6 +132,7 @@
 		70A4BE94240B69A8005A9C55 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherProfileViewController.swift; sourceTree = "<group>"; };
 		70A4BE98240B9198005A9C55 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		70A4BEA3240C34C4005A9C55 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTest.swift; path = "/Users/aravindarathnayake/Desktop/ios-cobsccomp182p-010/nibm-eventsTests/LoginTest.swift"; sourceTree = "<absolute>"; };
 		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F2C5BD2408074B00529625 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		70F2C5BF2408286500529625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 		709B0A2223FF8C6700488BD2 /* nibm-eventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				70A4BEA3240C34C4005A9C55 /* LoginTest.swift */,
 				709B0A2323FF8C6700488BD2 /* nibm_eventsTests.swift */,
 				709B0A2523FF8C6700488BD2 /* Info.plist */,
 			);
@@ -734,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709B0A2423FF8C6700488BD2 /* nibm_eventsTests.swift in Sources */,
+				70A4BEA4240C34C4005A9C55 /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

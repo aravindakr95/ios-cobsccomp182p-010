@@ -30,14 +30,9 @@ final class AuthManager {
         })
     }
     
-    func signIn(emailField: NETextField, passwordField: NETextField,
+    func signIn(emailField: String, passwordField: String,
                 completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
-        guard
-            let email = emailField.text,
-            let password = passwordField.text
-            else { return }
-        
-        Auth.auth().signIn(withEmail: email, password: password, completion: {(_ authResult, error) in
+        Auth.auth().signIn(withEmail: emailField, password: passwordField, completion: {(_ authResult, error) in
             if error != nil {
                 
                 completion(nil, error?.localizedDescription)

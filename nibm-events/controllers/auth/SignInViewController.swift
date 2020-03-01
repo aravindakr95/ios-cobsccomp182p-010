@@ -59,7 +59,7 @@ class SignInViewController: UIViewController {
 
         self.btnSignIn.showLoading()
 
-        AuthManager.sharedInstance.signIn(emailField: txtEmail, passwordField: txtPassword) {[weak self] (_ success, error) in
+        AuthManager.sharedInstance.signIn(emailField: txtEmail.text!, passwordField: txtPassword.text!) {[weak self] (_ success, error) in
             guard let `self` = self else { return }
 
             if (error != nil) {
