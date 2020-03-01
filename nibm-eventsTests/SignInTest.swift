@@ -7,7 +7,7 @@
 
 import XCTest
 
-@testable import nibm-events
+@testable import nibm_events
 
 class LoginTest: XCTestCase {
     
