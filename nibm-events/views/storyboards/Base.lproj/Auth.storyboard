@@ -88,7 +88,7 @@
                         <segue destination="ogQ-pb-e7K" kind="presentation" identifier="initialToHome" id="fan-a5-Q8a"/>
                         <segue destination="kAi-IV-0Jv" kind="presentation" identifier="initialToSignUp" id="Ky8-1w-p7N"/>
                         <segue destination="hTF-rU-y81" kind="presentation" identifier="initialToSignIn" id="V6S-ed-l1l"/>
-                        <segue destination="47U-HF-C8w" kind="show" identifier="initialToBMBlocked" id="Syf-Km-H6d"/>
+                        <segue destination="bay-Th-1pC" kind="show" identifier="initialToAuthBMBlocked" id="9U6-Lo-HVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -217,7 +217,6 @@
                         <segue destination="fD7-qe-1ua" kind="presentation" identifier="signInToResetPW" id="3FL-Ue-MYr"/>
                         <segue destination="ogQ-pb-e7K" kind="presentation" identifier="signInToHome" id="UpH-Fe-M1j"/>
                         <segue destination="Kfb-NY-jpV" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="htb-z6-B7A"/>
-                        <segue destination="47U-HF-C8w" kind="show" identifier="signInToBMBlocked" id="dhm-Ai-yGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-TW-CE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -549,23 +548,66 @@
             </objects>
             <point key="canvasLocation" x="4163.768115942029" y="46.467391304347828"/>
         </scene>
-        <!--BioMetrics-->
-        <scene sceneID="oUs-Ln-gJe">
+        <!--Auth Bio Metrics Blocked View Controller-->
+        <scene sceneID="VES-gD-fTn">
             <objects>
-                <viewControllerPlaceholder storyboardName="BioMetrics" id="47U-HF-C8w" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bd5-B8-l4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="AuthBioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jtn-Cj-WAT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-AZ-4bO">
+                                <rect key="frame" x="157" y="157" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NIBM Events is Locked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-oq-hKe">
+                                <rect key="frame" x="78" y="296" width="258" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unlock with BioMetric to open NIBM Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-Vy-e8V">
+                                <rect key="frame" x="28" y="355" width="374" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-u8-Kdi">
+                                <rect key="frame" x="153" y="403" width="109" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Use BioMetric">
+                                    <color key="titleColor" red="0.2022456229" green="0.59510076050000005" blue="0.85695862769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReAuthenticate:" destination="bay-Th-1pC" eventType="touchUpInside" id="WBz-c0-3S6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6tq-7s-GpM"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBioMetric" destination="EBZ-u8-Kdi" id="aZw-EY-2ux"/>
+                        <outlet property="lblDescription" destination="0gT-Vy-e8V" id="xmD-qE-l2p"/>
+                        <segue destination="ogQ-pb-e7K" kind="show" identifier="authBMBlockedToHome" id="Am1-uc-cbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9DE-Y5-b3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="1620"/>
+            <point key="canvasLocation" x="2448" y="1546"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkbox-deselected" width="64" height="64"/>
         <image name="default-user" width="512" height="512"/>
         <image name="events-logo" width="1200" height="1200"/>
+        <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhm-Ai-yGh"/>
         <segue reference="V6S-ed-l1l"/>
-        <segue reference="UpH-Fe-M1j"/>
+        <segue reference="Am1-uc-cbn"/>
     </inferredMetricsTieBreakers>
 </document>

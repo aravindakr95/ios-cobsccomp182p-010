@@ -17,7 +17,7 @@
 		70575EC92402ED37005264E5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575EC82402ED37005264E5 /* SignUpViewController.swift */; };
 		70575ECB2402F54C005264E5 /* NECustomSwipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECA2402F54C005264E5 /* NECustomSwipButton.swift */; };
 		70575ECD2402F9E6005264E5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */; };
-		70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */; };
+		70575ECF24030690005264E5 /* AuthBioMetricsBlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70575ECE24030690005264E5 /* AuthBioMetricsBlockedViewController.swift */; };
 		706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A22782408DF1D0079E9D0 /* Events.storyboard */; };
 		706A227B2408DF5D0079E9D0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A227A2408DF5D0079E9D0 /* Profile.storyboard */; };
 		706A227F2408E18A0079E9D0 /* MyEventHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */; };
@@ -50,7 +50,6 @@
 		70A4BE95240B69A8005A9C55 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE94240B69A8005A9C55 /* Publisher.swift */; };
 		70A4BE97240B7EED005A9C55 /* PublisherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */; };
 		70A4BE99240B9198005A9C55 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE98240B9198005A9C55 /* EditEventViewController.swift */; };
-		70A4BE9D240BDE66005A9C55 /* BioMetrics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A4BE9C240BDE66005A9C55 /* BioMetrics.storyboard */; };
 		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
 		70F2C5BE2408074B00529625 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BD2408074B00529625 /* DateExtension.swift */; };
 		70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BF2408286500529625 /* MainTabBarController.swift */; };
@@ -93,7 +92,7 @@
 		70575EC82402ED37005264E5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		70575ECA2402F54C005264E5 /* NECustomSwipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECustomSwipButton.swift; sourceTree = "<group>"; };
 		70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMetricsBlockedViewController.swift; sourceTree = "<group>"; };
+		70575ECE24030690005264E5 /* AuthBioMetricsBlockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBioMetricsBlockedViewController.swift; sourceTree = "<group>"; };
 		706A22782408DF1D0079E9D0 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		706A227A2408DF5D0079E9D0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventHeaderCell.swift; sourceTree = "<group>"; };
@@ -132,7 +131,6 @@
 		70A4BE94240B69A8005A9C55 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherProfileViewController.swift; sourceTree = "<group>"; };
 		70A4BE98240B9198005A9C55 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
-		70A4BE9C240BDE66005A9C55 /* BioMetrics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BioMetrics.storyboard; sourceTree = "<group>"; };
 		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F2C5BD2408074B00529625 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		70F2C5BF2408286500529625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				709B0A1723FF8C6700488BD2 /* LaunchScreen.storyboard */,
 				706A22782408DF1D0079E9D0 /* Events.storyboard */,
 				706A227A2408DF5D0079E9D0 /* Profile.storyboard */,
-				70A4BE9C240BDE66005A9C55 /* BioMetrics.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -223,7 +220,6 @@
 			children = (
 				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
 				70F2C5BF2408286500529625 /* MainTabBarController.swift */,
-				70A4BE9E240BE0EA005A9C55 /* shared */,
 				706A227D2408E0E70079E9D0 /* profile */,
 				706A227C2408E0E00079E9D0 /* events */,
 				7072CCA92403A625004F0A58 /* auth */,
@@ -299,6 +295,7 @@
 		7072CCA92403A625004F0A58 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				70575ECE24030690005264E5 /* AuthBioMetricsBlockedViewController.swift */,
 				709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */,
 				70575EC62402E8EC005264E5 /* SignInViewController.swift */,
 				70575EC82402ED37005264E5 /* SignUpViewController.swift */,
@@ -412,14 +409,6 @@
 				70A4BE94240B69A8005A9C55 /* Publisher.swift */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		70A4BE9E240BE0EA005A9C55 /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				70575ECE24030690005264E5 /* BioMetricsBlockedViewController.swift */,
-			);
-			path = shared;
 			sourceTree = "<group>";
 		};
 		FF5A668321F45836ACCC55EB /* Pods */ = {
@@ -557,7 +546,6 @@
 				706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
-				70A4BE9D240BDE66005A9C55 /* BioMetrics.storyboard in Resources */,
 				704BE49C2409A202007D1570 /* logo-banner.png in Resources */,
 				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
 			);
@@ -709,7 +697,7 @@
 				70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */,
 				70575ECB2402F54C005264E5 /* NECustomSwipButton.swift in Sources */,
 				70045621240920350021CB3A /* AddEventViewController.swift in Sources */,
-				70575ECF24030690005264E5 /* BioMetricsBlockedViewController.swift in Sources */,
+				70575ECF24030690005264E5 /* AuthBioMetricsBlockedViewController.swift in Sources */,
 				7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */,
 				7072CCA224039F96004F0A58 /* AuthManager.swift in Sources */,
 				7072CCAE2403A9DE004F0A58 /* DatabaseManager.swift in Sources */,

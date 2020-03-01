@@ -15,8 +15,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblContactNumber: UILabel!
     @IBOutlet weak var lblFacebookIdentifier: UILabel!
     
-    var bioMetricType: String = "Not Supported"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isAuthorized()
@@ -66,14 +64,11 @@ class ProfileViewController: UIViewController {
             if (error != nil) {
                 let alert = NotificationManager.sharedInstance.showAlert(
                     header: "Authentication Failed",
-                    body: error!, action: "Okay", handler: {(_: UIAlertAction!) in
-                        
-                        if (type != "Not Supported") {
-                            self.bioMetricType = type!
-                            self.transition(identifier: "profileToBMBlocked")
-                        }
-                })
-                self.present(alert, animated: true, completion: nil)
+                    body: error!, action: "Okay")
+                
+                if (type != "Not Supported") {
+                    self.isAuthorized()
+                }
             }
             self.unBlurBackground()
         }

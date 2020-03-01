@@ -1,5 +1,5 @@
 //
-//  BioMetricsBlockedViewController.swift
+//  AuthBioMetricsBlockedViewController.swift
 //  nibm-events
 //
 //  Created by Aravinda Rathnayake on 2/24/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BioMetricsBlockedViewController: UIViewController {
+class AuthBioMetricsBlockedViewController: UIViewController {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnBioMetric: UIButton!
     
@@ -68,7 +68,7 @@ class BioMetricsBlockedViewController: UIViewController {
 
     private func transitionToHome() {
         DispatchQueue.main.async {
-            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "bmBlockedToHome")
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "authBMBlockedToHome")
         }
     }
 }

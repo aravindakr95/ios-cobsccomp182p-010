@@ -23,8 +23,8 @@ class InitialViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "initialToBMBlocked") {
-            if let viewController = segue.destination as? BioMetricsBlockedViewController {
+        if (segue.identifier == "initialToAuthBMBlocked") {
+            if let viewController = segue.destination as? AuthBioMetricsBlockedViewController {
                 viewController.bioMetricType = self.bioMetricType
             }
         }
@@ -64,7 +64,7 @@ class InitialViewController: UIViewController {
                         
                         if (type != "Not Supported") {
                             self.bioMetricType = type!
-                            self.transition(identifier: "initialToBMBlocked")
+                            self.transition(identifier: "initialToAuthBMBlocked")
                         }
                 })
                 self.present(alert, animated: true, completion: nil)
