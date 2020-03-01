@@ -67,6 +67,14 @@
             </objects>
             <point key="canvasLocation" x="187" y="800"/>
         </scene>
+        <!--Auth-->
+        <scene sceneID="taJ-TQ-kxU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="gKC-tb-0eq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1Q-Fl-Z5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="292"/>
+        </scene>
         <!--NIBM Events-->
         <scene sceneID="LNs-5R-GcQ">
             <objects>
@@ -250,6 +258,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="NIBM Events" id="EgV-D8-eCn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="JUu-Ih-C4u">
+                            <connections>
+                                <action selector="onGoBack:" destination="T5D-Gx-FeG" id="7lH-aY-w0K"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" image="new-event" id="iaW-eu-Xhu">
                             <connections>
                                 <action selector="onAddEvent:" destination="T5D-Gx-FeG" id="AT8-Cc-tWt"/>
@@ -259,13 +272,18 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="btnAddEvent" destination="iaW-eu-Xhu" id="CcU-9c-Bjm"/>
+                        <outlet property="btnBack" destination="JUu-Ih-C4u" id="yw5-o2-4yz"/>
                         <segue destination="stu-QG-UDO" kind="presentation" identifier="homeToAddEvent" id="GQZ-bc-KKg"/>
                         <segue destination="z0r-oa-LCR" kind="show" identifier="homeToPublisherProfile" id="ezg-Ah-uoR"/>
+                        <segue destination="gKC-tb-0eq" kind="show" identifier="homeToInitial" id="dT6-g5-n3R"/>
+                        <segue destination="jXC-qh-cVM" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="AjK-NH-OxV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHq-Cg-JBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jXC-qh-cVM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="969" y="800"/>
+            <point key="canvasLocation" x="933" y="745"/>
         </scene>
         <!--Profile-->
         <scene sceneID="DgP-oz-vEF">

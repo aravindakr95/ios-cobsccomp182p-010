@@ -13,6 +13,10 @@ import RxSwift
 
 class HomeTableViewController: UITableViewController {
     let disposeBag: DisposeBag = DisposeBag()
+    var isGuest: Bool?
+    
+    @IBOutlet weak var btnBack: UIBarButtonItem!
+    @IBOutlet weak var btnAddEvent: UIBarButtonItem!
     
     var eventsData: [Event] = [Event]()
     var currentIndex: Int?
@@ -26,6 +30,9 @@ class HomeTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.isGuest = UserDefaults.standard.bool(forKey: "isGuest")
+        self.btnBack.isEnabled = isGuest!
+        self.btnAddEvent.isEnabled = isGuest!
         SVProgressHUD.setDefaultAnimationType(.native)
         SVProgressHUD.show(withStatus: "Loading Events")
     }
@@ -35,13 +42,18 @@ class HomeTableViewController: UITableViewController {
         
         self.configureStyles()
         self.fetchPosts()
-        //        self.listenUpdateEvents()
+        self.listenUpdateEvents()
         self.updateEventPreference()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         SVProgressHUD.dismiss()
+    }
+    
+    @IBAction func onGoBack(_ sender: UIBarButtonItem) {
+        UserDefaults.standard.set(false, forKey: "isGuest")
+        self.transition(identifier: "unwindToInitial")
     }
     
     @IBAction func onAddEvent(_ sender: UIBarButtonItem) {

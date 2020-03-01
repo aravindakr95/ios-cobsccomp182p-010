@@ -32,7 +32,10 @@ class InitialViewController: UIViewController {
     
     @IBAction func unwind(segue:UIStoryboardSegue) { }
     
-    @IBAction func onGuest(_ sender: NEButton) {}
+    @IBAction func onGuest(_ sender: NEButton) {
+        UserDefaults.standard.set(true, forKey: "isGuest")
+        self.transition(identifier: "initialToHome")
+    }
     
     @IBAction func onSignUp(_ sender: NEButton) {
         self.transition(identifier: "initialToSignUp")

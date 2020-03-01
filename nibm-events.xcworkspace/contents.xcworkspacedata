@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/aravindarathnayake/Desktop/ios-cobsccomp182p-010/nibm-eventsTests/LoginTest.swift">
-   </FileRef>
-   <FileRef
       location = "group:nibm-events.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,6 +1,6 @@
 //
 //  LoginTest.swift
-//  
+//
 //
 //  Created by Aravinda Rathnayake on 3/1/20.
 //
@@ -10,7 +10,7 @@ import XCTest
 @testable import nibm-events
 
 class LoginTest: XCTestCase {
-
+    
     var loginView: SignInViewController!
     var authDataManager  : AuthManager!
     
@@ -65,6 +65,6 @@ class LoginTest: XCTestCase {
         }
     }
     
-
-
+    
+    
 }

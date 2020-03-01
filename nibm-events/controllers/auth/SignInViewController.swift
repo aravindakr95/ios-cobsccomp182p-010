@@ -34,6 +34,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func onSignIn(_ sender: NEButton) {
+        UserDefaults.standard.set(false, forKey: "isGuest")
         var fields: [String: NETextField] = [:]
         var fieldErrors = [String: String]()
 
