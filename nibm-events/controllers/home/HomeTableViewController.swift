@@ -35,7 +35,7 @@ class HomeTableViewController: UITableViewController {
         
         self.configureStyles()
         self.fetchPosts()
-        self.listenUpdateEvents()
+        //        self.listenUpdateEvents()
         self.updateEventPreference()
     }
     

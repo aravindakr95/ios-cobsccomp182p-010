@@ -10,10 +10,11 @@ import UIKit
 import MobileCoreServices
 import DateTimePicker
 import SVProgressHUD
+import FirebaseFirestore
 
 class AddEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var isNewEventImage: Bool?
-    var dateTime: String?
+    var dateTime: Timestamp?
     
     @IBOutlet weak var imgEvent: UIImageView!
     
@@ -28,7 +29,7 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.is12HourFormat = true
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
-            self.dateTime = date.description
+            self.dateTime = Timestamp(date: Date())
             let omitTimezone = date.description.components(separatedBy: "+")
             self.btnDateTime.setTitle(omitTimezone[0], for: .normal)
         }
@@ -62,20 +63,6 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
             
             return
         }
-        
-        if invokeServices() == true {
-            let alert = NotificationManager.sharedInstance.showAlert(
-                header: "Add Event Success",
-                body: "Event is recoreded successfully.",
-                action: "Okay",
-                handler: {(_: UIAlertAction!) in
-                    self.dismiss(animated: true, completion: nil)
-            })
-            
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        
     }
     
     @IBAction func onCancelEvent(_ sender: UIBarButtonItem) {
@@ -142,45 +129,49 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func invokeServices() -> Bool {
-        var isSuccess: Bool = false
-        
+    private func invokeServices() {
         SVProgressHUD.show(withStatus: "Please wait")
         guard let user = AuthManager.sharedInstance.user,
             let profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String : Any])
-            else { return false }
-        
-        if self.isNewEventImage == true {
-            DatabaseManager.sharedInstance.uploadImage(image: self.imgEvent.image!,
-                                                       email: user.email!,
-                                                       type: .event)
-            { (url, error) in
-                if url != nil {
-                    let data: [String: Any] = [
-                        "uid": user.uid,
-                        "publisher": profile.firstName + profile.lastName,
-                        "publisherBatch": profile.batch,
-                        "publisherContactNumber": profile.contactNumber,
-                        "publisherFacebookIdentifier": profile.facebookIdentifier.uppercased(),
-                        "publisherImageUrl": profile.profileImageUrl,
-                        "publishedLocation": "Colombo", // As per Location picker gives me a error (cannot comple objective c library)
-                        "timeStamp": self.dateTime!,
-                        "title": self.txtEventName.text!,
-                        "isGoing": false,
-                        "eventImageUrl": url
-                    ]
-                    
-                    DatabaseManager.sharedInstance.insertDocument(collection: "events", data: data) { (success, error) in
-                        if error == nil {
-                            SVProgressHUD.dismiss()
-                            isSuccess = true
-                        }
-                    }
-                }
-            }
+            else { return }
+        DatabaseManager.sharedInstance.uploadImage(image: self.imgEvent.image!,
+                                                   email: user.email!,
+                                                   type: .event) { (url, error) in
+                                                    if url != nil {
+                                                        let data: [String: Any] = [
+                                                            "uid": user.uid,
+                                                            "publisher": profile.firstName + profile.lastName,
+                                                            "publisherBatch": profile.batch.uppercased(),
+                                                            "publisherContactNumber": profile.contactNumber,
+                                                            "publisherFacebookIdentifier": profile.facebookIdentifier,
+                                                            "publisherImageUrl": profile.profileImageUrl,
+                                                            "publishedLocation": "Colombo", // As per Location picker gives me a error hardcoded it (cannot comple objective c library)
+                                                            "timeStamp": self.dateTime,
+                                                            "title": self.txtEventName.text!,
+                                                            "body": self.txtEventBody.text!,
+                                                            "isGoing": false,
+                                                            "eventImageUrl": url!
+                                                        ]
+                                                        
+                                                        DatabaseManager.sharedInstance.insertDocument(collection: "events", data: data) { (success, error) in
+                                                            if error == nil {
+                                                                SVProgressHUD.dismiss()
+                                                                let alert = NotificationManager.sharedInstance.showAlert(
+                                                                    header: "Add Event Success",
+                                                                    body: "Event is recoreded successfully.",
+                                                                    action: "Okay",
+                                                                    handler: {(_: UIAlertAction!) in
+                                                                        self.dismiss(animated: true, completion: nil)
+                                                                })
+                                                                
+                                                                self.present(alert, animated: true, completion: nil)
+                                                            } else { print("not insert document")}
+                                                        }
+                                                    } else {
+                                                        print ("not upload")
+                                                        
+                                                    }
         }
-        
-        return isSuccess
     }
     
     private func configureStyles() {

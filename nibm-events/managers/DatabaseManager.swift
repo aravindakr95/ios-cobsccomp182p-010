@@ -131,7 +131,7 @@ final class DatabaseManager {
     
     func uploadImage(image: UIImage,
                      email: String,
-                     type: UploadType ,
+                     type: UploadType,
                      completion: @escaping (_ url: String?, _ error: String?)
         -> Void) {
         guard let imageToUpload = image.jpegData(compressionQuality: 0.75) else { return }
@@ -141,11 +141,11 @@ final class DatabaseManager {
         var stRef: StorageReference?
         var urlPath: String?
         
-        if (type == .event) {
-            urlPath = "events/\(email)"
+        if (type == .profile) {
+            urlPath = "users/\(email)"
             stRef = self.storageRef.child(urlPath!)
         } else {
-            urlPath = "users/\(UUID().uuidString)"
+            urlPath = "events/\(UUID().uuidString)"
             stRef = self.storageRef.child(urlPath!)
         }
         
