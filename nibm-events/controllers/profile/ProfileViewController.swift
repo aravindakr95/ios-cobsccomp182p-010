@@ -13,7 +13,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblFullName: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblContactNumber: UILabel!
-    @IBOutlet weak var lblFacebookIdentifier: UILabel!
+    
+    @IBOutlet weak var btnFacebookIdentifier: UIButton!
+    
+    var profile: UserProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +78,18 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureStyles() {
-        self.profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
-        self.profileImageView.layer.masksToBounds = true
+        self.profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String: String])
+        guard let profile = profile else { return }
+        
+        let imgUrl = URL(string: profile.profileImageUrl)
+        self.profileImageView.kf.indicatorType = .activity
+        self.profileImageView.kf.setImage(with: imgUrl)
+        
+        self.lblEmail.text = AuthManager.sharedInstance.user.email
+        self.lblFullName!.text = profile.firstName + profile.lastName
+        self.lblContactNumber.text = profile.contactNumber
+        
+        self.btnFacebookIdentifier.setTitle(profile.facebookIdentifier, for: .normal)
     }
     
     private func blurBackground() {

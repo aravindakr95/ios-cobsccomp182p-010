@@ -236,6 +236,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnFacebookIdentifier" destination="KXU-PH-e5X" id="6mU-lc-uYP"/>
                         <outlet property="lblContactNumber" destination="Ls7-y3-msp" id="GHB-18-rp9"/>
                         <outlet property="lblEmail" destination="oNq-mX-Sbs" id="csn-ul-exI"/>
                         <outlet property="lblFullName" destination="icK-1U-Vcy" id="Yoa-FG-zd4"/>

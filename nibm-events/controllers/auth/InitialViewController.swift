@@ -50,6 +50,7 @@ class InitialViewController: UIViewController {
             guard let `self` = self else { return }
             
             if (error == nil) {
+                UserDefaults.standard.set(false, forKey: "isGuest")
                 self.canPerformBioMetricsVerification()
             }
         }

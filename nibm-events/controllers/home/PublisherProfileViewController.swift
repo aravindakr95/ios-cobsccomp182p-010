@@ -36,10 +36,6 @@ class PublisherProfileViewController: UIViewController {
         self.lblBatch!.text = profile.publisherBatch
         self.lblContactNumber.text = profile.publisherContactNumber
         self.btnFacebookIdentifier.setTitle(profile.publisherFacebookIdentifier, for: .normal)
-        
-        self.profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
-        self.profileImageView.layer.masksToBounds = true
-        
     }
     
     @IBAction func onCancel(_ sender: UIBarButtonItem) {
