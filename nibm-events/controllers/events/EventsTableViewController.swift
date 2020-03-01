@@ -7,23 +7,124 @@
 //
 
 import UIKit
+import SVProgressHUD
+import RxSwift
 
 class EventsTableViewController: UITableViewController {
+    let disposeBag: DisposeBag = DisposeBag()
+    var eventsData: [Event] = [Event]()
+    var currentIndex: Int?
+
+    struct Storyboard {
+        static let myEventCell = "MyEventBodyCell"
+        static let myEventHeaderCell = "MyEventHeaderCell"
+        static let postHeaderHeight: CGFloat = 57.0
+        static let postCellDefaultHeight: CGFloat = 578.0
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        SVProgressHUD.setDefaultAnimationType(.native)
+        SVProgressHUD.show(withStatus: "Loading Events")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configureStyles()
+        self.fetchPosts()
+        self.openEditEvent()
     }
 
-    /*
-    // MARK: - Navigation
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        SVProgressHUD.dismiss()
+    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "eventsToEditEvent") {
+            guard let index = self.currentIndex else { return }
+            let editEventVC = self.storyboard?.instantiateViewController(withIdentifier: "EditEventVC")
+                as? EditEventViewController
+
+            editEventVC!.event = self.eventsData[index]
+        }
     }
-    */
+    
+    private func openEditEvent() {
+        MyEventHeaderCell.onEditPreferenceChange.subscribe(onNext: { [weak self] data in
+            guard let `self` = self else { return }
+            if data != "" {
+                self.transition(identifier: "eventsToEditEvent")
+            }
+
+        }).disposed(by: disposeBag)
+    }
+
+    private func configureStyles() {
+        self.tableView.estimatedRowHeight = Storyboard.postCellDefaultHeight
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.separatorColor = UIColor.clear
+    }
+
+    private func fetchPosts() {
+        DatabaseManager.sharedInstance.retrieveDocuments(collection: "events") { [weak self] (events, error) in
+            guard let `self` = self else { return }
+
+            guard let events = events else {
+                print("Error fetching snapshot results: \(error!)")
+                return
+            }
+
+            self.eventsData = events
+
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    private func transition(identifier: String) {
+        DispatchQueue.main.async {
+            TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: identifier)
+        }
+    }
+}
+
+extension EventsTableViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if !self.eventsData.isEmpty {
+            return self.eventsData.count
+        } else { return 0 }
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !self.eventsData.isEmpty {
+            return 1
+        } else { return 0 }
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.myEventCell, for: indexPath) as! MyEventBodyCell
+        cell.event = self.eventsData[indexPath.section]
+        cell.selectionStyle = .none
+        cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 0.8470588235)
+
+        self.currentIndex = indexPath.section
+
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.myEventHeaderCell) as! MyEventHeaderCell
+
+        cell.event = self.eventsData[section]
+        cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 1)
+
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return Storyboard.postHeaderHeight
+    }
 
 }

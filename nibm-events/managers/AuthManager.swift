@@ -12,7 +12,7 @@ import FirebaseAuth
 
 final class AuthManager {
     public static let sharedInstance = AuthManager()
-    private var userProfile: User!
+    var userProfile: User!
     
     func createUser(emailField: NETextField, passwordField: NETextField,
                            completion: @escaping (_ success: User?, _ error: String?) -> Void) {
@@ -25,7 +25,6 @@ final class AuthManager {
             if error != nil {
                 completion(nil, error?.localizedDescription)
             } else {
-                AuthManager.sharedInstance.userProfile = authResult?.user
                 completion(authResult?.user, nil)
             }
         })
@@ -43,6 +42,7 @@ final class AuthManager {
 
                 completion(nil, error?.localizedDescription)
             } else {
+                self.userProfile = authResult?.user
                 completion(true, nil)
             }
         })

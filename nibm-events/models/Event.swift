@@ -13,11 +13,12 @@ struct Event {
     var uid: String
     var documentId: String?
     var timeStamp: Timestamp
-    var publisher: String
-    var publisherImageUrl: String
-    var publisherBatch: String
-    var publishedLocation: String
-    var publisherFacebookIdentifier: String
+    var title: String
+    var publisher: String?
+    var publisherImageUrl: String?
+    var publisherBatch: String?
+    var publishedLocation: String?
+    var publisherFacebookIdentifier: String?
     var body: String
     var eventImageUrl: String
     var isGoing: Bool
@@ -26,6 +27,7 @@ struct Event {
         guard let uid = event["uid"] as? String,
             let documentId = id,
             let timeStamp = event["timeStamp"] as? Timestamp,
+            let title = event["title"] as? String,
             let publisher = event["publisher"] as? String,
             let publisherImageUrl = event["publisherImageUrl"] as? String,
             let publisherBatch = event["publisherBatch"] as? String,
@@ -38,6 +40,7 @@ struct Event {
         self.uid = uid
         self.documentId = documentId
         self.timeStamp = timeStamp
+        self.title = title
         self.publisher = publisher
         self.publisherImageUrl = publisherImageUrl
         self.publisherBatch = publisherBatch

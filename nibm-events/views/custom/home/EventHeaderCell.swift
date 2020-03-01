@@ -10,7 +10,7 @@ import UIKit
 
 class EventHeaderCell: UITableViewCell {
     @IBOutlet weak var imgProfileView: UIImageView!
-    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var lblEventName: UILabel!
     @IBOutlet weak var btnBatch: UIButton!
     @IBOutlet weak var lblLocation: UILabel!
     
@@ -21,7 +21,7 @@ class EventHeaderCell: UITableViewCell {
     }
     
     private func updateUI() {
-        let imgUrl = URL(string: event.publisherImageUrl)
+        let imgUrl = URL(string: event.publisherImageUrl!)
         
         self.imgProfileView.kf.indicatorType = .activity
         self.imgProfileView.kf.setImage(with: imgUrl)
@@ -29,7 +29,7 @@ class EventHeaderCell: UITableViewCell {
         self.imgProfileView.layer.cornerRadius = imgProfileView.bounds.width / 2.0
         self.imgProfileView.layer.masksToBounds = true
         
-        self.lblUsername.text = event.publisher
+        self.lblEventName.text = event.title
         
         self.btnBatch.layer.borderWidth = 1.0
         self.btnBatch.layer.cornerRadius = 2.0

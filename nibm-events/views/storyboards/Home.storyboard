@@ -90,7 +90,7 @@
                                                 <constraint firstAttribute="width" constant="36" id="Waq-Sj-Grh"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aravinda Rathnayake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weK-cc-ban">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aurudu Festival 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weK-cc-ban">
                                             <rect key="frame" x="56" y="7" width="168" height="22"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -128,8 +128,8 @@
                                 <connections>
                                     <outlet property="btnBatch" destination="OIe-O3-jIC" id="EPe-vl-amU"/>
                                     <outlet property="imgProfileView" destination="nNV-k4-foN" id="oWO-Nj-qCq"/>
+                                    <outlet property="lblEventName" destination="weK-cc-ban" id="N20-Q4-ABP"/>
                                     <outlet property="lblLocation" destination="fBc-vW-WCy" id="5RV-QM-okf"/>
-                                    <outlet property="lblUsername" destination="weK-cc-ban" id="N20-Q4-ABP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventBodyCell" rowHeight="578" id="tYl-9g-SoI" customClass="EventBodyCell" customModule="NIBM_Events" customModuleProvider="target">
@@ -286,7 +286,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-vY-YfT" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="21" y="429" width="373" height="55"/>
+                                <rect key="frame" x="20" y="501" width="374" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="textColor"/>
@@ -299,11 +299,23 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="Bsn-qR-XmT">
-                                <rect key="frame" x="82" y="106" width="250" height="250"/>
+                                <rect key="frame" x="107" y="80" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-u5-MPQ" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="369" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="EVENT LOCATION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddLocation:" destination="hJk-QN-3oc" eventType="touchUpInside" id="5Z5-iz-8n2"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-Jf-lt3" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="21" y="492" width="373" height="135"/>
+                                <rect key="frame" x="21" y="564" width="373" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="textColor"/>
@@ -315,23 +327,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-u5-MPQ" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="635" width="374" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvl-q3-Aya" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="431" width="374" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="EVENT LOCATION">
+                                <state key="normal" title="DATE AND TIME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onAddLocation:" destination="hJk-QN-3oc" eventType="touchUpInside" id="5Z5-iz-8n2"/>
+                                    <action selector="onAddDateTime:" destination="hJk-QN-3oc" eventType="touchUpInside" id="gaD-vZ-c8u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-e2-DbL">
-                                <rect key="frame" x="162" y="364" width="91" height="35"/>
+                                <rect key="frame" x="170" y="300" width="74" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="Event Photo">
+                                <state key="normal" title="Set Photo">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -357,6 +369,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btndateTime" destination="Fvl-q3-Aya" id="C6Y-79-5Vt"/>
                         <outlet property="imgEvent" destination="Bsn-qR-XmT" id="dUC-c3-g27"/>
                         <outlet property="txtEventBody" destination="1Wn-Jf-lt3" id="95P-sU-SC4"/>
                         <outlet property="txtEventName" destination="HxX-vY-YfT" id="WJO-xz-lmC"/>
@@ -392,7 +405,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-sample" translatesAutoresizingMaskIntoConstraints="NO" id="YxU-np-2mu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="YxU-np-2mu">
                                 <rect key="frame" x="82" y="145" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -476,6 +489,5 @@
         <image name="home-tab" width="30" height="30"/>
         <image name="like-outline" width="30" height="30"/>
         <image name="new-event" width="30" height="30"/>
-        <image name="profile-sample" width="400" height="400"/>
     </resources>
 </document>

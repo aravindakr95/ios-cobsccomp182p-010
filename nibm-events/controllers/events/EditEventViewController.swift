@@ -1,49 +1,49 @@
 //
-//  AddEventViewController.swift
+//  EditEventViewController.swift
 //  nibm-events
 //
-//  Created by Aravinda Rathnayake on 2/28/20.
+//  Created by Aravinda Rathnayake on 3/1/20.
 //  Copyright © 2020 Aravinda Rathnayake. All rights reserved.
 //
 
 import UIKit
-import MobileCoreServices
 import DateTimePicker
+import MobileCoreServices
 
-class AddEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var isNewEventImage: Bool?
+class EditEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var imgEventView: UIImageView!
     
-    @IBOutlet weak var imgEvent: UIImageView!
+    @IBOutlet weak var btnEventLocation: NEButton!
+    @IBOutlet weak var btnDateTime: NEButton!
     
-    @IBOutlet weak var txtEventName: NETextField!
-    @IBOutlet weak var txtEventBody: NETextField!
+    @IBOutlet weak var imgEventTitle: NETextField!
+    @IBOutlet weak var txtEventDescription: NETextField!
     
-    @IBOutlet weak var btndateTime: NEButton!
+    var isNewEventImage: Bool = false
     
-    @IBAction func onAddDateTime(_ sender: NEButton) {
+    var event: Event! {
+        didSet {
+            self.updateUI()
+        }
+    }
+    
+    @IBAction func onChangeLocation(_ sender: NEButton) {}
+    
+    @IBAction func onChangeDateTime(_ sender: NEButton) {
         let picker = DateTimePicker.show()
         picker.is12HourFormat = true
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
             let omitTimezone = date.description.components(separatedBy: "+")
-            self.btndateTime.setTitle(omitTimezone[0], for: .normal)
+            self.btnDateTime.setTitle(omitTimezone[0], for: .normal)
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configureStyles()
-    }
-    
-    @IBAction func onAddEvent(_ sender: UIBarButtonItem) {}
-    
-    @IBAction func onCancelEvent(_ sender: UIBarButtonItem) {
+    @IBAction func onCancel(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onAddLocation(_ sender: NEButton) {}
-    
-    @IBAction func onAddEventPhoto(_ sender: UIButton) {
+    @IBAction func btnEditEventPhoto(_ sender: UIButton) {
         let alert = UIAlertController(title: "Select Event Image From", message: "", preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
@@ -77,20 +77,14 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
         self.present(alert, animated: true)
     }
     
-    @objc func imageError(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafeRawPointer) {
-        if error != nil {
-            let alert = UIAlertController(title: "Save Failed", message: "Failed to save image.", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
-        }
+    private func updateUI() {
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            imgEvent.image = image
+            self.imgEventView.image = image
             
             if isNewEventImage == true {
                 guard let userProfile = AuthManager.sharedInstance.userProfile,
@@ -106,17 +100,5 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
             }
         }
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    private func configureStyles() {
-        self.txtEventName.setLeftPaddingPoints(5)
-        self.txtEventName.setRightPaddingPoints(5)
-        
-        self.txtEventBody.setLeftPaddingPoints(5)
-        self.txtEventBody.setRightPaddingPoints(5)
     }
 }

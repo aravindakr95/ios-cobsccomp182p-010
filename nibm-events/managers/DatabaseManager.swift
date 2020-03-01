@@ -7,17 +7,20 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 
 final class DatabaseManager {
     private let database: Firestore = Firestore.firestore()
+    private let storageRef = Storage.storage().reference()
+    
     private var events = [Event]()
     
     public static let sharedInstance = DatabaseManager()
     
     func insertDocument(collection: String,
-                               data: [String: String],
-                               completion: @escaping (_ success: Bool?, _ error: String?)
+                        data: [String: String],
+                        completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
         
         self.database.collection(collection).addDocument(data: data) { (error) in
@@ -30,9 +33,9 @@ final class DatabaseManager {
     }
     
     func mergeDocument(collection: String,
-                        documentId: String,
-                        data: [String: Any],
-                        completion: @escaping (_ success: String?, _ error: String?)
+                       documentId: String,
+                       data: [String: Any],
+                       completion: @escaping (_ success: String?, _ error: String?)
         -> Void) {
         self.database.collection(collection).document(documentId).setData(data, merge: true) { (error) in
             if let error = error {
@@ -44,7 +47,7 @@ final class DatabaseManager {
     }
     
     func retrieveDocuments(collection: String,
-                                  completion: @escaping (_ success: [Event]?, _ error: String?)
+                           completion: @escaping (_ success: [Event]?, _ error: String?)
         -> Void) {
         self.database.collection(collection).getDocuments { (querySnapshot, error) in
             guard let snapshot = querySnapshot else {
@@ -81,6 +84,32 @@ final class DatabaseManager {
                         }
                     }
                 }
+        }
+    }
+    
+    func uploadImage(image: UIImage,
+                     email: String,
+                     type: UploadType ,
+                     completion: @escaping (_ success: String?, _ error: Bool?)
+        -> Void) {
+        guard let imageToUpload = image.jpegData(compressionQuality: 0.75) else { return }
+        let metaData: StorageMetadata = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        
+        var stRef: StorageReference?
+        
+        if (type == .event) {
+            stRef = self.storageRef.child("users/\(email)")
+        } else {
+            stRef = self.storageRef.child("events/\(UUID().uuidString)")
+        }
+        
+        stRef!.putData(imageToUpload, metadata: metaData) { (metaData, uploadError) in
+            if metaData != nil , uploadError == nil {
+                completion("Image successfully inserted to the storage." , true);
+            } else {
+                completion(uploadError?.localizedDescription , false)
+            }
         }
     }
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6j-EM-6Q4">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,73 +15,95 @@
             <objects>
                 <tableViewController storyboardIdentifier="MyEventVC" id="GNH-AN-xcT" customClass="EventsTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Qaf-tg-67B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="FAy-Vw-97N">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="57"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyEventHeaderCell" rowHeight="57" id="FAy-Vw-97N" customClass="MyEventHeaderCell" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAy-Vw-97N" id="esV-Cz-yEW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Aurudu Festival 2020" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-En-kyB">
-                                            <rect key="frame" x="20" y="7" width="205.5" height="42.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW1-4G-6VF">
-                                            <rect key="frame" x="344" y="16" width="50" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aurudu Festival 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-Cr-OEa">
+                                            <rect key="frame" x="20" y="16" width="215" height="29"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="CqK-yR-Zic"/>
+                                                <constraint firstAttribute="width" constant="215" id="dG1-Hl-JbC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW1-4G-6VF">
+                                            <rect key="frame" x="364" y="8" width="30" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="oRU-JE-DWq"/>
                                             </constraints>
                                             <state key="normal" title="Edit" image="edit"/>
+                                            <connections>
+                                                <action selector="onEditEvent:" destination="FAy-Vw-97N" eventType="touchUpInside" id="rYu-AR-uoD"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="topMargin" constant="5" id="LB4-Hn-kmS"/>
-                                        <constraint firstItem="vaO-En-kyB" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="top" constant="7" id="U6b-o2-NAc"/>
-                                        <constraint firstAttribute="bottom" secondItem="vaO-En-kyB" secondAttribute="bottom" constant="7" id="X3c-dp-FNG"/>
-                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="trailing" secondItem="esV-Cz-yEW" secondAttribute="trailingMargin" id="ZAl-bm-zxk"/>
-                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="leading" secondItem="vaO-En-kyB" secondAttribute="trailing" constant="118.67" id="ZNi-mj-bpZ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="JW1-4G-6VF" secondAttribute="bottom" constant="5" id="bxa-6A-wW7"/>
-                                        <constraint firstItem="vaO-En-kyB" firstAttribute="leading" secondItem="esV-Cz-yEW" secondAttribute="leading" constant="20" id="lN6-pn-jqA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p4g-Cr-OEa" secondAttribute="bottom" constant="1" id="1pR-3f-c18"/>
+                                        <constraint firstAttribute="bottom" secondItem="JW1-4G-6VF" secondAttribute="bottom" constant="8.6699999999999999" id="8GS-dU-vL0"/>
+                                        <constraint firstItem="p4g-Cr-OEa" firstAttribute="leading" secondItem="esV-Cz-yEW" secondAttribute="leadingMargin" id="OJj-bP-4bg"/>
+                                        <constraint firstItem="p4g-Cr-OEa" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="topMargin" constant="5" id="Zkh-Rd-b9H"/>
+                                        <constraint firstItem="JW1-4G-6VF" firstAttribute="top" secondItem="esV-Cz-yEW" secondAttribute="top" constant="8" id="uh8-Nj-lE9"/>
+                                        <constraint firstAttribute="trailing" secondItem="JW1-4G-6VF" secondAttribute="trailing" constant="20" id="uzs-7U-byR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblEventName" destination="p4g-Cr-OEa" id="kJ5-f5-yQl"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="161" id="ki8-FK-Dqw">
-                                <rect key="frame" x="0.0" y="112.5" width="414" height="161"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyEventBodyCell" rowHeight="161" id="ki8-FK-Dqw" customClass="MyEventBodyCell" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="112.33333333333334" width="414" height="161.00000000000003"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ki8-FK-Dqw" id="zda-U4-COv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-QE-9vn">
-                                            <rect key="frame" x="76" y="12" width="330" height="140.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</string>
-                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-8f-gxw">
-                                            <rect key="frame" x="12" y="25" width="56" height="56"/>
+                                            <rect key="frame" x="16" y="56" width="90" height="90"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="56" id="f59-Xf-leU"/>
+                                                <constraint firstAttribute="height" constant="90" id="9Pm-Rk-vWr"/>
+                                                <constraint firstAttribute="width" constant="90" id="lYg-rv-TS5"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at pulvinar erat. Fusce erat dui." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS4-tO-Xos">
+                                            <rect key="frame" x="118" y="42" width="280" height="108"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colombo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-JN-FMg">
+                                            <rect key="frame" x="20" y="11" width="75" height="24"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leading" constant="12" id="7TT-vO-rzf"/>
-                                        <constraint firstItem="Bfe-QE-9vn" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="12" id="8UV-0i-ugB"/>
-                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="25" id="JEU-cu-P9l"/>
-                                        <constraint firstAttribute="bottom" secondItem="Bfe-QE-9vn" secondAttribute="bottom" constant="8" id="TVF-LN-jFH"/>
-                                        <constraint firstAttribute="trailing" secondItem="Bfe-QE-9vn" secondAttribute="trailing" constant="8" id="b22-Bt-SVG"/>
-                                        <constraint firstItem="Bfe-QE-9vn" firstAttribute="leading" secondItem="DeN-8f-gxw" secondAttribute="trailing" constant="8" id="c5x-Qf-PDa"/>
-                                        <constraint firstAttribute="bottom" secondItem="DeN-8f-gxw" secondAttribute="bottom" constant="79.670000000000002" id="scu-8x-L2u"/>
+                                        <constraint firstAttribute="bottom" secondItem="DeN-8f-gxw" secondAttribute="bottom" constant="14.67" id="2zo-MS-30r"/>
+                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="top" secondItem="HM3-JN-FMg" secondAttribute="bottom" constant="21" id="3cU-ug-I44"/>
+                                        <constraint firstItem="HM3-JN-FMg" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="topMargin" constant="2.8421709430404007e-14" id="CuA-v5-3mf"/>
+                                        <constraint firstItem="sS4-tO-Xos" firstAttribute="leading" secondItem="DeN-8f-gxw" secondAttribute="trailing" constant="12" id="J8o-wU-ODo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HM3-JN-FMg" secondAttribute="trailing" constant="299" id="KHQ-hv-soH"/>
+                                        <constraint firstItem="DeN-8f-gxw" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leading" constant="16" id="VKP-4U-fyq"/>
+                                        <constraint firstItem="sS4-tO-Xos" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="42" id="VRW-kF-GQO"/>
+                                        <constraint firstAttribute="bottom" secondItem="sS4-tO-Xos" secondAttribute="bottom" constant="10.67" id="WaC-hk-nFq"/>
+                                        <constraint firstAttribute="trailing" secondItem="sS4-tO-Xos" secondAttribute="trailing" constant="16" id="on0-IU-D6D"/>
+                                        <constraint firstItem="HM3-JN-FMg" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leadingMargin" id="ye6-23-ACw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgEvent" destination="DeN-8f-gxw" id="Zx4-eq-yDq"/>
+                                    <outlet property="lblEventBody" destination="sS4-tO-Xos" id="mof-Xi-hmD"/>
+                                    <outlet property="lblEventLocation" destination="HM3-JN-FMg" id="CFc-gI-fMu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -90,10 +113,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Events" id="voV-XT-tSY"/>
+                    <connections>
+                        <segue destination="imY-L9-xxc" kind="presentation" identifier="eventsToEditEvent" id="3yx-Z1-eeA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7j-Ky-nh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="181"/>
+            <point key="canvasLocation" x="457.97101449275368" y="180.80357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JXf-Er-TrM">
@@ -104,7 +130,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ISY-ON-YUM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,8 +147,132 @@
             </objects>
             <point key="canvasLocation" x="-355" y="183"/>
         </scene>
+        <!--Edit My Event-->
+        <scene sceneID="1fK-TW-aKg">
+            <objects>
+                <viewController storyboardIdentifier="EditEventVC" id="1ZG-BG-5HP" customClass="EditEventViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7TB-pb-Gkb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-ar-u4o" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="501" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-9X-gil">
+                                <rect key="frame" x="107" y="80" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sJ-Jw-X5O" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="369" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="EVENT LOCATION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChangeLocation:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="KV2-kr-Q4b"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-En-li5" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="21" y="564" width="373" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfq-Qh-6Jz" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="431" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="DATE AND TIME">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChangeDateTime:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="Xw2-Li-OZY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slW-1q-Mon">
+                                <rect key="frame" x="168" y="300" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Edit Photo">
+                                    <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEditEventPhoto:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="wyd-Jz-pzn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92658263439999999" green="0.94222563510000001" blue="0.94585055110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UdX-vn-2LB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit My Event" id="Oqc-wf-Yi7">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="close" id="cyw-X6-s1D">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onCancel:" destination="1ZG-BG-5HP" id="Pgo-1g-qqw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" image="complete" id="nA0-Vt-OMo">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onAddEvent:" destination="1ZG-BG-5HP" id="EBE-38-Nyz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnDateTime" destination="Yfq-Qh-6Jz" id="9FC-IY-MeC"/>
+                        <outlet property="btnEventLocation" destination="1sJ-Jw-X5O" id="6Ri-on-7tR"/>
+                        <outlet property="imgEventTitle" destination="P5R-ar-u4o" id="fqF-XJ-ZCB"/>
+                        <outlet property="imgEventView" destination="3W1-9X-gil" id="i9l-iR-1F0"/>
+                        <outlet property="txtEventDescription" destination="JXS-En-li5" id="FDL-X7-wAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pii-pu-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="903"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7jp-U5-CUD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="imY-L9-xxc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yPw-PS-zLg">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1ZG-BG-5HP" kind="relationship" relationship="rootViewController" id="vZS-kQ-J4A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXZ-QQ-eqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="914"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="close" width="30" height="30"/>
+        <image name="complete" width="30" height="30"/>
+        <image name="default-user" width="512" height="512"/>
         <image name="edit" width="30" height="30"/>
         <image name="event-tab" width="30" height="30"/>
     </resources>

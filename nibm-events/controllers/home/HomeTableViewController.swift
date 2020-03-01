@@ -8,11 +8,10 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 import RxSwift
 
 class HomeTableViewController: UITableViewController {
-    var activityIndicator: UIAlertController?
-    
     let disposeBag: DisposeBag = DisposeBag()
     
     var eventsData: [Event] = [Event]()
@@ -25,20 +24,31 @@ class HomeTableViewController: UITableViewController {
         static let postCellDefaultHeight: CGFloat = 578.0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        SVProgressHUD.setDefaultAnimationType(.native)
+        SVProgressHUD.show(withStatus: "Loading Events")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.configureStyles()
         self.fetchPosts()
         self.listenUpdateEvents()
         self.updateEventPreference()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        SVProgressHUD.dismiss()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "homeToPublisherProfile") {
-            let publisherProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "PublisherProfileVC") as? PublisherProfileViewController
             guard let index = self.currentIndex else { return }
-            
+            let publisherProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "PublisherProfileVC") as? PublisherProfileViewController
+
             publisherProfileVC!.profile = self.eventsData[index]
         }
     }
@@ -48,6 +58,8 @@ class HomeTableViewController: UITableViewController {
     }
     
     @objc private func publisherProfileImageTapped() {
+        guard let index = self.currentIndex else { return }
+        
         self.transition(identifier: "homeToPublisherProfile")
     }
     
@@ -158,3 +170,4 @@ extension HomeTableViewController {
         return Storyboard.postHeaderHeight
     }
 }
+

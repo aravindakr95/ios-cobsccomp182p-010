@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+enum UploadType: String {
+    case profile = "profile"
+    case event = "event"
+}

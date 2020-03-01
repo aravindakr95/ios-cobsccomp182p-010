@@ -43,12 +43,26 @@ class BioMetricsBlockedViewController: UIViewController {
     }
 
     private func canPerformBioMetricsVerification() {
+        self.blurBackground()
         AuthManager.sharedInstance.authWithBioMetrics {[weak self] (_ bioMetricType, _ success, error) in
             guard let `self` = self else { return }
 
             if (error == nil) {
                 self.transitionToHome()
             }
+            self.unBlurBackground()
+        }
+    }
+    
+    private func blurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.blur(context: self.view)
+        }
+    }
+    
+    private func unBlurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.removeBlur(context: self.view)
         }
     }
 

@@ -28,7 +28,10 @@ class ProfileViewController: UIViewController {
             } else {
                 let alert = NotificationManager.sharedInstance.showAlert(
                     header: "Sign Out",
-                    body: "You are about to signing out.", action: "Okay", handler: {(_: UIAlertAction!) in
+                    body: "Are you sure you want to sign out?",
+                    action: "Yes",
+                    cancelable: true,
+                    handler: {(_: UIAlertAction!) in
                         self.transition(identifier: "profileToAuth")
                 })
                 
