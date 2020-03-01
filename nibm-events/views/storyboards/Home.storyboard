@@ -260,7 +260,7 @@
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <segue destination="stu-QG-UDO" kind="presentation" identifier="homeToAddEvent" id="GQZ-bc-KKg"/>
-                        <segue destination="z0r-oa-LCR" kind="presentation" identifier="homeToPublisherProfile" id="ezg-Ah-uoR"/>
+                        <segue destination="z0r-oa-LCR" kind="show" identifier="homeToPublisherProfile" id="ezg-Ah-uoR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHq-Cg-JBw" userLabel="First Responder" sceneMemberID="firstResponder"/>

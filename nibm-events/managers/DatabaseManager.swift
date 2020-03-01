@@ -98,8 +98,11 @@ final class DatabaseManager {
                 completion(nil, error.localizedDescription)
             } else {
                 snapshot.documentChanges.forEach { diff in
-                    self.events.append(Event(event: diff.document.data(), id: diff.document.documentID)!)
-                    completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
+                    if diff.type == .added || diff.type == .modified {
+                        let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
+                        self.events.append(dataset)
+                        completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
+                    }
                 }
             }
         }
@@ -116,9 +119,11 @@ final class DatabaseManager {
                     completion(nil, error.localizedDescription)
                 } else {
                     snapshot.documentChanges.forEach { diff in
-                        let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
-                        self.events.append(dataset)
-                        completion(dataset, nil)
+                        if diff.type == .added || diff.type == .modified {
+                            let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
+                            self.events.append(dataset)
+                            completion(dataset, nil)
+                        }
                     }
                 }
         }

@@ -19,6 +19,7 @@ struct Event {
     var publisherBatch: String?
     var publishedLocation: String?
     var publisherFacebookIdentifier: String?
+    var publisherContactNumber: String?
     var body: String
     var eventImageUrl: String
     var isGoing: Bool
@@ -33,6 +34,7 @@ struct Event {
             let publisherBatch = event["publisherBatch"] as? String,
             let publishedLocation = event["publishedLocation"] as? String,
             let publisherFacebookIdentifier = event["publisherFacebookIdentifier"] as? String,
+            let publisherContactNumber = event["publisherContactNumber"] as? String,
             let body = event["body"] as? String,
             let eventImageUrl = event["eventImageUrl"] as? String,
             let isGoing = event["isGoing"] as? Bool else { return nil }
@@ -46,6 +48,7 @@ struct Event {
         self.publisherBatch = publisherBatch
         self.publishedLocation = publishedLocation
         self.publisherFacebookIdentifier = publisherFacebookIdentifier
+        self.publisherContactNumber = publisherContactNumber
         self.body = body
         self.eventImageUrl = eventImageUrl
         self.isGoing = isGoing

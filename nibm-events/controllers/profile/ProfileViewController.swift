@@ -15,8 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblContactNumber: UILabel!
     @IBOutlet weak var lblFacebookIdentifier: UILabel!
     
+    var bioMetricType: String = "Not Supported"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isAuthorized()
         self.configureStyles()
     }
     
@@ -44,9 +47,53 @@ class ProfileViewController: UIViewController {
         self.transition(identifier: "profileToEditProfile")
     }
     
+    
+    private func isAuthorized() {
+        AuthManager.sharedInstance.isAuthorized {[weak self] (_ success, error) in
+            guard let `self` = self else { return }
+            
+            if (error == nil) {
+                self.canPerformBioMetricsVerification()
+            }
+        }
+    }
+    
+    private func canPerformBioMetricsVerification() {
+        self.blurBackground()
+        AuthManager.sharedInstance.authWithBioMetrics {[weak self] (type, _ success, error) in
+            guard let `self` = self else { return }
+            
+            if (error != nil) {
+                let alert = NotificationManager.sharedInstance.showAlert(
+                    header: "Authentication Failed",
+                    body: error!, action: "Okay", handler: {(_: UIAlertAction!) in
+                        
+                        if (type != "Not Supported") {
+                            self.bioMetricType = type!
+                            self.transition(identifier: "profileToBMBlocked")
+                        }
+                })
+                self.present(alert, animated: true, completion: nil)
+            }
+            self.unBlurBackground()
+        }
+    }
+    
     private func configureStyles() {
         self.profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
         self.profileImageView.layer.masksToBounds = true
+    }
+    
+    private func blurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.blur(context: self.view)
+        }
+    }
+    
+    private func unBlurBackground() {
+        DispatchQueue.main.async {
+            UIEffects.removeBlur(context: self.view)
+        }
     }
     
     private func transition(identifier: String) {

@@ -140,6 +140,14 @@
             </objects>
             <point key="canvasLocation" x="1749" y="717"/>
         </scene>
+        <!--BioMetrics-->
+        <scene sceneID="ScR-B5-81w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BioMetrics" id="iDd-Fk-0LW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2N-uT-yco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733" y="802"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="JGX-Nb-SAr">
             <objects>
@@ -233,6 +241,7 @@
                         <outlet property="lblFullName" destination="icK-1U-Vcy" id="Yoa-FG-zd4"/>
                         <outlet property="profileImageView" destination="QnW-BB-4Tl" id="nUc-MA-khc"/>
                         <segue destination="6ff-Ls-P06" kind="presentation" identifier="profileToEditProfile" id="68m-SK-zjQ"/>
+                        <segue destination="iDd-Fk-0LW" kind="show" identifier="profileToBMBlocked" id="nI2-BM-Z8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpO-FS-vZp" userLabel="First Responder" sceneMemberID="firstResponder"/>

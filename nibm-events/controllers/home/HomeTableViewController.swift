@@ -32,7 +32,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.configureStyles()
         self.fetchPosts()
         self.listenUpdateEvents()
@@ -44,22 +44,22 @@ class HomeTableViewController: UITableViewController {
         SVProgressHUD.dismiss()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "homeToPublisherProfile") {
-            guard let index = self.currentIndex else { return }
-            let publisherProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "PublisherProfileVC") as? PublisherProfileViewController
-
-            publisherProfileVC!.profile = self.eventsData[index]
-        }
-    }
-    
     @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
         self.transition(identifier: "homeToAddEvent")
     }
     
     @objc private func publisherProfileImageTapped() {
         guard let index = self.currentIndex else { return }
+        let selectedEvent = self.eventsData[index]
+        let publisher: [String: String] =  [
+            "publisher": selectedEvent.publisher!,
+            "publisherBatch": selectedEvent.publisherBatch!,
+            "publisherFacebookIdentifier": selectedEvent.publisherFacebookIdentifier!,
+            "publisherImageUrl": selectedEvent.publisherImageUrl!,
+            "publisherContactNumber": selectedEvent.publisherContactNumber!
+        ]
         
+        UserDefaults.standard.set(publisher, forKey: "selectedEvent")
         self.transition(identifier: "homeToPublisherProfile")
     }
     
@@ -72,14 +72,14 @@ class HomeTableViewController: UITableViewController {
     private func fetchPosts() {
         DatabaseManager.sharedInstance.retrieveDocuments(collection: "events") { [weak self] (events, error) in
             guard let `self` = self else { return }
-
+            
             guard let events = events else {
                 print("Error fetching snapshot results: \(error!)")
                 return
             }
-
+            
             self.eventsData = events
-
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -90,17 +90,17 @@ class HomeTableViewController: UITableViewController {
         EventBodyCell.onEventPreferenceChange.subscribe(onNext: { [weak self] preference in
             guard let `self` = self else { return }
             guard let index = self.currentIndex else { return }
-
+            
             let docId = self.eventsData[index].documentId
             
             DatabaseManager.sharedInstance.mergeDocument(collection: "events",
                                                          documentId: docId!,
-                                                          data: ["isGoing": preference]) { [weak self] (success, error) in
-                if error != nil {
-                    print(error!)
-                } else {
-                   print(success!)
-                }
+                                                         data: ["isGoing": preference]) { [weak self] (success, error) in
+                                                            if error != nil {
+                                                                print(error!)
+                                                            } else {
+                                                                print(success!)
+                                                            }
             }
         }).disposed(by: self.disposeBag)
     }
@@ -115,7 +115,8 @@ class HomeTableViewController: UITableViewController {
             }
             
             self.eventsData.append(event)
-        
+            
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -170,4 +171,3 @@ extension HomeTableViewController {
         return Storyboard.postHeaderHeight
     }
 }
-
