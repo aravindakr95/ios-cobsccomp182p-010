@@ -11,15 +11,16 @@ import FirebaseFirestore
 import FirebaseStorage
 
 final class DatabaseManager {
+    public static let sharedInstance = DatabaseManager()
+    var userProfile: UserProfile!
+    
     private let database: Firestore = Firestore.firestore()
     private let storageRef = Storage.storage().reference()
     
     private var events = [Event]()
     
-    public static let sharedInstance = DatabaseManager()
-    
     func insertDocument(collection: String,
-                        data: [String: String],
+                        data: [String: Any],
                         completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
         
@@ -132,25 +133,36 @@ final class DatabaseManager {
     func uploadImage(image: UIImage,
                      email: String,
                      type: UploadType ,
-                     completion: @escaping (_ success: String?, _ error: Bool?)
+                     completion: @escaping (_ url: String?, _ error: String?)
         -> Void) {
         guard let imageToUpload = image.jpegData(compressionQuality: 0.75) else { return }
         let metaData: StorageMetadata = StorageMetadata()
         metaData.contentType = "image/jpeg"
         
         var stRef: StorageReference?
+        var urlPath: String?
         
         if (type == .event) {
-            stRef = self.storageRef.child("users/\(email)")
+            urlPath = "events/\(email)"
+            stRef = self.storageRef.child(urlPath!)
         } else {
-            stRef = self.storageRef.child("events/\(UUID().uuidString)")
+            urlPath = "users/\(UUID().uuidString)"
+            stRef = self.storageRef.child(urlPath!)
         }
         
         stRef!.putData(imageToUpload, metadata: metaData) { (metaData, uploadError) in
             if metaData != nil , uploadError == nil {
-                completion("Image successfully inserted to the storage." , true);
+                stRef!.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        
+                        completion(nil, error?.localizedDescription);
+                        return
+                    } else {
+                        completion(url?.absoluteString , nil);
+                    }
+                })
             } else {
-                completion(uploadError?.localizedDescription , false)
+                completion(nil, uploadError?.localizedDescription);
             }
         }
     }

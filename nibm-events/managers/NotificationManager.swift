@@ -11,7 +11,8 @@ import UIKit
 final class NotificationManager {
     public static let sharedInstance = NotificationManager()
     
-    func showAlert(header: String, body: String,
+    func showAlert(header: String,
+                   body: String,
                    action: String,
                    cancelable: Bool? = false,
                    handler: ((UIAlertAction) -> Void)? = nil) -> UIViewController {

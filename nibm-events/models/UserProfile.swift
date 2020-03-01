@@ -13,16 +13,19 @@ struct UserProfile {
     var firstName: String
     var lastName: String
     var profileImageUrl: String
-    var contactNumber: Int
+    var contactNumber: String
     var facebookIdentifier: String
+    var batch: String
     
     init?(user: [String: Any]) {
         guard let uid = user["uid"] as? String,
             let firstName = user["firstName"] as? String,
             let lastName = user["lastName"] as? String,
             let profileImageUrl = user["profileImageUrl"] as? String,
-            let contactNumber = user["contactNumber"] as? Int,
-            let facebookIdentifier = user["facebookIdentifier"] as? String else { return nil }
+            let contactNumber = user["contactNumber"] as? String,
+            let facebookIdentifier = user["facebookIdentifier"] as? String,
+            let batch = user["batch"] as? String
+            else { return nil }
         
         self.uid = uid
         self.firstName = firstName
@@ -30,5 +33,6 @@ struct UserProfile {
         self.profileImageUrl = profileImageUrl
         self.contactNumber = contactNumber
         self.facebookIdentifier = facebookIdentifier
+        self.batch = batch
     }
 }

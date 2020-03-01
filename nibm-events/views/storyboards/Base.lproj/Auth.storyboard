@@ -416,6 +416,9 @@
                                 <state key="normal" title="Add Profile Photo">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAddPhoto:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="FLK-Lx-pJ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-Af-Qy9">
                                 <rect key="frame" x="54" y="673" width="313" height="35"/>
@@ -531,6 +534,7 @@
                     <connections>
                         <outlet property="btnSignUp" destination="trQ-qD-xWe" id="Zhr-uo-H4k"/>
                         <outlet property="cbAgreement" destination="0A1-Ih-1bl" id="k6U-Oc-GqM"/>
+                        <outlet property="imgUser" destination="gIE-Y0-gF8" id="53N-ym-4Of"/>
                         <outlet property="txtBatch" destination="RN9-gR-8yi" id="Y9X-fq-KFG"/>
                         <outlet property="txtConfirmPassword" destination="vQ3-5Z-e0y" id="jqt-tK-kQO"/>
                         <outlet property="txtContactNumber" destination="pTF-oT-RYI" id="DnS-RW-gUL"/>
@@ -548,10 +552,10 @@
             </objects>
             <point key="canvasLocation" x="4163.768115942029" y="46.467391304347828"/>
         </scene>
-        <!--Auth Bio Metrics Blocked View Controller-->
+        <!--Bio Metrics Blocked View Controller-->
         <scene sceneID="VES-gD-fTn">
             <objects>
-                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="AuthBioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="BioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jtn-Cj-WAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,7 +596,7 @@
                     <connections>
                         <outlet property="btnBioMetric" destination="EBZ-u8-Kdi" id="aZw-EY-2ux"/>
                         <outlet property="lblDescription" destination="0gT-Vy-e8V" id="xmD-qE-l2p"/>
-                        <segue destination="ogQ-pb-e7K" kind="show" identifier="authBMBlockedToHome" id="Am1-uc-cbn"/>
+                        <segue destination="ogQ-pb-e7K" kind="show" identifier="AuthBMBlockedToHome" id="Am1-uc-cbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DE-Y5-b3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,7 +611,7 @@
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V6S-ed-l1l"/>
-        <segue reference="Am1-uc-cbn"/>
+        <segue reference="cxo-7x-TjM"/>
+        <segue reference="UpH-Fe-M1j"/>
     </inferredMetricsTieBreakers>
 </document>

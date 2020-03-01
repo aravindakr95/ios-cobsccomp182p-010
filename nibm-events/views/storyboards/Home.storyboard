@@ -369,7 +369,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btndateTime" destination="Fvl-q3-Aya" id="C6Y-79-5Vt"/>
+                        <outlet property="btnDateTime" destination="Fvl-q3-Aya" id="6w8-EZ-KsK"/>
+                        <outlet property="btnEventLocation" destination="vig-u5-MPQ" id="nrZ-Kh-nly"/>
                         <outlet property="imgEvent" destination="Bsn-qR-XmT" id="dUC-c3-g27"/>
                         <outlet property="txtEventBody" destination="1Wn-Jf-lt3" id="95P-sU-SC4"/>
                         <outlet property="txtEventName" destination="HxX-vY-YfT" id="WJO-xz-lmC"/>

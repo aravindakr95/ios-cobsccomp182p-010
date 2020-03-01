@@ -9,24 +9,28 @@
 import UIKit
 import MobileCoreServices
 import DateTimePicker
+import SVProgressHUD
 
 class AddEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var isNewEventImage: Bool?
+    var dateTime: String?
     
     @IBOutlet weak var imgEvent: UIImageView!
     
     @IBOutlet weak var txtEventName: NETextField!
     @IBOutlet weak var txtEventBody: NETextField!
     
-    @IBOutlet weak var btndateTime: NEButton!
+    @IBOutlet weak var btnDateTime: NEButton!
+    @IBOutlet weak var btnEventLocation: NEButton!
     
     @IBAction func onAddDateTime(_ sender: NEButton) {
         let picker = DateTimePicker.show()
         picker.is12HourFormat = true
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
+            self.dateTime = date.description
             let omitTimezone = date.description.components(separatedBy: "+")
-            self.btndateTime.setTitle(omitTimezone[0], for: .normal)
+            self.btnDateTime.setTitle(omitTimezone[0], for: .normal)
         }
     }
     
@@ -35,13 +39,52 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
         self.configureStyles()
     }
     
-    @IBAction func onAddEvent(_ sender: UIBarButtonItem) {}
+    @IBAction func onAddEvent(_ sender: UIBarButtonItem) {
+        var fields: [String: NETextField] = [:]
+        var fieldErrors = [String: String]()
+        
+        fields = [ "Event Title": txtEventName, "Description": txtEventBody ]
+        
+        for (type, field) in fields {
+            let (valid, message) = FieldValidator.validate(type: type, textField: field)
+            if (!valid) {
+                fieldErrors.updateValue(message, forKey: type)
+            }
+        }
+        
+        if !fieldErrors.isEmpty {
+            let alert = NotificationManager.sharedInstance.showAlert(
+                header: "Add Event Failed",
+                body: "The following \(fieldErrors.values.joined(separator: ", ")) field(s) are invalid.",
+                action: "Okay")
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        if invokeServices() == true {
+            let alert = NotificationManager.sharedInstance.showAlert(
+                header: "Add Event Success",
+                body: "Event is recoreded successfully.",
+                action: "Okay",
+                handler: {(_: UIAlertAction!) in
+                    self.dismiss(animated: true, completion: nil)
+            })
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+    }
     
     @IBAction func onCancelEvent(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onAddLocation(_ sender: NEButton) {}
+    @IBAction func onAddLocation(_ sender: NEButton) {
+        self.btnEventLocation.setTitle("Colombo", for: .normal) // As per LocationPicker gives me a error (cannot comple objective c library)
+    }
     
     @IBAction func onAddEventPhoto(_ sender: UIButton) {
         let alert = UIAlertController(title: "Select Event Image From", message: "", preferredStyle: .actionSheet)
@@ -90,26 +133,54 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            imgEvent.image = image
-            
-            if isNewEventImage == true {
-                guard let userProfile = AuthManager.sharedInstance.userProfile,
-                    let email = userProfile.email else { return }
-                
-                DatabaseManager.sharedInstance.uploadImage(image: image, email: email, type: .event) { (success, error) in
-                    if (error == nil) {
-                        print(success)
-                    } else {
-                        print(error)
-                    }
-                }
-            }
+            self.imgEvent.image = image
         }
         self.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func invokeServices() -> Bool {
+        var isSuccess: Bool = false
+        
+        SVProgressHUD.show(withStatus: "Please wait")
+        guard let user = AuthManager.sharedInstance.user,
+            let profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String : Any])
+            else { return false }
+        
+        if self.isNewEventImage == true {
+            DatabaseManager.sharedInstance.uploadImage(image: self.imgEvent.image!,
+                                                       email: user.email!,
+                                                       type: .event)
+            { (url, error) in
+                if url != nil {
+                    let data: [String: Any] = [
+                        "uid": user.uid,
+                        "publisher": profile.firstName + profile.lastName,
+                        "publisherBatch": profile.batch,
+                        "publisherContactNumber": profile.contactNumber,
+                        "publisherFacebookIdentifier": profile.facebookIdentifier.uppercased(),
+                        "publisherImageUrl": profile.profileImageUrl,
+                        "publishedLocation": "Colombo", // As per Location picker gives me a error (cannot comple objective c library)
+                        "timeStamp": self.dateTime!,
+                        "title": self.txtEventName.text!,
+                        "isGoing": false,
+                        "eventImageUrl": url
+                    ]
+                    
+                    DatabaseManager.sharedInstance.insertDocument(collection: "events", data: data) { (success, error) in
+                        if error == nil {
+                            SVProgressHUD.dismiss()
+                            isSuccess = true
+                        }
+                    }
+                }
+            }
+        }
+        
+        return isSuccess
     }
     
     private func configureStyles() {

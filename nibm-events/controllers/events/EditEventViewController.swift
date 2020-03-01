@@ -101,7 +101,7 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
             self.imgEventView.image = image
             
             if isNewEventImage == true {
-                guard let userProfile = AuthManager.sharedInstance.userProfile,
+                guard let userProfile = AuthManager.sharedInstance.user,
                     let email = userProfile.email else { return }
                 
                 DatabaseManager.sharedInstance.uploadImage(image: image, email: email, type: .event) { (success, error) in
