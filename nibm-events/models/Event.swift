@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 struct Event {
-    var uid: String
+    var uid: String?
     var documentId: String?
     var timeStamp: Timestamp
     var title: String

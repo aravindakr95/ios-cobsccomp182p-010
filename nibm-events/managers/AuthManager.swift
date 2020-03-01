@@ -63,6 +63,7 @@ final class AuthManager {
         let user = Auth.auth().currentUser
 
         if user != nil {
+            self.userProfile = user
             completion(user!, nil)
         } else {
             completion(nil, "Current user expired or invalid.")
@@ -86,8 +87,10 @@ final class AuthManager {
         self.currentUser {(userData, _ error) in
             let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
             if userData != nil && isAuthorized {
+                self.userProfile = userData
                 completion(true, nil)
             } else {
+
                 completion(false, "Not an valid user.")
             }
         }

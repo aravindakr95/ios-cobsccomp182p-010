@@ -67,7 +67,45 @@ final class DatabaseManager {
         }
     }
     
-    func listenDocumentChanges(collection: String,
+    func retrieveDocumentsWhere(finder: String, value: String,  collection: String,
+                                completion: @escaping (_ success: [Event]?, _ error: String?)
+        -> Void) {
+        self.database.collection(collection).whereField(finder, isEqualTo: value).getDocuments { (querySnapshot, error) in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshot results.")
+                return
+            }
+            if let error = error {
+                completion(nil, error.localizedDescription)
+            } else {
+                let models = snapshot.documents.map { (document) -> Event in
+                    return Event(event: document.data(), id: document.documentID)!
+                }
+                
+                self.events = models
+                completion(models, nil)
+            }
+        }
+    }
+    
+    func listenDocumentChangeWhere(finder: String, value: String,  collection: String,
+                                   completion: @escaping (_ success: Event?, _ error: String?)
+        -> Void) {
+        self.database.collection(collection).whereField(finder, isEqualTo: value).addSnapshotListener { (querySnapshot, error) in
+            guard let snapshot = querySnapshot else { return }
+            
+            if let error = error {
+                completion(nil, error.localizedDescription)
+            } else {
+                snapshot.documentChanges.forEach { diff in
+                    self.events.append(Event(event: diff.document.data(), id: diff.document.documentID)!)
+                    completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
+                }
+            }
+        }
+    }
+    
+    func listenDocumentsChange(collection: String,
                                completion: @escaping (_ success: Event?, _ error: String?)
         -> Void) {
         self.database.collection(collection).whereField("timeStamp", isGreaterThan: Date())
@@ -78,10 +116,9 @@ final class DatabaseManager {
                     completion(nil, error.localizedDescription)
                 } else {
                     snapshot.documentChanges.forEach { diff in
-                        if diff.type == .added {
-                            self.events.append(Event(event: diff.document.data(), id: diff.document.documentID)!)
-                            completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
-                        }
+                        let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
+                        self.events.append(dataset)
+                        completion(dataset, nil)
                     }
                 }
         }

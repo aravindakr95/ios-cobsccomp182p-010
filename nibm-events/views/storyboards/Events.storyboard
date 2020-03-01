@@ -80,7 +80,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colombo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-JN-FMg">
-                                            <rect key="frame" x="20" y="11" width="75" height="24"/>
+                                            <rect key="frame" x="20" y="11" width="150" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="0nj-kD-cBC"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -91,7 +94,6 @@
                                         <constraint firstItem="DeN-8f-gxw" firstAttribute="top" secondItem="HM3-JN-FMg" secondAttribute="bottom" constant="21" id="3cU-ug-I44"/>
                                         <constraint firstItem="HM3-JN-FMg" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="topMargin" constant="2.8421709430404007e-14" id="CuA-v5-3mf"/>
                                         <constraint firstItem="sS4-tO-Xos" firstAttribute="leading" secondItem="DeN-8f-gxw" secondAttribute="trailing" constant="12" id="J8o-wU-ODo"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="HM3-JN-FMg" secondAttribute="trailing" constant="299" id="KHQ-hv-soH"/>
                                         <constraint firstItem="DeN-8f-gxw" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leading" constant="16" id="VKP-4U-fyq"/>
                                         <constraint firstItem="sS4-tO-Xos" firstAttribute="top" secondItem="zda-U4-COv" secondAttribute="top" constant="42" id="VRW-kF-GQO"/>
                                         <constraint firstAttribute="bottom" secondItem="sS4-tO-Xos" secondAttribute="bottom" constant="10.67" id="WaC-hk-nFq"/>
@@ -119,7 +121,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7j-Ky-nh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457.97101449275368" y="180.80357142857142"/>
+            <point key="canvasLocation" x="457.97101449275368" y="180.16304347826087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JXf-Er-TrM">
@@ -241,9 +243,9 @@
                     <connections>
                         <outlet property="btnDateTime" destination="Yfq-Qh-6Jz" id="9FC-IY-MeC"/>
                         <outlet property="btnEventLocation" destination="1sJ-Jw-X5O" id="6Ri-on-7tR"/>
-                        <outlet property="imgEventTitle" destination="P5R-ar-u4o" id="fqF-XJ-ZCB"/>
                         <outlet property="imgEventView" destination="3W1-9X-gil" id="i9l-iR-1F0"/>
                         <outlet property="txtEventDescription" destination="JXS-En-li5" id="FDL-X7-wAQ"/>
+                        <outlet property="txtEventTitle" destination="P5R-ar-u4o" id="fqF-XJ-ZCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pii-pu-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>

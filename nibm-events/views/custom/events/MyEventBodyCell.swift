@@ -25,5 +25,6 @@ class MyEventBodyCell: UITableViewCell {
         self.imgEvent.kf.setImage(with: imgUrl)
 
         self.lblEventBody.text = event.body
+        self.lblEventLocation.text = event.publishedLocation
     }
 }

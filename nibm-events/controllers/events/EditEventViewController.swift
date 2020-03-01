@@ -9,6 +9,7 @@
 import UIKit
 import DateTimePicker
 import MobileCoreServices
+import Kingfisher
 
 class EditEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imgEventView: UIImageView!
@@ -16,7 +17,7 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var btnEventLocation: NEButton!
     @IBOutlet weak var btnDateTime: NEButton!
     
-    @IBOutlet weak var imgEventTitle: NETextField!
+    @IBOutlet weak var txtEventTitle: NETextField!
     @IBOutlet weak var txtEventDescription: NETextField!
     
     var isNewEventImage: Bool = false
@@ -78,6 +79,19 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     private func updateUI() {
+        guard let event = event else { return }
+        
+        let imgUrl = URL(string: event.eventImageUrl)
+        self.imgEventView.kf.indicatorType = .activity
+        self.imgEventView.kf.setImage(with: imgUrl)
+        
+        let omitTimeZone = event.timeStamp.description.components(separatedBy: "+")
+        self.btnEventLocation.setTitle(event.publishedLocation, for: .normal)
+        self.btnDateTime.setTitle(omitTimeZone[0], for: .normal)
+        self.txtEventTitle.text = event.title
+        self.txtEventDescription.text = event.body
+        
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

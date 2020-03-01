@@ -72,14 +72,14 @@ class HomeTableViewController: UITableViewController {
     private func fetchPosts() {
         DatabaseManager.sharedInstance.retrieveDocuments(collection: "events") { [weak self] (events, error) in
             guard let `self` = self else { return }
-            
+
             guard let events = events else {
                 print("Error fetching snapshot results: \(error!)")
                 return
             }
-            
+
             self.eventsData = events
-            
+
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -106,7 +106,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     private func listenUpdateEvents() {
-        DatabaseManager.sharedInstance.listenDocumentChanges(collection: "events") { [weak self] (event, error) in
+        DatabaseManager.sharedInstance.listenDocumentsChange(collection: "events") { [weak self] (event, error) in
             guard let `self` = self else { return }
             
             guard let event = event else {
@@ -115,7 +115,7 @@ class HomeTableViewController: UITableViewController {
             }
             
             self.eventsData.append(event)
-            
+        
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

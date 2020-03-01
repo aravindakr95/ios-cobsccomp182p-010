@@ -32,6 +32,7 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.configureStyles()
         self.fetchPosts()
+        self.listenUpdateEvents()
         self.openEditEvent()
     }
 
@@ -41,6 +42,7 @@ class EventsTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(type(of: segue.destination))
         if (segue.identifier == "eventsToEditEvent") {
             guard let index = self.currentIndex else { return }
             let editEventVC = self.storyboard?.instantiateViewController(withIdentifier: "EditEventVC")
@@ -67,9 +69,13 @@ class EventsTableViewController: UITableViewController {
     }
 
     private func fetchPosts() {
-        DatabaseManager.sharedInstance.retrieveDocuments(collection: "events") { [weak self] (events, error) in
+        guard let userProfile = AuthManager.sharedInstance.userProfile
+            else { return }
+        DatabaseManager.sharedInstance.retrieveDocumentsWhere(finder: "uid",
+                                                              value: userProfile.uid,
+                                                              collection: "events")
+        { [weak self] (events, error) in
             guard let `self` = self else { return }
-
             guard let events = events else {
                 print("Error fetching snapshot results: \(error!)")
                 return
@@ -77,6 +83,29 @@ class EventsTableViewController: UITableViewController {
 
             self.eventsData = events
 
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private func listenUpdateEvents() {
+        guard let userProfile = AuthManager.sharedInstance.userProfile
+            else { return }
+        
+        DatabaseManager.sharedInstance.listenDocumentChangeWhere(finder: "uid",
+                                                            value: userProfile.uid,
+                                                            collection: "events")
+        { [weak self] (event, error) in
+            guard let `self` = self else { return }
+            
+            guard let event = event else {
+                print("Error fetching events: \(error!)")
+                return
+            }
+            
+            self.eventsData.append(event)
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
