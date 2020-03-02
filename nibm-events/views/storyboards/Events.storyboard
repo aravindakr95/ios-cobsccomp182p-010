@@ -56,6 +56,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="btnEditEvent" destination="JW1-4G-6VF" id="Cfw-KH-q3d"/>
                                     <outlet property="lblEventName" destination="p4g-Cr-OEa" id="kJ5-f5-yQl"/>
                                 </connections>
                             </tableViewCell>
@@ -249,7 +250,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" image="complete" id="nA0-Vt-OMo">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="onAddEvent:" destination="1ZG-BG-5HP" id="EBE-38-Nyz"/>
+                                <action selector="onEditEvent:" destination="1ZG-BG-5HP" id="Qhu-AM-XCj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,6 +258,7 @@
                         <outlet property="btnDateTime" destination="Yfq-Qh-6Jz" id="9FC-IY-MeC"/>
                         <outlet property="btnEventLocation" destination="1sJ-Jw-X5O" id="6Ri-on-7tR"/>
                         <outlet property="imgEventView" destination="3W1-9X-gil" id="i9l-iR-1F0"/>
+                        <outlet property="txtContactNumber" destination="KmL-rV-hqp" id="gXi-1q-F7x"/>
                         <outlet property="txtEventDescription" destination="JXS-En-li5" id="FDL-X7-wAQ"/>
                         <outlet property="txtEventTitle" destination="P5R-ar-u4o" id="fqF-XJ-ZCB"/>
                     </connections>

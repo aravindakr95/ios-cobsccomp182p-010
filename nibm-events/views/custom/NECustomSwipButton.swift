@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable class NECustomSwipButton: UIButton {
     var selectedImage: UIImage!
     var deSelectedImage: UIImage!
-    
+
     @IBInspectable var selectImage: String = "checkbox-selected" {
         didSet {
             self.selectedImage = UIImage(named: selectImage)

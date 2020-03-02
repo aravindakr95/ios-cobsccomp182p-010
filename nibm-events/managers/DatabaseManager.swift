@@ -12,17 +12,17 @@ import FirebaseStorage
 
 final class DatabaseManager {
     public static let sharedInstance = DatabaseManager()
-    
+
     private let database: Firestore = Firestore.firestore()
     private let storageRef = Storage.storage().reference()
-    
+
     private var events = [Event]()
-    
+
     func insertDocument(collection: String,
                         data: [String: Any],
                         completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
-        
+
         self.database.collection(collection).addDocument(data: data) { (error) in
             if error != nil {
                 completion(nil, error?.localizedDescription)
@@ -31,7 +31,7 @@ final class DatabaseManager {
             }
         }
     }
-    
+
     func mergeDocument(collection: String,
                        documentId: String,
                        data: [String: Any],
@@ -45,7 +45,7 @@ final class DatabaseManager {
             }
         }
     }
-    
+
     func retrieveDocuments(collection: String,
                            completion: @escaping (_ success: [Event]?, _ error: String?)
         -> Void) {
@@ -58,15 +58,15 @@ final class DatabaseManager {
                 completion(nil, error.localizedDescription)
             } else {
                 let models = snapshot.documents.map { (document) -> Event in
-                    return Event(event: document.data(), id: document.documentID)!
+                    return Event(event: document.data(), docId: document.documentID)!
                 }
-                
+
                 self.events = models
                 completion(models, nil)
             }
         }
     }
-    
+
     func retrieveDocumentsWhere(finder: String, value: String,  collection: String,
                                 completion: @escaping (_ success: [Event]?, _ error: String?)
         -> Void) {
@@ -79,9 +79,9 @@ final class DatabaseManager {
                 completion(nil, error.localizedDescription)
             } else {
                 let models = snapshot.documents.map { (document) -> Event in
-                    return Event(event: document.data(), id: document.documentID)!
+                    return Event(event: document.data(), docId: document.documentID)!
                 }
-                
+
                 self.events = models
                 completion(models, nil)
             }
@@ -93,34 +93,34 @@ final class DatabaseManager {
         -> Void) {
         self.database.collection(collection).whereField(finder, isEqualTo: value).addSnapshotListener { (querySnapshot, error) in
             guard let snapshot = querySnapshot else { return }
-            
+
             if let error = error {
                 completion(nil, error.localizedDescription)
             } else {
                 snapshot.documentChanges.forEach { diff in
-                    if diff.type == .added || diff.type == .modified {
-                        let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
+                    if diff.type == .added {
+                        let dataset = Event(event: diff.document.data(), docId: diff.document.documentID)!
                         self.events.append(dataset)
-                        completion(Event(event: diff.document.data(), id: diff.document.documentID)!, nil)
+                        completion(Event(event: diff.document.data(), docId: diff.document.documentID)!, nil)
                     }
                 }
             }
         }
     }
-    
+
     func listenDocumentsChange(collection: String,
                                completion: @escaping (_ success: Event?, _ error: String?)
         -> Void) {
         self.database.collection(collection).whereField("timeStamp", isGreaterThan: Date())
             .addSnapshotListener { (querySnapshot, _ error) in
                 guard let snapshot = querySnapshot else { return }
-                
+
                 if let error = error {
                     completion(nil, error.localizedDescription)
                 } else {
                     snapshot.documentChanges.forEach { diff in
                         if diff.type == .added || diff.type == .modified {
-                            let dataset = Event(event: diff.document.data(), id: diff.document.documentID)!
+                            let dataset = Event(event: diff.document.data(), docId: diff.document.documentID)!
                             self.events.append(dataset)
                             completion(dataset, nil)
                         }
@@ -128,7 +128,7 @@ final class DatabaseManager {
                 }
         }
     }
-    
+
     func uploadImage(image: UIImage,
                      email: String,
                      type: UploadType,
@@ -137,10 +137,10 @@ final class DatabaseManager {
         guard let imageToUpload = image.jpegData(compressionQuality: 0.75) else { return }
         let metaData: StorageMetadata = StorageMetadata()
         metaData.contentType = "image/jpeg"
-        
+
         var stRef: StorageReference?
         var urlPath: String?
-        
+
         if (type == .profile) {
             urlPath = "users/\(email)"
             stRef = self.storageRef.child(urlPath!)
@@ -148,20 +148,19 @@ final class DatabaseManager {
             urlPath = "events/\(UUID().uuidString)"
             stRef = self.storageRef.child(urlPath!)
         }
-        
+
         stRef!.putData(imageToUpload, metadata: metaData) { (metaData, uploadError) in
             if metaData != nil , uploadError == nil {
                 stRef!.downloadURL(completion: { (url, error) in
                     if error != nil {
-                        
-                        completion(nil, error?.localizedDescription);
+                        completion(nil, error?.localizedDescription)
                         return
                     } else {
-                        completion(url?.absoluteString , nil);
+                        completion(url?.absoluteString , nil)
                     }
                 })
             } else {
-                completion(nil, uploadError?.localizedDescription);
+                completion(nil, uploadError?.localizedDescription)
             }
         }
     }

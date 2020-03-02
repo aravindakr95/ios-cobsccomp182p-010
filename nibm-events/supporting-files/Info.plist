@@ -36,6 +36,8 @@
 	<string>This App requests access to your camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requests access to your photo library.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Application wants to use your current location.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

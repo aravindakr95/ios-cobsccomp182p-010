@@ -13,14 +13,14 @@ import FirebaseAuth
 final class AuthManager {
     public static let sharedInstance = AuthManager()
     var user: User!
-    
+
     func createUser(emailField: NETextField, passwordField: NETextField,
                     completion: @escaping (_ success: User?, _ error: String?) -> Void) {
         guard
             let email = emailField.text,
             let password = passwordField.text
             else { return }
-        
+
         Auth.auth().createUser(withEmail: email, password: password, completion: {(authResult, error) in
             if error != nil {
                 completion(nil, error?.localizedDescription)
@@ -29,12 +29,12 @@ final class AuthManager {
             }
         })
     }
-    
+
     func signIn(emailField: String, passwordField: String,
                 completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         Auth.auth().signIn(withEmail: emailField, password: passwordField, completion: {(_ authResult, error) in
             if error != nil {
-                
+
                 completion(nil, error?.localizedDescription)
             } else {
                 self.user = authResult?.user
@@ -42,10 +42,10 @@ final class AuthManager {
             }
         })
     }
-    
+
     func signOut(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         let firebaseAuth = Auth.auth()
-        
+
         do {
             try firebaseAuth.signOut()
             completion(true, nil)
@@ -53,10 +53,10 @@ final class AuthManager {
             completion(nil, "Error signing out: %@ \(signOutError)")
         }
     }
-    
+
     func currentUser(completion: @escaping (_ success: User?, _ error: String?) -> Void) {
         let user = Auth.auth().currentUser
-        
+
         if user != nil {
             self.user = user
             completion(user!, nil)
@@ -64,11 +64,11 @@ final class AuthManager {
             completion(nil, "Current user expired or invalid.")
         }
     }
-    
+
     func sendPasswordReset(emailField: NETextField, completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         guard
             let email = emailField.text else { return }
-        
+
         Auth.auth().sendPasswordReset(withEmail: email, completion: {error in
             if error != nil {
                 completion(nil, error?.localizedDescription)
@@ -77,7 +77,7 @@ final class AuthManager {
             }
         })
     }
-    
+
     func isAuthorized(completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         self.currentUser {(userData, _ error) in
             let isAuthorized = UserDefaults.standard.bool(forKey: "isAuthorized")
@@ -88,15 +88,15 @@ final class AuthManager {
             }
         }
     }
-    
+
     func authWithBioMetrics(completion: @escaping (_ type: String?, _ success: Bool?, _ error: String?) -> Void) {
         let localAuthContext = LAContext()
         var error: NSError?
-        
+
         if localAuthContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             let biometricType = localAuthContext.biometryType == LABiometryType.faceID ? "Face ID" : "Touch ID"
             let reason = "Please authenticate using your \(biometricType)."
-            
+
             localAuthContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason,
                                             reply: {(_ success, error) in
                                                 if error != nil {

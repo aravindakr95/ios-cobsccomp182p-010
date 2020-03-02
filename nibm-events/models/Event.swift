@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 
 struct Event {
     var uid: String?
@@ -23,10 +23,10 @@ struct Event {
     var body: String
     var eventImageUrl: String
     var isGoing: Bool
-    
-    init?(event: [String: Any], id: String?) {
+
+    init?(event: [String: Any], docId: String?) {
         guard let uid = event["uid"] as? String,
-            let documentId = id,
+            let documentId = docId,
             let timeStamp = event["timeStamp"] as? Timestamp,
             let title = event["title"] as? String,
             let publisher = event["publisher"] as? String,

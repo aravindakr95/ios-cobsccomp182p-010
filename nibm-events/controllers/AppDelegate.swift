@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let log = SwiftyBeaver.self
-    
+
     override init() {
         FirebaseApp.configure()
     }

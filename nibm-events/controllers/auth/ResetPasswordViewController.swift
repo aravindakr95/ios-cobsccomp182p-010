@@ -24,17 +24,15 @@ class ResetPasswordViewController: UIViewController {
 
     @IBAction func onResetPassword(_ sender: NEButton) {
         let (valid, error) = FieldValidator.validate(type: "Reset Password", textField: self.txtEmail)
-        
+
         if !valid {
             let alert = NotificationManager.sharedInstance.showAlert(
                 header: "Registration Failed",
                 body: "\(error) field is missing or invalid.", action: "Okay")
-            
+
             self.present(alert, animated: true, completion: nil)
-            
             return
         }
-        
         self.btnResetPassword.showLoading()
 
         AuthManager.sharedInstance.sendPasswordReset(emailField: txtEmail) {[weak self] (_ success, error) in
@@ -60,7 +58,7 @@ class ResetPasswordViewController: UIViewController {
             self.btnResetPassword.hideLoading()
         }
     }
-    
+
     @IBAction func unwindToInitial(_ sender: UIBarButtonItem) {
         TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "unwindToInitial")
     }
@@ -70,5 +68,4 @@ class ResetPasswordViewController: UIViewController {
             TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "resetPWToSignIn")
         }
     }
-
 }

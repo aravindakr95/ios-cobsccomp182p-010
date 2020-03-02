@@ -30,7 +30,7 @@ class EventHeaderCell: UITableViewCell {
         self.imgProfileView.layer.masksToBounds = true
         
         self.lblEventName.text = event.title
-        
+
         self.btnBatch.layer.borderWidth = 1.0
         self.btnBatch.layer.cornerRadius = 2.0
         self.btnBatch.layer.borderColor = btnBatch.tintColor.cgColor

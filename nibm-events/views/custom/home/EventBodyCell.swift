@@ -19,13 +19,13 @@ class EventBodyCell: UITableViewCell {
     @IBOutlet weak var lblPostTimeAgo: UILabel!
     
     private static let eventPreference: BehaviorSubject<Bool> = BehaviorSubject(value: false)
-    
+
     lazy var formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         return formatter
     }()
-    
+
     static var onEventPreferenceChange: Observable<Bool> {
         return EventBodyCell.eventPreference.asObservable()
     }
@@ -45,26 +45,25 @@ class EventBodyCell: UITableViewCell {
         } else {
             EventBodyCell.eventPreference.onNext(false)
         }
-        
+
         self.setEventPreference(isGoing: status)
     }
     
     private func updateUI() {
-        
         let imgUrl = URL(string: event.eventImageUrl)
         self.imgPostView.kf.indicatorType = .activity
         self.imgPostView.kf.setImage(with: imgUrl)
         
         self.lblPostBody.text = event.body
         self.lblPostTimeAgo.text = formatter.string(from: event.timeStamp.dateValue())
-        
+
         self.setEventPreference(isGoing: event.isGoing)
     }
     
     private func setEventPreference(isGoing: Bool) {
         let likeFill = UIImage(named: "like-fill")
         let likeOutline = UIImage(named: "like-outline")
-        
+
         if (isGoing) {
             self.btnGoingPreference.setImage(likeFill, for: .normal)
             
@@ -75,7 +74,7 @@ class EventBodyCell: UITableViewCell {
             }, completion: nil)
         } else {
             self.btnGoingPreference.setImage(likeOutline, for: .normal)
-            
+
             UIView.transition(with: btnGoingStatus, duration: 0.01, options: .transitionFlipFromBottom, animations: {
                 self.btnGoingStatus.setTitle("Not Going", for: .normal)
                 self.btnGoingStatus.tintColor = #colorLiteral(red: 1, green: 0.4941176471, blue: 0.4745098039, alpha: 1)

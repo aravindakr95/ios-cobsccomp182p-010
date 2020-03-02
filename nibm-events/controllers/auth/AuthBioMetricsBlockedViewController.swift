@@ -11,8 +11,12 @@ import UIKit
 class AuthBioMetricsBlockedViewController: UIViewController {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnBioMetric: UIButton!
-    
+
     var bioMetricType = ""
+
+    @IBAction func onReAuthenticate(_ sender: UIButton) {
+        isAuthorized()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,10 +25,6 @@ class AuthBioMetricsBlockedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func onReAuthenticate(_ sender: UIButton) {
-        isAuthorized()
     }
 
     private func setBioMetricsLable() {
@@ -53,13 +53,13 @@ class AuthBioMetricsBlockedViewController: UIViewController {
             self.unBlurBackground()
         }
     }
-    
+
     private func blurBackground() {
         DispatchQueue.main.async {
             UIEffects.blur(context: self.view)
         }
     }
-    
+
     private func unBlurBackground() {
         DispatchQueue.main.async {
             UIEffects.removeBlur(context: self.view)

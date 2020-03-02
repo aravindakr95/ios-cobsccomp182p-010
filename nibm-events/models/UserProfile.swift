@@ -16,7 +16,7 @@ struct UserProfile {
     var contactNumber: String
     var facebookIdentifier: String
     var batch: String
-    
+
     init?(user: [String: Any]) {
         guard let uid = user["uid"] as? String,
             let firstName = user["firstName"] as? String,
@@ -26,7 +26,7 @@ struct UserProfile {
             let facebookIdentifier = user["facebookIdentifier"] as? String,
             let batch = user["batch"] as? String
             else { return nil }
-        
+
         self.uid = uid
         self.firstName = firstName
         self.lastName = lastName

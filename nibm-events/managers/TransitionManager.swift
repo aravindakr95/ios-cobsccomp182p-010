@@ -10,7 +10,7 @@ import UIKit
 
 class TransitionManager {
     public static let sharedInstance = TransitionManager()
-    
+
     func transitionSegue(sender: UIViewController, identifier: String) {
         sender.performSegue(withIdentifier: identifier, sender: sender)
     }

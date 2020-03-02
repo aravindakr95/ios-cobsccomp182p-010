@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="ogQ-pb-e7K" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoW-lJ-D6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="743"/>
+            <point key="canvasLocation" x="1988" y="831"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -26,34 +26,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-AO-Mn5" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="515" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="SIGN UP">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8G-8W-zOF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="452" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="SIGN IN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uN8-8Z-wZq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="629" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-ul-Alc">
+                                <rect key="frame" x="20" y="422" width="374" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mf7-m1-WTY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <state key="normal" title="SIGN IN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uN8-8Z-wZq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-AO-Mn5" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <state key="normal" title="SIGN UP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8G-8W-zOF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="603.66666666666663" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.83137254901960778" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T7K-VW-aiM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="GUEST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,26 +70,45 @@
                                     <action selector="onGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPl-Ae-udf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
-                                <rect key="frame" x="190" y="585" width="33" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
+                                <rect key="frame" x="190.66666666666666" y="555" width="33" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Zp-71Q">
-                                <rect key="frame" x="81" y="52" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Zp-71Q">
+                                <rect key="frame" x="40" y="52" width="334" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="beF-Vg-Qwk"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-n4-itw">
-                                <rect key="frame" x="56" y="246" width="300" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-n4-itw">
+                                <rect key="frame" x="30" y="246" width="354" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z14-ul-Alc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Vc-RL-Ve6"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="top" secondItem="5C9-Zp-71Q" secondAttribute="bottom" constant="-56" id="8OY-sv-sB1"/>
+                            <constraint firstItem="BgH-es-Ago" firstAttribute="top" secondItem="P4J-AO-Mn5" secondAttribute="bottom" constant="25" id="C8R-3b-ISP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5C9-Zp-71Q" secondAttribute="trailing" constant="40" id="Fha-Sn-TVD"/>
+                            <constraint firstItem="Z14-ul-Alc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jle-xa-huG"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lfy-VD-8ss"/>
+                            <constraint firstItem="BgH-es-Ago" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NwZ-yG-QUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z14-ul-Alc" secondAttribute="trailing" constant="20" id="Tnc-h1-93y"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="XRG-g1-kS3"/>
+                            <constraint firstItem="Z14-ul-Alc" firstAttribute="top" secondItem="BV4-n4-itw" secondAttribute="bottom" constant="150" id="YEE-Vl-se1"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZV-lE-Ifs"/>
+                            <constraint firstItem="XOh-aF-hAa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j3C-uz-exU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BV4-n4-itw" secondAttribute="trailing" constant="30" id="mn2-sE-4uN"/>
+                            <constraint firstAttribute="trailing" secondItem="XOh-aF-hAa" secondAttribute="trailing" constant="20" id="piw-wY-hc6"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="unX-uw-iPw"/>
+                            <constraint firstItem="XOh-aF-hAa" firstAttribute="top" secondItem="BgH-es-Ago" secondAttribute="bottom" constant="20" id="uxv-lw-I8k"/>
+                            <constraint firstAttribute="trailing" secondItem="XOh-aF-hAa" secondAttribute="trailing" constant="20" id="zrB-RI-hQN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -93,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060.8695652173915" y="-285.32608695652175"/>
+            <point key="canvasLocation" x="1601" y="-70"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="ErM-sM-q2y">
@@ -103,50 +130,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
-                                <rect key="frame" x="82" y="73" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
+                                <rect key="frame" x="101.66666666666669" y="49" width="211" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="FFu-PA-g56"/>
-                                    <constraint firstAttribute="width" constant="250" id="WXc-vI-fbs"/>
+                                    <constraint firstAttribute="height" constant="141" id="C0J-j5-f5s"/>
+                                    <constraint firstAttribute="width" constant="211" id="aE4-RK-Xsm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
-                                <rect key="frame" x="57" y="267" width="300" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="354" width="374" height="55"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="bMO-A9-E0f"/>
-                                    <constraint firstAttribute="height" constant="55" id="blQ-sA-uNN"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="417" width="374" height="55"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="5Sx-Wd-J11"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-f3-eLH">
+                                <rect key="frame" x="20" y="285" width="374" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="bMO-A9-E0f"/>
+                                            <constraint firstAttribute="height" constant="55" id="blQ-sA-uNN"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63" width="374" height="55"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="5Sx-Wd-J11"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
                                 <rect key="frame" x="20" y="498" width="374" height="55"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,8 +188,8 @@
                                     <action selector="onSignIn:" destination="hTF-rU-y81" eventType="touchUpInside" id="z0S-ir-pUu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
-                                <rect key="frame" x="138" y="582" width="139" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
+                                <rect key="frame" x="119" y="513" width="139" height="38"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -171,9 +198,8 @@
                                     <action selector="onResetPassword:" destination="hTF-rU-y81" eventType="touchUpInside" id="62W-up-ehj"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-gN-J9h">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-gN-J9h">
+                                <rect key="frame" x="0.0" y="-1063" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Sign In" id="VV0-kD-mRv">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="B1f-Nl-2hc">
@@ -185,23 +211,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
+                                <rect key="frame" x="57.333333333333343" y="209" width="299.33333333333326" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="top" secondItem="sP5-Kc-pqa" secondAttribute="bottom" constant="26" id="0e1-8v-jc2"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" constant="53" id="2Ny-6b-Chk"/>
                             <constraint firstItem="vXz-Ud-ogK" firstAttribute="top" secondItem="vBe-Ug-Nmc" secondAttribute="bottom" constant="29" id="302-u1-yYw"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="rYN-20-A4X" secondAttribute="trailing" constant="20" id="8vv-ze-1h7"/>
-                            <constraint firstItem="rYN-20-A4X" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="BRn-JE-j7h"/>
-                            <constraint firstItem="sP5-Kc-pqa" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="GMg-6j-QYG"/>
-                            <constraint firstItem="rYN-20-A4X" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="31" id="L0M-nJ-a8P"/>
-                            <constraint firstItem="02A-5n-AzG" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="57" id="SiC-Lz-9NC"/>
-                            <constraint firstItem="sP5-Kc-pqa" firstAttribute="top" secondItem="rYN-20-A4X" secondAttribute="bottom" constant="8" id="SmP-Cc-ziM"/>
-                            <constraint firstItem="rYN-20-A4X" firstAttribute="top" secondItem="02A-5n-AzG" secondAttribute="bottom" constant="61" id="bh3-Kb-DD0"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sqY-k3-lu7" secondAttribute="trailing" constant="82" id="e5c-TK-tqq"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sP5-Kc-pqa" secondAttribute="trailing" constant="20" id="hwa-Qf-OGz"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="02A-5n-AzG" secondAttribute="trailing" constant="57" id="jqK-Nt-qKD"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="82" id="mV0-gs-ITX"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="centerX" secondItem="5eJ-gN-J9h" secondAttribute="centerX" id="OZ4-cS-zIS"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="centerX" secondItem="FKu-v4-t6i" secondAttribute="centerX" id="WWG-9t-0ir"/>
+                            <constraint firstItem="02A-5n-AzG" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="19" id="WaH-tI-aWS"/>
+                            <constraint firstItem="02A-5n-AzG" firstAttribute="centerX" secondItem="FKu-v4-t6i" secondAttribute="centerX" id="XBq-8Z-nXW"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" constant="29" id="cEj-dC-Lg5"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vXz-Ud-ogK" secondAttribute="trailing" constant="137" id="myw-J4-PWb"/>
                             <constraint firstItem="vXz-Ud-ogK" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="138" id="oX0-fM-gVi"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="bottom" secondItem="vXz-Ud-ogK" secondAttribute="bottom" constant="116" id="rcS-DT-zzI"/>
@@ -222,7 +246,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-TW-CE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kfb-NY-jpV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="994"/>
+            <point key="canvasLocation" x="669.60000000000002" y="786.65667166416802"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="fcZ-DX-K6T">
@@ -232,21 +256,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-ze-DQm">
-                                <rect key="frame" x="82" y="20" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-ze-DQm">
+                                <rect key="frame" x="20" y="79" width="374" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="DiS-UJ-Ywa"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
-                                <rect key="frame" x="57" y="209" width="300" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
+                                <rect key="frame" x="47" y="244" width="300" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-ZI-dv9" customClass="HBOTextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="357" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-ZI-dv9" customClass="HBOTextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="10" y="348.33333333333331" width="394" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zRP-hL-qLp"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -256,27 +283,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-RP-4OR" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="420" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="RESET PASSWORD">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onResetPassword:" destination="fD7-qe-1ua" eventType="touchUpInside" id="ocP-Q1-HT1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
-                                <rect key="frame" x="20" y="278" width="374" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
+                                <rect key="frame" x="20" y="278" width="374" height="62.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-Uv-7Mg">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-Uv-7Mg">
+                                <rect key="frame" x="0.0" y="20" width="453" height="44"/>
                                 <items>
                                     <navigationItem title="Reset Password" id="s8e-gO-XCa">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="aLw-AZ-JHM">
@@ -288,8 +301,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-RP-4OR" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="443.33333333333331" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7W9-rS-Trr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="RESET PASSWORD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetPassword:" destination="fD7-qe-1ua" eventType="touchUpInside" id="ocP-Q1-HT1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yYj-RP-4OR" firstAttribute="top" secondItem="3I4-ZI-dv9" secondAttribute="bottom" constant="45" id="7RI-QS-b3f"/>
+                            <constraint firstItem="yYj-RP-4OR" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="DjG-Hm-Zbn"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="centerX" secondItem="SAL-Pz-NHy" secondAttribute="centerX" id="Gtc-Af-Vlx"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="SAL-Pz-NHy" secondAttribute="top" constant="79" id="Mpw-hV-bic"/>
+                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="top" secondItem="bAE-3k-G0z" secondAttribute="bottom" constant="8" id="NdK-Fc-AEv"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="821-Iu-G3p" secondAttribute="bottom" constant="8" id="TJ9-PR-GuD"/>
+                            <constraint firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" constant="20" id="Trt-Xq-a4J"/>
+                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="10" id="VYD-kW-jwL"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="leading" secondItem="SAL-Pz-NHy" secondAttribute="leading" constant="20" id="X0a-qO-EKb"/>
+                            <constraint firstItem="yYj-RP-4OR" firstAttribute="centerX" secondItem="SAL-Pz-NHy" secondAttribute="centerX" id="ZBi-8O-ME4"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="yYj-RP-4OR" secondAttribute="trailing" constant="20" id="aXK-Or-kyh"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="centerX" secondItem="iWK-Uv-7Mg" secondAttribute="centerX" id="dIG-23-mYR"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="15" id="hBW-hp-8Xy"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="leading" secondItem="bAE-3k-G0z" secondAttribute="leading" id="kFf-rR-nMC"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="NOC-ze-DQm" secondAttribute="bottom" constant="28" id="sFZ-wb-3wR"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="3I4-ZI-dv9" secondAttribute="trailing" constant="10" id="vli-4h-1bT"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" id="xXj-bM-JBx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rmG-21-Npj"/>
                     </view>
                     <connections>
@@ -302,7 +348,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfW-3w-ZWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="PTc-Vy-J68" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3610" y="914"/>
+            <point key="canvasLocation" x="-119.2" y="1545.8770614692655"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="iRb-lK-TMO">
@@ -552,34 +598,34 @@
             </objects>
             <point key="canvasLocation" x="4163.768115942029" y="46.467391304347828"/>
         </scene>
-        <!--Bio Metrics Blocked View Controller-->
+        <!--Auth Bio Metrics Blocked View Controller-->
         <scene sceneID="VES-gD-fTn">
             <objects>
-                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="BioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="AuthBioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jtn-Cj-WAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-AZ-4bO">
-                                <rect key="frame" x="157" y="157" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NIBM Events is Locked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-oq-hKe">
-                                <rect key="frame" x="78" y="296" width="258" height="33"/>
+                                <rect key="frame" x="70" y="297" width="275" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unlock with BioMetric to open NIBM Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-Vy-e8V">
-                                <rect key="frame" x="28" y="355" width="374" height="26"/>
+                                <rect key="frame" x="28" y="357" width="359" height="23.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-AZ-4bO">
+                                <rect key="frame" x="98" y="151" width="219" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-u8-Kdi">
-                                <rect key="frame" x="153" y="403" width="109" height="35"/>
+                                <rect key="frame" x="153" y="410" width="109" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Use BioMetric">
@@ -596,12 +642,12 @@
                     <connections>
                         <outlet property="btnBioMetric" destination="EBZ-u8-Kdi" id="aZw-EY-2ux"/>
                         <outlet property="lblDescription" destination="0gT-Vy-e8V" id="xmD-qE-l2p"/>
-                        <segue destination="ogQ-pb-e7K" kind="show" identifier="AuthBMBlockedToHome" id="Am1-uc-cbn"/>
+                        <segue destination="ogQ-pb-e7K" kind="show" identifier="authBMBlockedToHome" id="Am1-uc-cbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DE-Y5-b3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448" y="1546"/>
+            <point key="canvasLocation" x="1399.2" y="1480.2098950524739"/>
         </scene>
     </scenes>
     <resources>
@@ -611,7 +657,8 @@
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cxo-7x-TjM"/>
-        <segue reference="fan-a5-Q8a"/>
+        <segue reference="3FL-Ue-MYr"/>
+        <segue reference="aPh-om-mnu"/>
+        <segue reference="Am1-uc-cbn"/>
     </inferredMetricsTieBreakers>
 </document>

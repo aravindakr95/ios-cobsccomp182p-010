@@ -12,6 +12,7 @@ import RxSwift
 class MyEventHeaderCell: UITableViewCell {
     @IBOutlet weak var lblEventName: UILabel!
 //    @IBOutlet weak var lblEventLocation: UILabel!
+    @IBOutlet weak var btnEditEvent: UIButton!
     
     private static let editPreference: BehaviorSubject<String> = BehaviorSubject(value: "")
     

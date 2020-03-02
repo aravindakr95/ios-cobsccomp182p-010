@@ -14,7 +14,7 @@ struct Publisher {
     var publisherBatch: String
     var publisherFacebookIdentifier: String
     var publisherContactNumber: String
-    
+
     init?(publisher: [String: String]) {
         guard let publisherName = publisher["publisher"],
             let publisherImageUrl = publisher["publisherImageUrl"],
@@ -22,7 +22,7 @@ struct Publisher {
             let publisherFacebookIdentifier = publisher["publisherFacebookIdentifier"],
             let publisherContactNumber = publisher["publisherContactNumber"]
             else { return nil }
-        
+
         self.publisherName = publisherName
         self.publisherImageUrl = publisherImageUrl
         self.publisherBatch = publisherBatch

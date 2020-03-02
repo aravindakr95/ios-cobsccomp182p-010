@@ -9,7 +9,7 @@ import XCTest
 
 @testable import nibm_events
 
-class LoginTest: XCTestCase {
+class SignInTest: XCTestCase {
     
     var loginView: SignInViewController!
     var authDataManager  : AuthManager!
