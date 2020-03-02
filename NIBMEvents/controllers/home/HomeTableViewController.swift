@@ -79,8 +79,8 @@ class HomeTableViewController: UITableViewController {
             "title": selectedEvent.title,
             "body": selectedEvent.body,
             "publishedLocation": selectedEvent.publishedLocation!,
-            "longitudes": selectedEvent.longitudes,
-            "latitudes": selectedEvent.longitudes,
+            "longitude": selectedEvent.coordinates?.longitude,
+            "latitude": selectedEvent.coordinates?.latitude,
             "publisherName": selectedEvent.publisher!,
             "publisherImageUrl": selectedEvent.publisherImageUrl!,
             "publisherContactNumber": selectedEvent.publisherContactNumber!,
@@ -143,7 +143,9 @@ class HomeTableViewController: UITableViewController {
                 return
             }
             
-            self.eventsData.append(event)
+            if let row = self.eventsData.firstIndex(where: {$0.documentId == event.documentId}) {
+                self.eventsData[row] = event
+            }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()

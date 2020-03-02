@@ -20,10 +20,9 @@ struct Event {
     var publisherImageUrl: String?
     var publisherBatch: String?
     var publishedLocation: String?
-    var longitudes: Double?
-    var latitudes: Double?
     var publisherFacebookIdentifier: String?
     var publisherContactNumber: String?
+    var coordinates: GeoPoint?
     var body: String
     var eventImageUrl: String
     var isGoing: Bool
@@ -37,14 +36,13 @@ struct Event {
             let publisherImageUrl = event["publisherImageUrl"] as? String,
             let publisherBatch = event["publisherBatch"] as? String,
             let publishedLocation = event["publishedLocation"] as? String,
-            let longitudes = event["longitudes"] as? Double,
-            let latitudes = event["latitudes"] as? Double,
             let publisherFacebookIdentifier = event["publisherFacebookIdentifier"] as? String,
             let publisherContactNumber = event["publisherContactNumber"] as? String,
+            let coordinates = event["coordinates"] as? GeoPoint,
             let body = event["body"] as? String,
             let eventImageUrl = event["eventImageUrl"] as? String,
             let isGoing = event["isGoing"] as? Bool else { return nil }
-        
+
         self.uid = uid
         self.documentId = documentId
         self.timeStamp = timeStamp
@@ -53,10 +51,9 @@ struct Event {
         self.publisherImageUrl = publisherImageUrl
         self.publisherBatch = publisherBatch
         self.publishedLocation = publishedLocation
-        self.longitudes = longitudes
-        self.latitudes = latitudes
         self.publisherFacebookIdentifier = publisherFacebookIdentifier
         self.publisherContactNumber = publisherContactNumber
+        self.coordinates = coordinates
         self.body = body
         self.eventImageUrl = eventImageUrl
         self.isGoing = isGoing

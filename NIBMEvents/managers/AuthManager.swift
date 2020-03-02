@@ -14,6 +14,7 @@ import FirebaseAuth
 final class AuthManager {
     public static let sharedInstance = AuthManager()
     var user: User!
+    var userProfile: UserProfile!
 
     func createUser(emailField: NETextField, passwordField: NETextField,
                     completion: @escaping (_ success: User?, _ error: String?) -> Void) {
@@ -30,12 +31,23 @@ final class AuthManager {
             }
         })
     }
+    
+    func getUserProfile(uid: String, completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
+        DatabaseManager.sharedInstance.retrieveDocumentWhere(finder: "uid", value: uid, collection: "users") { profile, error in
+            
+            if error != nil {
+                completion(nil, error)
+            } else {
+                self.userProfile = profile
+                completion(true, nil)
+            }
+        }
+    }
 
     func signIn(emailField: String, passwordField: String,
                 completion: @escaping (_ success: Bool?, _ error: String?) -> Void) {
         Auth.auth().signIn(withEmail: emailField, password: passwordField, completion: {(_ authResult, error) in
             if error != nil {
-
                 completion(nil, error?.localizedDescription)
             } else {
                 self.user = authResult?.user

@@ -21,15 +21,15 @@
         <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="InitialViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="InitialViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-ul-Alc">
-                                <rect key="frame" x="20" y="414" width="374" height="108"/>
+                                <rect key="frame" x="20" y="414.33333333333331" width="374" height="107.99999999999994"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -43,7 +43,7 @@
                                             <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uN8-8Z-wZq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-AO-Mn5" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-AO-Mn5" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="58" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -59,7 +59,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-aF-hAa" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="603.66666666666663" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.83137254901960778" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -74,13 +74,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
-                                <rect key="frame" x="20" y="555" width="374" height="29"/>
+                                <rect key="frame" x="20" y="555.33333333333337" width="374" height="28.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-n4-itw">
-                                <rect key="frame" x="20" y="260" width="374" height="26"/>
+                                <rect key="frame" x="20" y="260.33333333333331" width="374" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="9ZS-Hw-8gU"/>
                                 </constraints>
@@ -90,27 +90,28 @@
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D59-wK-xcn">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Welcome" id="3Qy-NA-cmq"/>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Zp-71Q">
-                                <rect key="frame" x="95" y="105" width="225" height="150"/>
+                                <rect key="frame" x="132" y="102" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="25K-Xy-1yp"/>
-                                    <constraint firstAttribute="width" constant="225" id="myB-wA-rpF"/>
+                                    <constraint firstAttribute="width" constant="150" id="BHm-7E-cwh"/>
+                                    <constraint firstAttribute="height" constant="150" id="CZQ-U2-Zjb"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BV4-n4-itw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0YQ-Dp-1ID"/>
-                            <constraint firstItem="BV4-n4-itw" firstAttribute="top" secondItem="5C9-Zp-71Q" secondAttribute="bottom" constant="5" id="4Kc-t2-6cD"/>
                             <constraint firstItem="Z14-ul-Alc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="66f-4i-e3Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z14-ul-Alc" secondAttribute="trailing" constant="20" id="8cC-8R-LUz"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="CSA-9U-WEm"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="top" secondItem="D59-wK-xcn" secondAttribute="bottom" constant="38" id="D9A-qe-dOC"/>
                             <constraint firstItem="D59-wK-xcn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GjG-Wx-eWC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5C9-Zp-71Q" secondAttribute="trailing" constant="94" id="HFW-XZ-kWc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5C9-Zp-71Q" secondAttribute="trailing" constant="132" id="JsF-zM-LxX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BgH-es-Ago" secondAttribute="trailing" constant="20" id="Rii-FV-LEr"/>
                             <constraint firstItem="D59-wK-xcn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SuV-BX-FEa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XOh-aF-hAa" secondAttribute="bottom" constant="82.329999999999998" id="Y84-85-2sh"/>
@@ -118,16 +119,16 @@
                             <constraint firstItem="XOh-aF-hAa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bTZ-id-CJ2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BV4-n4-itw" secondAttribute="trailing" constant="20" id="do3-rq-Jqf"/>
                             <constraint firstItem="XOh-aF-hAa" firstAttribute="top" secondItem="BgH-es-Ago" secondAttribute="bottom" constant="19.670000000000002" id="fPZ-XU-Cbp"/>
-                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="top" secondItem="D59-wK-xcn" secondAttribute="bottom" constant="41" id="ggQ-TA-gK2"/>
                             <constraint firstItem="BgH-es-Ago" firstAttribute="top" secondItem="Z14-ul-Alc" secondAttribute="bottom" constant="33" id="gvu-rT-rVe"/>
                             <constraint firstItem="BgH-es-Ago" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="on0-sK-txy"/>
                             <constraint firstItem="D59-wK-xcn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWM-2z-niN"/>
                             <constraint firstItem="Z14-ul-Alc" firstAttribute="top" secondItem="BV4-n4-itw" secondAttribute="bottom" constant="128" id="ulW-gY-U75"/>
-                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="unj-Xe-ecc"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="top" secondItem="5C9-Zp-71Q" secondAttribute="bottom" constant="8.3300000000000001" id="yGn-us-Fuc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imgMain" destination="5C9-Zp-71Q" id="lQN-D8-yDl"/>
                         <segue destination="ogQ-pb-e7K" kind="presentation" identifier="initialToHome" id="fan-a5-Q8a"/>
                         <segue destination="kAi-IV-0Jv" kind="presentation" identifier="initialToSignUp" id="Ky8-1w-p7N"/>
                         <segue destination="hTF-rU-y81" kind="presentation" identifier="initialToSignIn" id="V6S-ed-l1l"/>
@@ -141,14 +142,14 @@
         <!--Sign In View Controller-->
         <scene sceneID="ErM-sM-q2y">
             <objects>
-                <viewController storyboardIdentifier="SignInVC" id="hTF-rU-y81" customClass="SignInViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="hTF-rU-y81" customClass="SignInViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FKu-v4-t6i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-1I-yc5">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Sign In" id="IUj-2x-Nbu">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="akD-4i-Gca">
@@ -160,14 +161,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
-                                <rect key="frame" x="95" y="125" width="225" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="hxj-yF-8br"/>
-                                    <constraint firstAttribute="height" constant="150" id="qSb-8e-qzh"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="494" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -200,7 +194,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-f3-eLH">
                                 <rect key="frame" x="20" y="322" width="374" height="108"/>
                                 <subviews>
-                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
@@ -215,7 +209,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="58" width="374" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
@@ -232,11 +226,16 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
+                                <rect key="frame" x="132" y="101" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1CY-OV-87s"/>
+                                    <constraint firstAttribute="height" constant="150" id="G2C-WL-Ot3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="95" id="4Kq-g0-aCO"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sqY-k3-lu7" secondAttribute="trailing" constant="94" id="5et-Qu-C5A"/>
                             <constraint firstItem="vXz-Ud-ogK" firstAttribute="top" secondItem="vBe-Ug-Nmc" secondAttribute="bottom" constant="30" id="6nf-DZ-2jR"/>
                             <constraint firstItem="0fW-1I-yc5" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" id="7Gb-Gk-hmG"/>
                             <constraint firstItem="0fW-1I-yc5" firstAttribute="trailing" secondItem="mha-RP-4Pt" secondAttribute="trailing" id="APy-hl-S8w"/>
@@ -244,21 +243,24 @@
                             <constraint firstItem="0fW-1I-yc5" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" id="D5J-YG-DQF"/>
                             <constraint firstItem="vBe-Ug-Nmc" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="EMg-IB-YkZ"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="02A-5n-AzG" secondAttribute="trailing" constant="20" id="FCP-z3-09V"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sqY-k3-lu7" secondAttribute="trailing" constant="132" id="Ha2-wi-RkG"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="tGv-f3-eLH" secondAttribute="trailing" constant="20" id="IOD-kj-wWR"/>
                             <constraint firstItem="vXz-Ud-ogK" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="JBa-jb-5vy"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="bottom" secondItem="vXz-Ud-ogK" secondAttribute="bottom" constant="124" id="Km1-3R-LAi"/>
                             <constraint firstItem="tGv-f3-eLH" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="LfP-9R-qIy"/>
-                            <constraint firstItem="tGv-f3-eLH" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="47" id="XqF-ll-HJn"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="132" id="N24-fd-5jW"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="0fW-1I-yc5" secondAttribute="bottom" constant="37" id="QqW-kM-Ooz"/>
                             <constraint firstItem="vBe-Ug-Nmc" firstAttribute="top" secondItem="tGv-f3-eLH" secondAttribute="bottom" constant="64" id="e4Z-Mq-Dxr"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vXz-Ud-ogK" secondAttribute="trailing" constant="20" id="fks-B4-2Kp"/>
                             <constraint firstItem="02A-5n-AzG" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="ifr-fj-7Bh"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="0fW-1I-yc5" secondAttribute="bottom" constant="61" id="kcn-AD-WlR"/>
+                            <constraint firstItem="02A-5n-AzG" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="19" id="lTv-GH-8A7"/>
                             <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vBe-Ug-Nmc" secondAttribute="trailing" constant="20" id="lgv-so-JJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mha-RP-4Pt"/>
                     </view>
                     <connections>
                         <outlet property="btnSignIn" destination="vBe-Ug-Nmc" id="IDW-LN-tCx"/>
+                        <outlet property="imgLogo" destination="sqY-k3-lu7" id="MVk-Qg-tAd"/>
                         <outlet property="txtEmail" destination="rYN-20-A4X" id="3fk-Da-xLH"/>
                         <outlet property="txtPassword" destination="sP5-Kc-pqa" id="Ndw-xY-emN"/>
                         <segue destination="fD7-qe-1ua" kind="presentation" identifier="signInToResetPW" id="3FL-Ue-MYr"/>
@@ -274,25 +276,18 @@
         <!--Reset Password View Controller-->
         <scene sceneID="fcZ-DX-K6T">
             <objects>
-                <viewController storyboardIdentifier="ResetPasswordVC" id="fD7-qe-1ua" customClass="ResetPasswordViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResetPasswordVC" id="fD7-qe-1ua" customClass="ResetPasswordViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SAL-Pz-NHy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-ze-DQm">
-                                <rect key="frame" x="95" y="106" width="225" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="EIw-G0-zLr"/>
-                                    <constraint firstAttribute="height" constant="150" id="gRb-Pu-kAC"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
                                 <rect key="frame" x="20" y="254" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-ZI-dv9" customClass="HBOTextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-ZI-dv9" customClass="HBOTextField" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="401" width="374" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -307,7 +302,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-RP-4OR" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-RP-4OR" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="485" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -321,8 +316,8 @@
                                     <action selector="onResetPassword:" destination="fD7-qe-1ua" eventType="touchUpInside" id="ocP-Q1-HT1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
-                                <rect key="frame" x="20" y="317" width="374" height="62.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
+                                <rect key="frame" x="20" y="317" width="374" height="62"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -340,35 +335,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-ze-DQm">
+                                <rect key="frame" x="132" y="96" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="X6F-CU-yLP"/>
+                                    <constraint firstAttribute="width" constant="150" id="rPv-Mf-EoU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="42" id="3FH-Se-pHB"/>
                             <constraint firstItem="iWK-Uv-7Mg" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" id="4Eb-L0-blm"/>
                             <constraint firstItem="3I4-ZI-dv9" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="4i4-qE-qxt"/>
-                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="NOC-ze-DQm" secondAttribute="trailing" constant="94" id="5Bk-Bc-oZs"/>
                             <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="3I4-ZI-dv9" secondAttribute="trailing" constant="20" id="5yo-fS-daA"/>
                             <constraint firstItem="rmG-21-Npj" firstAttribute="bottom" secondItem="yYj-RP-4OR" secondAttribute="bottom" constant="201" id="8hl-B2-aR9"/>
                             <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="821-Iu-G3p" secondAttribute="bottom" constant="37" id="AO2-8W-gfl"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="SAL-Pz-NHy" secondAttribute="top" constant="106" id="BuV-o3-19r"/>
                             <constraint firstItem="821-Iu-G3p" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="E41-a4-Pha"/>
                             <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="821-Iu-G3p" secondAttribute="trailing" constant="20" id="EhS-hB-yqk"/>
+                            <constraint firstItem="821-Iu-G3p" firstAttribute="top" secondItem="NOC-ze-DQm" secondAttribute="bottom" constant="8" id="I1A-uu-sAe"/>
                             <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="yYj-RP-4OR" secondAttribute="trailing" constant="20" id="KHx-8z-Rxy"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="132" id="LF4-IS-vAb"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="NOC-ze-DQm" secondAttribute="trailing" constant="132" id="Pbj-kN-2ED"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="SAL-Pz-NHy" secondAttribute="top" constant="96" id="Q7t-pR-SkO"/>
                             <constraint firstItem="iWK-Uv-7Mg" firstAttribute="trailing" secondItem="rmG-21-Npj" secondAttribute="trailing" id="Wud-ki-PQF"/>
                             <constraint firstItem="yYj-RP-4OR" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="Xf3-AA-xMK"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="42" id="bIK-ZT-SKS"/>
-                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="NOC-ze-DQm" secondAttribute="bottom" constant="61" id="bMa-7k-1VU"/>
                             <constraint firstItem="bAE-3k-G0z" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="exE-wo-lMn"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="32" id="fs9-KE-cIw"/>
                             <constraint firstItem="yYj-RP-4OR" firstAttribute="top" secondItem="3I4-ZI-dv9" secondAttribute="bottom" constant="34" id="g6T-Sa-e3q"/>
                             <constraint firstItem="iWK-Uv-7Mg" firstAttribute="top" secondItem="rmG-21-Npj" secondAttribute="top" id="oaj-LR-m9h"/>
                             <constraint firstItem="3I4-ZI-dv9" firstAttribute="top" secondItem="bAE-3k-G0z" secondAttribute="bottom" constant="21.670000000000002" id="wZX-UD-Vrp"/>
                             <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" constant="20" id="xQv-qu-1dj"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="95" id="z2x-mB-F6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rmG-21-Npj"/>
                     </view>
                     <connections>
                         <outlet property="btnResetPassword" destination="yYj-RP-4OR" id="npr-fG-qNm"/>
+                        <outlet property="imgLogo" destination="NOC-ze-DQm" id="4Sj-m3-yA6"/>
                         <outlet property="txtEmail" destination="3I4-ZI-dv9" id="522-Ji-aJf"/>
                         <segue destination="hTF-rU-y81" kind="presentation" identifier="resetPWToSignIn" id="aPh-om-mnu"/>
                         <segue destination="PTc-Vy-J68" kind="unwind" identifier="unwindToInitial" unwindAction="unwindWithSegue:" id="ua2-Ct-i0u"/>
@@ -382,12 +384,12 @@
         <!--Sign Up View Controller-->
         <scene sceneID="iRb-lK-TMO">
             <objects>
-                <viewController storyboardIdentifier="SignUpVC" id="kAi-IV-0Jv" customClass="SignUpViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="kAi-IV-0Jv" customClass="SignUpViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4To-Ll-c7x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECustomSwipButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECustomSwipButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="599" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0qR-dM-VrX"/>
@@ -411,7 +413,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-jt-WAe">
                                 <rect key="frame" x="20" y="408.33333333333331" width="374" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-Wz-bgs" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-Wz-bgs" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -423,7 +425,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-5Z-e0y" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-5Z-e0y" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="187" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -440,7 +442,7 @@
                                     <constraint firstAttribute="height" constant="50" id="EQd-cK-URe"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-JZ-hgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-JZ-hgp" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="345.33333333333331" width="374" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -458,7 +460,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="29r-2o-imM">
                                 <rect key="frame" x="20" y="282.33333333333331" width="374" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-H4-Gdu" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-H4-Gdu" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -470,7 +472,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-IC-ZOm" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-IC-ZOm" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="187" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -487,7 +489,7 @@
                                     <constraint firstAttribute="height" constant="50" id="REj-67-ybZ"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-oT-RYI" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-oT-RYI" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="471.33333333333331" width="374" height="49.999999999999943"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -505,7 +507,7 @@
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-Lz-bGh">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Registration" id="Vke-5a-tD7">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="ucz-xY-TQ5">
@@ -563,7 +565,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ujs-e3-Yvy">
                                 <rect key="frame" x="20" y="534.33333333333337" width="374" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Batch" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-gR-8yi" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Batch" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-gR-8yi" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -575,7 +577,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Facebook Identifier" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-RI-vgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Facebook Identifier" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-RI-vgp" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                         <rect key="frame" x="187" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="textColor"/>
@@ -592,7 +594,7 @@
                                     <constraint firstAttribute="height" constant="50" id="7VA-if-0Ln"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-qD-xWe" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-qD-xWe" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="640" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -616,7 +618,7 @@
                                     <action selector="onAddPhoto:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="FLK-Lx-pJ2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Y0-gF8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Y0-gF8">
                                 <rect key="frame" x="167" y="81" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="DhN-rD-TZv"/>
@@ -624,7 +626,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="AHl-jt-WAe" secondAttribute="trailing" constant="20" id="4vT-Bx-fas"/>
                             <constraint firstItem="trQ-qD-xWe" firstAttribute="top" secondItem="0A1-Ih-1bl" secondAttribute="bottom" constant="24" id="5sD-3x-HXZ"/>
@@ -690,7 +692,7 @@
         <!--Auth Bio Metrics Blocked View Controller-->
         <scene sceneID="VES-gD-fTn">
             <objects>
-                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="AuthBioMetricsBlockedViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BioMetricsBlockedVC" id="bay-Th-1pC" customClass="AuthBioMetricsBlockedViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jtn-Cj-WAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -730,7 +732,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6tq-7s-GpM" firstAttribute="trailing" secondItem="Or2-AZ-4bO" secondAttribute="trailing" constant="20" id="1sF-kL-OsS"/>
                             <constraint firstItem="6tq-7s-GpM" firstAttribute="trailing" secondItem="6Mc-Qp-r7E" secondAttribute="trailing" constant="20" id="JIS-V0-ntn"/>
@@ -756,11 +758,12 @@
     </scenes>
     <resources>
         <image name="checkbox-deselected" width="64" height="64"/>
+        <image name="default-user" width="512" height="512"/>
         <image name="events-logo" width="1200" height="1200"/>
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cxo-7x-TjM"/>
+        <segue reference="aPh-om-mnu"/>
         <segue reference="Am1-uc-cbn"/>
     </inferredMetricsTieBreakers>
 </document>

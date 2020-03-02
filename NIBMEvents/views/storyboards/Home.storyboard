@@ -13,7 +13,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="GMC-o8-idu">
             <objects>
-                <tabBarController storyboardIdentifier="MainTab" id="Xad-H2-53a" customClass="MainTabBarController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTab" id="Xad-H2-53a" customClass="MainTabBarController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="L8W-DB-cj6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         </textAttributes>
@@ -78,13 +78,13 @@
         <!--NIBM Events-->
         <scene sceneID="LNs-5R-GcQ">
             <objects>
-                <tableViewController storyboardIdentifier="HomeVC" id="T5D-Gx-FeG" customClass="HomeTableViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeVC" id="T5D-Gx-FeG" customClass="HomeTableViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bC0-4T-xBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventHeaderCell" rowHeight="57" id="Qd7-cW-msy" customClass="EventHeaderCell" customModule="NIBM_Events" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventHeaderCell" rowHeight="57" id="Qd7-cW-msy" customClass="EventHeaderCell" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qd7-cW-msy" id="32p-wh-0E7">
@@ -133,6 +133,7 @@
                                         <constraint firstItem="OIe-O3-jIC" firstAttribute="top" secondItem="32p-wh-0E7" secondAttribute="top" constant="13" id="zi8-2I-vir"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="btnBatch" destination="OIe-O3-jIC" id="EPe-vl-amU"/>
                                     <outlet property="imgProfileView" destination="nNV-k4-foN" id="oWO-Nj-qCq"/>
@@ -140,7 +141,7 @@
                                     <outlet property="lblLocation" destination="fBc-vW-WCy" id="5RV-QM-okf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventBodyCell" rowHeight="578" id="tYl-9g-SoI" customClass="EventBodyCell" customModule="NIBM_Events" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventBodyCell" rowHeight="578" id="tYl-9g-SoI" customClass="EventBodyCell" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="85" width="375" height="578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYl-9g-SoI" id="xuV-0g-Ecb">
@@ -156,7 +157,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xRM-au-KtJ">
                                             <rect key="frame" x="12" y="387" width="101" height="22"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-5P-tYD" customClass="NECustomSwipButton" customModule="NIBM_Events" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOP-5P-tYD" customClass="NECustomSwipButton" customModule="NIBMEvents" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="23" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="0Xc-J1-592"/>
@@ -254,7 +255,7 @@
                                         <constraint firstItem="5bD-C7-gS9" firstAttribute="leading" secondItem="xuV-0g-Ecb" secondAttribute="leading" constant="12" id="zZx-AR-fzf"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="btnComment" destination="oTM-qS-Zqc" id="07X-LK-RYI"/>
                                     <outlet property="btnGoingPreference" destination="hOP-5P-tYD" id="mCD-Vm-oqY"/>
@@ -313,12 +314,12 @@
         <!--Add Event-->
         <scene sceneID="yXr-eQ-T4J">
             <objects>
-                <viewController storyboardIdentifier="AddEventVC" id="hJk-QN-3oc" customClass="AddEventViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEventVC" id="hJk-QN-3oc" customClass="AddEventViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NT-XX-zYO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-vY-YfT" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-vY-YfT" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="506" width="374" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -333,7 +334,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-u5-MPQ" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vig-u5-MPQ" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="379" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -347,7 +348,7 @@
                                     <action selector="onAddLocation:" destination="hJk-QN-3oc" eventType="touchUpInside" id="5Z5-iz-8n2"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-Jf-lt3" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-Jf-lt3" customClass="NETextField" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="564" width="374" height="135"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -362,7 +363,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvl-q3-Aya" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvl-q3-Aya" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="436" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -394,7 +395,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vig-u5-MPQ" firstAttribute="top" secondItem="8FE-e2-DbL" secondAttribute="bottom" constant="56" id="8e0-Tl-rPw"/>
                             <constraint firstItem="WIP-mE-TOO" firstAttribute="trailing" secondItem="1Wn-Jf-lt3" secondAttribute="trailing" constant="20" id="Cz6-Zw-db4"/>
@@ -454,7 +455,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tmU-T3-2UR">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.95294117647058818" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -468,76 +469,89 @@
         <!--Publisher Profile-->
         <scene sceneID="e7A-OU-H6a">
             <objects>
-                <viewController storyboardIdentifier="PublisherProfileVC" id="ufJ-0M-Xip" customClass="PublisherProfileViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PublisherProfileVC" id="ufJ-0M-Xip" customClass="PublisherProfileViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9N-P0-jz2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="YxU-np-2mu">
-                                <rect key="frame" x="82" y="122" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="OIT-oZ-Ttd"/>
-                                    <constraint firstAttribute="height" constant="250" id="h0V-wb-MQk"/>
-                                </constraints>
+                                <rect key="frame" x="82" y="121.99999999999999" width="250" height="249.66666666666663"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aravinda Rathnayake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-Rv-v9w">
-                                <rect key="frame" x="20" y="380" width="374" height="31"/>
+                                <rect key="frame" x="20" y="379.66666666666669" width="374" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="jxQ-be-c80"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0715285588" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Hr-j4J">
                                 <rect key="frame" x="20" y="477.66666666666669" width="374" height="26"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="MdI-cr-GC1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l2-T6-jzI">
-                                <rect key="frame" x="20" y="511.66666666666669" width="374" height="38.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <state key="normal" title="@aravindakr95">
-                                    <color key="titleColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cobsccomp182p-010.@student.nibm.lk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-yB-ZMJ">
                                 <rect key="frame" x="20" y="428.66666666666669" width="374" height="26"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="FOv-2v-JSg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-9d-XTQ" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-9d-XTQ" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="610" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.83137254900000002" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ffg-VN-I6s"/>
+                                    <constraint firstAttribute="height" constant="50" id="KxH-0C-lTv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="SEND MESSAGE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l2-T6-jzI">
+                                <rect key="frame" x="20" y="525" width="374" height="38.333333333333371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="86B-XR-8ob"/>
+                                    <constraint firstAttribute="height" constant="38.329999999999998" id="o4h-nE-aqy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="@aravindakr95">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="Y0f-9d-XTQ" secondAttribute="trailing" constant="20" id="1fs-Yc-onJ"/>
-                            <constraint firstItem="Y0f-9d-XTQ" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="2ok-Mp-rXH"/>
-                            <constraint firstItem="3oh-yB-ZMJ" firstAttribute="top" secondItem="Jhk-Rv-v9w" secondAttribute="bottom" constant="17.670000000000002" id="55y-wA-NaL"/>
-                            <constraint firstItem="Jhk-Rv-v9w" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="7HD-7V-nRj"/>
-                            <constraint firstItem="6l2-T6-jzI" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="Axf-gk-P9N"/>
-                            <constraint firstItem="6l2-T6-jzI" firstAttribute="top" secondItem="6NQ-Hr-j4J" secondAttribute="bottom" constant="8" id="F8s-ee-SxS"/>
-                            <constraint firstItem="YxU-np-2mu" firstAttribute="top" secondItem="MHK-zG-wVc" secondAttribute="top" constant="58" id="HEP-P8-UWe"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="6NQ-Hr-j4J" secondAttribute="trailing" constant="20" id="JL4-dQ-oY3"/>
-                            <constraint firstItem="3oh-yB-ZMJ" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="Lma-7D-spE"/>
-                            <constraint firstItem="6NQ-Hr-j4J" firstAttribute="top" secondItem="3oh-yB-ZMJ" secondAttribute="bottom" constant="23" id="N4X-Al-3Q1"/>
-                            <constraint firstItem="Y0f-9d-XTQ" firstAttribute="top" secondItem="6l2-T6-jzI" secondAttribute="bottom" constant="60" id="cXo-Qq-Y1K"/>
-                            <constraint firstItem="YxU-np-2mu" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="82" id="idj-aW-LtH"/>
-                            <constraint firstItem="6NQ-Hr-j4J" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="lee-2d-8fN"/>
-                            <constraint firstItem="Jhk-Rv-v9w" firstAttribute="top" secondItem="YxU-np-2mu" secondAttribute="bottom" constant="8" id="mef-mR-VCi"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="Jhk-Rv-v9w" secondAttribute="trailing" constant="20" id="oOo-mi-qag"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="bottom" secondItem="Y0f-9d-XTQ" secondAttribute="bottom" constant="27" id="out-9L-j7Q"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="3oh-yB-ZMJ" secondAttribute="trailing" constant="20" id="s4C-eE-k5p"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="YxU-np-2mu" secondAttribute="trailing" constant="82" id="wC0-M4-uEc"/>
-                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="6l2-T6-jzI" secondAttribute="trailing" constant="20" id="zYp-h9-XZ3"/>
+                            <constraint firstItem="6l2-T6-jzI" firstAttribute="top" secondItem="6NQ-Hr-j4J" secondAttribute="bottom" constant="21.329999999999998" id="1nS-ze-31S"/>
+                            <constraint firstItem="MHK-zG-wVc" firstAttribute="bottom" secondItem="Y0f-9d-XTQ" secondAttribute="bottom" constant="27" id="2K6-sF-ZKt"/>
+                            <constraint firstItem="YxU-np-2mu" firstAttribute="top" secondItem="MHK-zG-wVc" secondAttribute="top" constant="58" id="6bm-zZ-d3V"/>
+                            <constraint firstItem="6NQ-Hr-j4J" firstAttribute="top" secondItem="3oh-yB-ZMJ" secondAttribute="bottom" constant="23" id="ACX-4T-Jd0"/>
+                            <constraint firstItem="Jhk-Rv-v9w" firstAttribute="top" secondItem="YxU-np-2mu" secondAttribute="bottom" constant="8" symbolic="YES" id="AGR-lr-II8"/>
+                            <constraint firstItem="Jhk-Rv-v9w" firstAttribute="leading" secondItem="3oh-yB-ZMJ" secondAttribute="leading" id="BBo-7E-O0Z"/>
+                            <constraint firstItem="6l2-T6-jzI" firstAttribute="leading" secondItem="Y0f-9d-XTQ" secondAttribute="leading" id="DqU-Ny-vd0"/>
+                            <constraint firstItem="YxU-np-2mu" firstAttribute="centerX" secondItem="Jhk-Rv-v9w" secondAttribute="centerX" id="J3r-DG-64Z"/>
+                            <constraint firstItem="6NQ-Hr-j4J" firstAttribute="trailing" secondItem="6l2-T6-jzI" secondAttribute="trailing" id="JJZ-Ln-7im"/>
+                            <constraint firstItem="Jhk-Rv-v9w" firstAttribute="trailing" secondItem="3oh-yB-ZMJ" secondAttribute="trailing" id="OxY-Kb-qbY"/>
+                            <constraint firstItem="MHK-zG-wVc" firstAttribute="trailing" secondItem="6l2-T6-jzI" secondAttribute="trailing" constant="20" id="PGU-x8-nan"/>
+                            <constraint firstItem="YxU-np-2mu" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="82" id="Rmk-Kf-0bk"/>
+                            <constraint firstItem="6NQ-Hr-j4J" firstAttribute="leading" secondItem="6l2-T6-jzI" secondAttribute="leading" id="Ugc-fN-eQG"/>
+                            <constraint firstItem="3oh-yB-ZMJ" firstAttribute="trailing" secondItem="6NQ-Hr-j4J" secondAttribute="trailing" id="Xad-o1-EXZ"/>
+                            <constraint firstItem="6l2-T6-jzI" firstAttribute="trailing" secondItem="Y0f-9d-XTQ" secondAttribute="trailing" id="cZp-FJ-S1a"/>
+                            <constraint firstItem="6l2-T6-jzI" firstAttribute="leading" secondItem="MHK-zG-wVc" secondAttribute="leading" constant="20" id="dtd-2l-9WH"/>
+                            <constraint firstItem="Y0f-9d-XTQ" firstAttribute="top" secondItem="6l2-T6-jzI" secondAttribute="bottom" constant="46.670000000000002" id="fiu-qB-Fwa"/>
+                            <constraint firstItem="3oh-yB-ZMJ" firstAttribute="top" secondItem="Jhk-Rv-v9w" secondAttribute="bottom" constant="18" id="gNu-MX-03g"/>
+                            <constraint firstItem="3oh-yB-ZMJ" firstAttribute="leading" secondItem="6NQ-Hr-j4J" secondAttribute="leading" id="qfD-Xe-Ovf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MHK-zG-wVc"/>
                     </view>
@@ -569,7 +583,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ttM-No-6lH">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -583,7 +597,7 @@
         <!--Event Details-->
         <scene sceneID="pTG-zj-8B3">
             <objects>
-                <viewController storyboardIdentifier="EventDetailsVC" id="hoj-g4-30r" customClass="EventDetailsViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetailsVC" id="hoj-g4-30r" customClass="EventDetailsViewController" customModule="NIBMEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAl-Wb-F84">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -622,7 +636,7 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz1-Jp-zNl" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz1-Jp-zNl" customClass="NEButton" customModule="NIBMEvents" customModuleProvider="target">
                                 <rect key="frame" x="20" y="659" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.83137254900000002" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -651,7 +665,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gcY-Kv-0hA" firstAttribute="trailing" secondItem="dp2-bB-yYk" secondAttribute="trailing" constant="20" id="2DK-aw-008"/>
                             <constraint firstItem="gcY-Kv-0hA" firstAttribute="trailing" secondItem="yVN-A3-QV8" secondAttribute="trailing" constant="100" id="2c7-Ju-fgk"/>
@@ -688,6 +702,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnEventLocation" destination="Nz1-Jp-zNl" id="qDM-do-s4C"/>
                         <outlet property="imgEvent" destination="yVN-A3-QV8" id="uxl-0R-6GT"/>
                         <outlet property="imgPublisher" destination="KMj-dy-gKu" id="UNz-Cm-JCZ"/>
                         <outlet property="lblBody" destination="7mD-zG-Lc0" id="flT-6W-wKA"/>
@@ -708,6 +723,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tOv-35-Nxp">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

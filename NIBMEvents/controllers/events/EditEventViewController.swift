@@ -27,9 +27,11 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var txtContactNumber: NETextField!
     
     var isNewEventImage: Bool = false
+    var isDateTimeSelected: Bool = false
     var isImageSelected: Bool = true
 
-    private var dateTime: Timestamp?
+    private var dateTime: Date = Date()
+    
     private var event: CustomEvent?
 
     override func viewDidLoad() {
@@ -52,7 +54,6 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
         picker.is12HourFormat = true
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
-            self.dateTime = Timestamp(date: Date())
             let omitTimezone = date.description.components(separatedBy: "+")
             self.btnDateTime.setTitle(omitTimezone[0], for: .normal)
         }
@@ -85,6 +86,15 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
             let alert = NotificationManager.sharedInstance.showAlert(
                 header: "Edit Image Failed",
                 body: "The following image field is missing or invalid.", action: "Okay")
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        if !self.isDateTimeSelected {
+            let alert = NotificationManager.sharedInstance.showAlert(
+                header: "Add Event Failed",
+                body: "The following date and time field is missing or invalid.", action: "Okay")
             
             self.present(alert, animated: true, completion: nil)
             return
@@ -132,6 +142,7 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
     }
 
     private func updateUI() {
+        self.setEventData()
         self.txtEventTitle.setLeftPaddingPoints(5)
         self.txtEventTitle.setRightPaddingPoints(5)
         
@@ -141,10 +152,8 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
         self.txtEventDescription.setLeftPaddingPoints(5)
         self.txtEventDescription.setRightPaddingPoints(5)
         
-        self.event = CustomEvent(event: UserDefaults.standard.value(
-            forKey: "selectedEvent") as! [String: Any])
         guard let event = event else { return }
-        let omitTimezone = Date().description.components(separatedBy: "+")
+        let omitTimezone = event.timeStamp!.description.components(separatedBy: "+")
 
         let imgUrl = URL(string: event.eventImageUrl!)
         self.imgEventView.kf.indicatorType = .activity
@@ -157,18 +166,27 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
         self.txtContactNumber.text = event.publisherContactNumber
     }
     
+    private func setEventData() {
+        self.event = CustomEvent(event: UserDefaults.standard.value(
+            forKey: "eventData") as! [String: Any])
+    }
+    
     private func invokeServices() {
         SVProgressHUD.show(withStatus: "Please wait")
-        guard let user = AuthManager.sharedInstance.user,
-            let profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String : Any])
+        SVProgressHUD.setDefaultMaskType(.clear)
+        
+        guard let user = AuthManager.sharedInstance.user
             else { return }
 
         DatabaseManager.sharedInstance.uploadImage(image: self.imgEventView.image!, email: user.email!, type: .event) { (url, error) in
             if url != nil {
                 guard let event = self.event else { return }
+                let coordinates = self.locationManager.exposedLocation?.coordinate
                 let data: [String: Any] = [
-                    "publishedLocation": self.btnEventLocation.titleLabel!,
-                    "timeStamp": self.dateTime,
+                    "publishedLocation": self.btnEventLocation.titleLabel?.text!,
+                    "coordinates": GeoPoint(latitude: coordinates!.latitude, longitude: coordinates!.longitude),
+                    "publisherContactNumber": self.txtContactNumber.text!,
+                    "timeStamp": Timestamp(date: self.dateTime),
                     "title": self.txtEventTitle.text!,
                     "body": self.txtEventDescription.text!,
                     "eventImageUrl": url!

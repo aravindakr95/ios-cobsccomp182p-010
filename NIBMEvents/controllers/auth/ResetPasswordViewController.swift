@@ -11,13 +11,17 @@ import UIKit
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var txtEmail: NETextField!
     @IBOutlet weak var btnResetPassword: NEButton!
-
+    @IBOutlet weak var imgLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureStyles()
     }
 
     private func configureStyles() {
+        self.imgLogo.layer.cornerRadius = imgLogo.bounds.width / 2.0
+        self.imgLogo.layer.masksToBounds = true
+        
         self.txtEmail.setLeftPaddingPoints(5)
         self.txtEmail.setRightPaddingPoints(5)
     }

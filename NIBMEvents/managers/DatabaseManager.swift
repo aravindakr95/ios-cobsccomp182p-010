@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 import FirebaseFirestore
 import FirebaseStorage
 
@@ -20,13 +21,8 @@ final class DatabaseManager {
 
     func insertDocument(collection: String,
                         data: [String: Any],
-                        isRegistration: Bool? = false,
                         completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
-        if isRegistration! {
-            UserDefaults.standard.set(data, forKey: "userProfile")
-        }
-
         self.database.collection(collection).addDocument(data: data) { (error) in
             if error != nil {
                 completion(nil, error?.localizedDescription)
@@ -92,6 +88,26 @@ final class DatabaseManager {
         }
     }
     
+    func retrieveDocumentWhere(finder: String, value: String,  collection: String,
+                                completion: @escaping (_ success: UserProfile?, _ error: String?)
+        -> Void) {
+        self.database.collection(collection).whereField(finder, isEqualTo: value).getDocuments { (querySnapshot, error) in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshot results.")
+                return
+            }
+            if let error = error {
+                completion(nil, error.localizedDescription)
+            } else {
+                let model = snapshot.documents.map { (document) -> UserProfile in
+                    return UserProfile(user: document.data())!
+                }
+                
+                completion(model.first, nil)
+            }
+        }
+    }
+    
     func listenDocumentChangeWhere(finder: String, value: String,  collection: String,
                                    completion: @escaping (_ success: Event?, _ error: String?)
         -> Void) {
@@ -102,7 +118,7 @@ final class DatabaseManager {
                 completion(nil, error.localizedDescription)
             } else {
                 snapshot.documentChanges.forEach { diff in
-                    if diff.type == .added {
+                    if diff.type == .added || diff.type == .modified {
                         let dataset = Event(event: diff.document.data(), docId: diff.document.documentID)!
                         self.events.append(dataset)
                         completion(Event(event: diff.document.data(), docId: diff.document.documentID)!, nil)

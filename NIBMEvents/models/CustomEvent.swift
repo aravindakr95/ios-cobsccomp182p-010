@@ -15,8 +15,8 @@ struct CustomEvent {
     var documentId: String?
     var title: String?
     var publishedLocation: String?
-    var longitudes: Double?
-    var latitudes: Double?
+    var longitude: Double?
+    var latitude: Double?
     var timeStamp: Date?
     var publisherName: String?
     var publisherImageUrl: String?
@@ -26,23 +26,23 @@ struct CustomEvent {
 
     init?(event: [String: Any]) {
         guard
-            let documentId = event["documentId"] as? String,//
-            let title = event["title"] as? String,//
-            let publishedLocation = event["publishedLocation"] as? String,//
-            let longitudes = event["longitudes"] as? Double,//
-            let latitudes = event["latitudes"] as? Double,//
-            let timeStamp = event["timeStamp"] as? Date,//
+            let documentId = event["documentId"] as? String,
+            let title = event["title"] as? String,
+            let publishedLocation = event["publishedLocation"] as? String,
+            let longitude = event["longitude"] as? Double,
+            let latitude = event["latitude"] as? Double,
+            let timeStamp = event["timeStamp"] as? Date,
             let publisherContactNumber = event["publisherContactNumber"] as? String,
-            let publisherName = event["publisherName"] as? String,//
-            let publisherImageUrl = event["publisherImageUrl"] as? String,//
-            let body = event["body"] as? String,//
-            let eventImageUrl = event["eventImageUrl"] as? String else { return nil }//
+            let publisherName = event["publisherName"] as? String,
+            let publisherImageUrl = event["publisherImageUrl"] as? String,
+            let body = event["body"] as? String,
+            let eventImageUrl = event["eventImageUrl"] as? String else { return nil }
 
         self.documentId = documentId
         self.title = title
         self.publishedLocation = publishedLocation
-        self.longitudes = longitudes
-        self.latitudes = latitudes
+        self.longitude = longitude
+        self.latitude = latitude
         self.timeStamp = timeStamp
         self.publisherContactNumber = publisherContactNumber
         self.publisherName = publisherName

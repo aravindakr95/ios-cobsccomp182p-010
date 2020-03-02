@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "709B0A0723FF8C6500488BD2"
-               BuildableName = "NIBM Events.app"
+               BuildableName = "NIBMEvents.app"
                BlueprintName = "NIBMEvents"
                ReferencedContainer = "container:NIBMEvents.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "70F90681240EC77A00BB8705"
+               BlueprintIdentifier = "7090F7F6240FB2F400041058"
                BuildableName = "NIBMEventsTests.xctest"
                BlueprintName = "NIBMEventsTests"
                ReferencedContainer = "container:NIBMEvents.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "70F90672240EC77100BB8705"
+               BlueprintIdentifier = "7090F7E7240FB2D600041058"
                BuildableName = "NIBMEventsUITests.xctest"
                BlueprintName = "NIBMEventsUITests"
                ReferencedContainer = "container:NIBMEvents.xcodeproj">
@@ -52,7 +52,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "70F90672240EC77100BB8705"
+               BlueprintIdentifier = "7090F7E7240FB2D600041058"
                BuildableName = "NIBMEventsUITests.xctest"
                BlueprintName = "NIBMEventsUITests"
                ReferencedContainer = "container:NIBMEvents.xcodeproj">
@@ -62,7 +62,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "70F90681240EC77A00BB8705"
+               BlueprintIdentifier = "7090F7F6240FB2F400041058"
                BuildableName = "NIBMEventsTests.xctest"
                BlueprintName = "NIBMEventsTests"
                ReferencedContainer = "container:NIBMEvents.xcodeproj">
@@ -73,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "709B0A0723FF8C6500488BD2"
-            BuildableName = "NIBM Events.app"
+            BuildableName = "NIBMEvents.app"
             BlueprintName = "NIBMEvents"
             ReferencedContainer = "container:NIBMEvents.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "709B0A0723FF8C6500488BD2"
-            BuildableName = "NIBM Events.app"
+            BuildableName = "NIBMEvents.app"
             BlueprintName = "NIBMEvents"
             ReferencedContainer = "container:NIBMEvents.xcodeproj">
          </BuildableReference>
@@ -115,7 +115,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "709B0A0723FF8C6500488BD2"
-            BuildableName = "NIBM Events.app"
+            BuildableName = "NIBMEvents.app"
             BlueprintName = "NIBMEvents"
             ReferencedContainer = "container:NIBMEvents.xcodeproj">
          </BuildableReference>

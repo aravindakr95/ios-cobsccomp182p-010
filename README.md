@@ -2,9 +2,9 @@
 
 # NIBM Events
 
-Share and communicate with bachelors during a Event at NIBM.
+Share and communicate with bachelors during an Event at NIBM.
 
-This application is used to simulates how students can manage and share a event at NIBM with other friends and staff. It is built on top of Swift with several 3rd party libraries, serving as a single application
+This application is used to simulates how students can manage and share a event at NIBM with other colleagues. It is built on top of Swift with several 3rd party libraries, serving as a single application.
 
 ## Technologies
 
@@ -36,3 +36,8 @@ Run `pod install` to install development and build system dependencies.
 ## Special Notes
 
 Minimum 8 characters at least 1 Uppercase, 1 Lowercase, 1 Number and 1 Special Character password is required and email domain name must be within example@student.nibm.lk
+
+## Sample Credentials
+
+'Username: aravinda@student.nibm.lk'
+'Password: Ara@123'

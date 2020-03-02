@@ -173,7 +173,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                             "profileImageUrl": url!
                         ]
 
-                        DatabaseManager.sharedInstance.insertDocument(collection: "users", data: data, isRegistration: true) {[weak self] (_ success, error) in
+                        DatabaseManager.sharedInstance.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in
                             guard let `self` = self else { return }
 
                             if (error != nil) {
@@ -184,7 +184,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 return
                             } else {
                                 print("data inserted and complete")
-                                UserDefaults.standard.set(data, forKey: "userProfile")
                                 UserDefaults.standard.set(false, forKey: "isAuthorized")
                                 self.btnSignUp.hideLoading()
                                 self.alert = NotificationManager.sharedInstance.showAlert(

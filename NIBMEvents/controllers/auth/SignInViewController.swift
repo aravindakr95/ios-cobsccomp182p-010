@@ -11,7 +11,8 @@ import UIKit
 class SignInViewController: UIViewController {
     @IBOutlet weak var txtEmail: NETextField!
     @IBOutlet weak var txtPassword: NETextField!
-
+    @IBOutlet weak var imgLogo: UIImageView!
+    
     @IBOutlet weak var btnSignIn: NEButton!
 
     var alert: UIViewController!
@@ -22,6 +23,9 @@ class SignInViewController: UIViewController {
     }
 
     private func configureStyles() {
+        self.imgLogo.layer.cornerRadius = imgLogo.bounds.width / 2.0
+        self.imgLogo.layer.masksToBounds = true
+        
         self.txtEmail.setLeftPaddingPoints(5)
         self.txtEmail.setRightPaddingPoints(5)
 
@@ -67,6 +71,7 @@ class SignInViewController: UIViewController {
                 self.alert = NotificationManager.sharedInstance.showAlert(header: "Sign In Failed", body: error!, action: "Okay")
                 self.present(self.alert, animated: true, completion: nil)
             } else {
+                self.setUserProfile()
                 UserDefaults.standard.set(true, forKey: "isAuthorized")
                 self.transition(identifier: "signInToHome")
             }
@@ -77,6 +82,16 @@ class SignInViewController: UIViewController {
 
     @IBAction func unwindToInitial(_ sender: UIBarButtonItem) {
         TransitionManager.sharedInstance.transitionSegue(sender: self, identifier: "unwindToInitial")
+    }
+    
+    private func setUserProfile() {
+        AuthManager.sharedInstance.getUserProfile(uid: AuthManager.sharedInstance.user.uid) { success, error in
+            if error == nil {
+                print("User profile added to the instance.")
+            } else {
+                print("Failed to add user profile into instance.")
+            }
+        }
     }
 
     private func transition(identifier: String) {

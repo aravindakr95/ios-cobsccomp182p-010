@@ -16,6 +16,7 @@ import FirebaseFirestore
 class AddEventViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var isNewEventImage: Bool = false
     var isImageSelected: Bool = false
+    var isDateTimeSelected: Bool = false
     
     var dateTime: Timestamp?
     
@@ -35,14 +36,15 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func onAddDateTime(_ sender: NEButton) {
-        let date = Date()
         let picker = DateTimePicker.show()
+        
         picker.is12HourFormat = false
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
             self.dateTime = Timestamp(date: Date())
             let omitTimezone = date.description.components(separatedBy: "+")
             self.btnDateTime.setTitle(omitTimezone[0], for: .normal)
+            self.isDateTimeSelected = true
         }
     }
     
@@ -78,6 +80,15 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
             return
         }
         
+        if !self.isDateTimeSelected {
+            let alert = NotificationManager.sharedInstance.showAlert(
+                header: "Add Event Failed",
+                body: "The following date and time field is missing or invalid.", action: "Okay")
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.invokeServices()
     }
     
@@ -87,12 +98,12 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func onAddLocation(_ sender: NEButton) {
         self.btnEventLocation.showLoading()
-        self.locationManager.getPlace { [weak self](location) in
+        self.locationManager.getPlace { [weak self] (data) in
             guard let `self` = self else { return }
-            if location != nil {
-                self.btnEventLocation.hideLoading()
-                self.btnEventLocation.setTitle(location?.locality, for: .normal)
-            }
+            guard let location = data else { return }
+            
+            self.btnEventLocation.hideLoading()
+            self.btnEventLocation.setTitle(location.name, for: .normal)
         }
     }
     
@@ -156,21 +167,23 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
     
     private func invokeServices() {
         SVProgressHUD.show(withStatus: "Please wait")
+        SVProgressHUD.setDefaultMaskType(.clear)
+        
         guard let user = AuthManager.sharedInstance.user,
-            let profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String : Any])
+            let profile = AuthManager.sharedInstance.userProfile
             else { return }
         DatabaseManager.sharedInstance.uploadImage(image: self.imgEvent.image!, email: user.email!, type: .event) { (url, error) in
             if url != nil {
+                let coordinates = self.locationManager.exposedLocation?.coordinate
                 let data: [String: Any] = [
                     "uid": user.uid,
-                    "publisher": profile.firstName + profile.lastName,
-                    "publisherBatch": profile.batch.uppercased(),
+                    "publisher": "\(profile.firstName!) \(profile.lastName!)",
+                    "publisherBatch": profile.batch!.uppercased(),
                     "publisherContactNumber": profile.contactNumber,
                     "publisherFacebookIdentifier": profile.facebookIdentifier,
                     "publisherImageUrl": profile.profileImageUrl,
-                    "publishedLocation": self.btnEventLocation.titleLabel,
-                    "longitudes": self.locationManager.exposedLocation?.coordinate.longitude ?? 79.857750,
-                    "latitudes": self.locationManager.exposedLocation?.coordinate.latitude ?? 6.931970,
+                    "publishedLocation": self.btnEventLocation.titleLabel?.text,
+                    "coordinates": GeoPoint(latitude: coordinates!.latitude, longitude: coordinates!.longitude),
                     "timeStamp": self.dateTime,
                     "title": self.txtEventName.text!,
                     "body": self.txtEventBody.text!,
@@ -193,7 +206,7 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
                     } else { print("not insert document")}
                 }
             } else {
-                print("not upload")
+                print("image not upload")
             }
         }
     }

@@ -15,12 +15,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblContactNumber: UILabel!
     
     @IBOutlet weak var btnFacebookIdentifier: UIButton!
-
-    private var profile: UserProfile!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.isAuthorized()
+    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.isAuthorized()
         self.configureStyles()
     }
 
@@ -78,18 +79,21 @@ class ProfileViewController: UIViewController {
     }
 
     private func configureStyles() {
-        self.profile = UserProfile(user: UserDefaults.standard.value(forKey: "userProfile") as! [String: String])
-        guard let profile = profile else { return }
+        let authManager = AuthManager.sharedInstance
+        
+        guard let profile = authManager.userProfile,
+        let email = authManager.user.email
+            else { return }
 
-        let imgUrl = URL(string: profile.profileImageUrl)
+        let imgUrl = URL(string: profile.profileImageUrl!)
         self.profileImageView.kf.indicatorType = .activity
         self.profileImageView.kf.setImage(with: imgUrl)
 
-        self.lblEmail.text = AuthManager.sharedInstance.user.email
-        self.lblFullName!.text = profile.firstName + " " + profile.lastName
+        self.lblEmail.text = email
+        self.lblFullName!.text = profile.firstName! + " " + profile.lastName!
         self.lblContactNumber.text = profile.contactNumber
 
-        self.btnFacebookIdentifier.setTitle("@\(profile.facebookIdentifier)", for: .normal)
+        self.btnFacebookIdentifier.setTitle("@\(profile.facebookIdentifier!)", for: .normal)
     }
 
     private func blurBackground() {

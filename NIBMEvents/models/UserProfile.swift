@@ -9,13 +9,13 @@
 import Foundation
 
 struct UserProfile {
-    var uid: String
-    var firstName: String
-    var lastName: String
-    var profileImageUrl: String
-    var contactNumber: String
-    var facebookIdentifier: String
-    var batch: String
+    var uid: String?
+    var firstName: String?
+    var lastName: String?
+    var profileImageUrl: String?
+    var contactNumber: String?
+    var facebookIdentifier: String?
+    var batch: String?
 
     init?(user: [String: Any]) {
         guard let uid = user["uid"] as? String,

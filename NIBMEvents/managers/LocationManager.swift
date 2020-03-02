@@ -10,7 +10,6 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject {
-    // - Private
     private let locationManager = CLLocationManager()
     
     public var exposedLocation: CLLocation? {
@@ -25,22 +24,19 @@ class LocationManager: NSObject {
     }
 }
 
-// MARK: - Get Placemark
 extension LocationManager: CLLocationManagerDelegate {
     func getPlace(completion: @escaping (CLPlacemark?) -> Void) {
         let geocoder = CLGeocoder()
         let coordinates = self.getCoordinates()
         
-        let location: CLLocation? = CLLocation(latitude: 6.931970, longitude: 79.857750) // Due to a coordinates returns nil mock the CLLocation
-        geocoder.reverseGeocodeLocation(location!) { placemarks, error in
-            
+        geocoder.reverseGeocodeLocation(coordinates!) { placemarks, error in
             guard error == nil else {
                 print("*** Error in \(#function): \(error!.localizedDescription)")
                 completion(nil)
                 return
             }
             
-            guard let placemark = placemarks?[0] else {
+            guard let placemark = placemarks?.first else {
                 print("*** Error in \(#function): placemark is nil")
                 completion(nil)
                 return
@@ -64,7 +60,6 @@ extension LocationManager: CLLocationManagerDelegate {
             let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
             
             if authStatus == .authorizedWhenInUse || authStatus == .authorizedAlways {
-                locationManager.startUpdatingLocation()
                 location = locationManager.location
                 return location
             }
@@ -73,5 +68,11 @@ extension LocationManager: CLLocationManagerDelegate {
         }
 
         return nil
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let loc = locations.first {
+            print("Users: location: \(loc)")
+        }
     }
 }
