@@ -39,5 +39,9 @@ Minimum 8 characters at least 1 Uppercase, 1 Lowercase, 1 Number and 1 Special C
 
 ## Sample Credentials
 
-'Username: aravinda@student.nibm.lk'
-'Password: Ara@123'
+`Username: aravinda@student.nibm.lk`
+`Password: Ara@123`
+
+Screenshots
+
+Drive Folder: [Link](https://drive.google.com/drive/folders/1GanHnT-r5NZzSHcolqyBiVrLfyajaP9O?usp=sharing)

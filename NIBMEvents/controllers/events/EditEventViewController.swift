@@ -44,7 +44,7 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
             guard let `self` = self else { return }
             if location != nil {
                 self.btnEventLocation.hideLoading()
-                self.btnEventLocation.setTitle(location?.locality, for: .normal)
+                self.btnEventLocation.setTitle(location?.name, for: .normal)
             }
         }
     }
