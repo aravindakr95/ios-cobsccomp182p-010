@@ -20,7 +20,7 @@ analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
 - explicit_self
 
 included:
-- nibm-events
+- NIBMEvents/models
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level

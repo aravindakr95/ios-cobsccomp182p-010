@@ -1,4 +1,4 @@
-<img src="assets/nibm-logo.png" height="140" width="380">
+<img src="assets/logo-banner.png" height="140" width="380">
 
 # NIBM Events
 
@@ -14,6 +14,7 @@ Language                   	| Swift 5.0
 Unit Testing Framework     	| XCTest                                         
 Build Tool                 	| Xcodebuild                                         
 Logger                    	| SwiftyBeaver
+Logger                        | SwiftLint
 Stream Communication               | RxSwift
 Database                    | FireStore
 Keyboard Manager            | IQKeyboardManagerSwift
