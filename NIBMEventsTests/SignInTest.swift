@@ -2,13 +2,13 @@
 //  SignInTest.swift
 //  NIBMEventsTests
 //
-//  Created by Aravinda Rathnayake on 3/4/20.
+//  Created by Aravinda Rathnayake on 3/2/20.
 //  Copyright © 2020 Aravinda Rathnayake. All rights reserved.
 //
 import XCTest
 //@testable import NIBMEVents
 
-// TESTING IS NOT WORKING I CANNOT INCLUDE MY MODULE OVER HERE
+// TESTING DIDN'T TESTED BECAUSE I CANNOT INCLUDE MY NIBMEVENTS MODULE OVER HERE, IT GIVES ERROR
 class SignInTest: XCTestCase {
     //    var loginView: SignInView!
     //    var authDataManager  : AuthManager!

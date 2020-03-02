@@ -4,20 +4,20 @@
 
 Share and communicate with bachelors during an Event at NIBM.
 
-This application is used to simulates how students can manage and share a event at NIBM with other colleagues. It is built on top of Swift with several 3rd party libraries, serving as a single application.
+This application is used to simulates how students can manage and share a event at NIBM with other colleagues. It is built on top of Swift with minimal 3rd party libraries, serving as a single application.
 
 ## Technologies
 
-Usage          	            | Technology   
---------------------------	| --------------------------
-Language                   	| Swift 5.0                      
-Unit Testing Framework     	| XCTest                                         
-Build Tool                 	| Xcodebuild                                         
-Logger                    	| SwiftyBeaver
+Usage                          | Technology   
+--------------------------    | --------------------------
+Language                       | Swift 5.0                      
+Unit Testing Framework         | XCTest                                         
+Build Tool                     | Xcodebuild                                         
+Logger                        | SwiftyBeaver
 Stream Communication               | RxSwift
 Database                    | FireStore
 Keyboard Manager            | IQKeyboardManagerSwift
-Dependency Management Tool 	| CocoaPods
+Dependency Management Tool     | CocoaPods
 Development IDE             | XCode 10.3
 
 ## Support
@@ -41,6 +41,6 @@ Minimum 8 characters at least 1 Uppercase, 1 Lowercase, 1 Number and 1 Special C
 `Username: aravinda@student.nibm.lk`
 `Password: Ara@123`
 
-Screenshots
+## Screenshots
 
-Drive Folder: [Link](https://drive.google.com/drive/folders/1GanHnT-r5NZzSHcolqyBiVrLfyajaP9O?usp=sharing)
+Drive Folder: [SCREENSHOTS LINK](https://drive.google.com/drive/folders/1GanHnT-r5NZzSHcolqyBiVrLfyajaP9O?usp=sharing)

@@ -259,7 +259,6 @@ PODS:
   - nanopb/encode (0.3.9011)
   - RxSwift (5.0.1)
   - SVProgressHUD (2.2.5)
-  - SwiftLint (0.39.1)
   - SwiftyBeaver (1.8.4)
 
 DEPENDENCIES:
@@ -271,7 +270,6 @@ DEPENDENCIES:
   - Kingfisher
   - RxSwift
   - SVProgressHUD
-  - SwiftLint
   - SwiftyBeaver
 
 SPEC REPOS:
@@ -299,7 +297,6 @@ SPEC REPOS:
     - nanopb
     - RxSwift
     - SVProgressHUD
-    - SwiftLint
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
@@ -326,9 +323,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
 
-PODFILE CHECKSUM: e384d5ea014a5b58840208f9ddc74095d68723e8
+PODFILE CHECKSUM: f7a06346118c2af815adf4511e538fafc19fa329
 
 COCOAPODS: 1.9.0
