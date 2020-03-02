@@ -1,4 +1,4 @@
-<img src="assets/logo-banner.png" height="180" width="550">
+<img src="assets/nibm-logo.png" height="140" width="380">
 
 # NIBM Events
 
@@ -13,9 +13,8 @@ Usage          	            | Technology
 Language                   	| Swift 5.0                      
 Unit Testing Framework     	| XCTest                                         
 Build Tool                 	| Xcodebuild                                         
-Code Quality Tools         	| SwiftLint
 Logger                    	| SwiftyBeaver
-Communication               | RxSwift
+Stream Communication               | RxSwift
 Database                    | FireStore
 Keyboard Manager            | IQKeyboardManagerSwift
 Dependency Management Tool 	| CocoaPods
@@ -23,7 +22,7 @@ Development IDE             | XCode 10.3
 
 ## Support
 
-Constraints work with, iPhone 7 Plus, 8 Plus with portrait mode.
+Constraints work with, from iPhone 6 to latest iPhone devices.
 
 ## Getting Started
 
@@ -33,3 +32,6 @@ Commands under `ios-cobsccomp182p-010` directory.
 
 Run `pod install` to install development and build system dependencies.
 
+## Special Notes
+
+Minimum 8 characters at least 1 Uppercase, 1 Lowercase, 1 Number and 1 Special Character password is required and email domain name must be within example@student.nibm.lk

@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "70F90672240EC77100BB8705"
+               BuildableName = "NIBM EventsUITests.xctest"
+               BlueprintName = "NIBM EventsUITests"
+               ReferencedContainer = "container:nibm-events.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "70F90681240EC77A00BB8705"
+               BuildableName = "NIBM EventsTests.xctest"
+               BlueprintName = "NIBM EventsTests"
+               ReferencedContainer = "container:nibm-events.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

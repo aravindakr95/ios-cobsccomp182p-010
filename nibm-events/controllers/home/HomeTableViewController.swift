@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 import Firebase
 import SVProgressHUD
 import RxSwift
@@ -64,8 +65,17 @@ class HomeTableViewController: UITableViewController {
             "publisherContactNumber": selectedEvent.publisherContactNumber!
         ]
 
-        UserDefaults.standard.set(publisher, forKey: "selectedEvent")
+        UserDefaults.standard.set(publisher, forKey: "selectedProfile")
         self.transition(identifier: "homeToPublisherProfile")
+    }
+    
+    @objc private func eventImageTapped() {
+        print("ggg")
+        guard let index = self.currentIndex else { return }
+        let selectedEvent = self.eventsData[index]
+        
+        UserDefaults.standard.set(selectedEvent, forKey: "selectedEvent")
+        self.transition(identifier: "homeToEvent")
     }
 
     private func configureStyles() {
@@ -149,11 +159,14 @@ extension HomeTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.eventBodyCell, for: indexPath) as? EventBodyCell
+        self.currentIndex = indexPath.section
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(eventImageTapped))
+        cell!.imgPostView.addGestureRecognizer(tapGesture)
+
         cell!.event = self.eventsData[indexPath.section]
         cell!.selectionStyle = .none
         cell!.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 0.8470588235)
-
-        self.currentIndex = indexPath.section
 
         return cell!
     }

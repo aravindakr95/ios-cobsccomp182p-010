@@ -40,7 +40,7 @@ class InitialViewController: UIViewController {
     @IBAction func onSignUp(_ sender: NEButton) {
         self.transition(identifier: "initialToSignUp")
     }
-
+    
     @IBAction func onSignIn(_ sender: NEButton) {
         self.transition(identifier: "initialToSignIn")
     }

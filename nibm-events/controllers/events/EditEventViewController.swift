@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import DateTimePicker
 import MobileCoreServices
+
+import DateTimePicker
 import Kingfisher
 import FirebaseFirestore
 import SVProgressHUD
@@ -24,7 +25,7 @@ class EditEventViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var txtContactNumber: NETextField!
     
     var isNewEventImage: Bool = false
-    var isImageSelected: Bool = false
+    var isImageSelected: Bool = true
 
     private var dateTime: Timestamp?
     private var event: CustomEvent?

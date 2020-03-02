@@ -14,7 +14,6 @@ class LocationManager: NSObject {
     // - Private
     private let locationManager = CLLocationManager()
     
-    // - API
     public var exposedLocation: CLLocation? {
         return self.locationManager.location
     }
@@ -27,30 +26,15 @@ class LocationManager: NSObject {
     }
 }
 
-// MARK: - Core Location Delegate
-extension LocationManager: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager,
-                         didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        switch status {
-        case .notDetermined         : print("notDetermined")        // location permission not asked for yet
-        case .authorizedWhenInUse   : print("authorizedWhenInUse")  // location authorized
-        case .authorizedAlways      : print("authorizedAlways")     // location authorized
-        case .restricted            : print("restricted")           // TODO: handle
-        case .denied                : print("denied")               // TODO: handle
-        }
-    }
-}
-
 // MARK: - Get Placemark
-extension LocationManager {
-    
-    
-    func getPlace(for location: CLLocation,
-                  completion: @escaping (CLPlacemark?) -> Void) {
-        
+extension LocationManager: CLLocationManagerDelegate {
+    func getPlace(completion: @escaping (CLPlacemark?) -> Void) {
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+        let coordinates = self.getCoordinates()
+        
+        let location: CLLocation? = CLLocation(latitude: 6.931970, longitude: 79.857750) // Due to a coordinates returns nil mock the CLLocation
+        
+        geocoder.reverseGeocodeLocation(location!) { placemarks, error in
             
             guard error == nil else {
                 print("*** Error in \(#function): \(error!.localizedDescription)")
@@ -63,41 +47,33 @@ extension LocationManager {
                 completion(nil)
                 return
             }
-            
             completion(placemark)
         }
     }
-}
-
-// MARK: - Get Location
-extension LocationManager {
     
-    
-    func getLocation(forPlaceCalled name: String,
-                     completion: @escaping(CLLocation?) -> Void) {
+    func getCoordinates() -> (CLLocation?) {
+        var location: CLLocation?
         
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(name) { placemarks, error in
-            
-            guard error == nil else {
-                print("*** Error in \(#function): \(error!.localizedDescription)")
-                completion(nil)
-                return
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            if CLLocationManager.authorizationStatus() == .denied {
+                locationManager.stopUpdatingLocation()
+                print("You have denied to access your current location.")
             }
             
-            guard let placemark = placemarks?[0] else {
-                print("*** Error in \(#function): placemark is nil")
-                completion(nil)
-                return
-            }
+            let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
             
-            guard let location = placemark.location else {
-                print("*** Error in \(#function): placemark is nil")
-                completion(nil)
-                return
+            if authStatus == .authorizedWhenInUse || authStatus == .authorizedAlways {
+                locationManager.startUpdatingLocation()
+                location = locationManager.location
+                return location
             }
-            
-            completion(location)
+        } else {
+            print("Please turn on your location services from settings.")
         }
+
+        return nil
     }
 }

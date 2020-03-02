@@ -99,7 +99,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         var fields: [String: NETextField] = [:]
         var fieldErrors = [String: String]()
 
-        // TODO: Refer usage comment
         let isChecked = !cbAgreement.isChecked
 
         fields = [
@@ -144,7 +143,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             return
         }
 
-        // FIXME: cbAgreement isChecked method returns wrong state of the checkbox
         if isChecked {
             alert = NotificationManager.sharedInstance.showAlert(
                 header: "Registration Failed",
@@ -175,7 +173,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                             "profileImageUrl": url!
                         ]
 
-                        DatabaseManager.sharedInstance.insertDocument(collection: "users", data: data) {[weak self] (_ success, error) in
+                        DatabaseManager.sharedInstance.insertDocument(collection: "users", data: data, isRegistration: true) {[weak self] (_ success, error) in
                             guard let `self` = self else { return }
 
                             if (error != nil) {

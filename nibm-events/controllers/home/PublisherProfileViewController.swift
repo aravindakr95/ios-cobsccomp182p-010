@@ -29,7 +29,7 @@ class PublisherProfileViewController: UIViewController {
     }
 
     private func updateUI() {
-        self.profile = Publisher(publisher: UserDefaults.standard.value(forKey: "selectedEvent") as! [String: String])
+        self.profile = Publisher(publisher: UserDefaults.standard.value(forKey: "selectedProfile") as! [String: String])
         guard let profile = profile else { return }
         let imgUrl = URL(string: profile.publisherImageUrl)
         self.profileImageView.kf.indicatorType = .activity

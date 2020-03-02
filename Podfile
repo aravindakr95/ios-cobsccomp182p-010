@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '10.0'
+#  platform :ios, '10.0'
 
 target 'nibm-events' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -11,20 +11,20 @@ target 'nibm-events' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'SwiftyBeaver'
-  pod 'SwiftLint'
-  pod 'Kingfisher'
   pod 'RxSwift'
+  pod 'Kingfisher'
+  pod 'SwiftLint'
   
   pod 'SVProgressHUD'
   pod 'DateTimePicker','~>1.3'
   pod 'IQKeyboardManagerSwift'
   
-  target 'nibm-eventsTests' do
+  target 'NIBM EventsTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'nibm-eventsUITests' do
+  target 'NIBM EventsUITests' do
     # Pods for testing
   end
 

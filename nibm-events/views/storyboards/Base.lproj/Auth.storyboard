@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-ul-Alc">
-                                <rect key="frame" x="20" y="422" width="374" height="108"/>
+                                <rect key="frame" x="20" y="414" width="374" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-6W-LmL" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="mf7-m1-WTY"/>
+                                            <constraint firstAttribute="height" constant="50" id="NyT-1E-shf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <state key="normal" title="SIGN IN">
@@ -46,6 +46,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4J-AO-Mn5" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="58" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="R7o-hR-gjy"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +63,7 @@
                                 <rect key="frame" x="20" y="603.66666666666663" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.83137254901960778" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="T7K-VW-aiM"/>
+                                    <constraint firstAttribute="height" constant="50" id="4FS-jt-cbI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="GUEST">
@@ -70,44 +73,57 @@
                                     <action selector="onGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPl-Ae-udf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
-                                <rect key="frame" x="190.66666666666666" y="555" width="33" height="28.666666666666629"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-es-Ago">
+                                <rect key="frame" x="20" y="555" width="374" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Zp-71Q">
-                                <rect key="frame" x="40" y="52" width="334" height="250"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-n4-itw">
+                                <rect key="frame" x="20" y="260" width="374" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="beF-Vg-Qwk"/>
+                                    <constraint firstAttribute="height" constant="26" id="9ZS-Hw-8gU"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-n4-itw">
-                                <rect key="frame" x="30" y="246" width="354" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D59-wK-xcn">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Welcome" id="3Qy-NA-cmq"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Zp-71Q">
+                                <rect key="frame" x="95" y="105" width="225" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="25K-Xy-1yp"/>
+                                    <constraint firstAttribute="width" constant="225" id="myB-wA-rpF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Z14-ul-Alc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Vc-RL-Ve6"/>
-                            <constraint firstItem="BV4-n4-itw" firstAttribute="top" secondItem="5C9-Zp-71Q" secondAttribute="bottom" constant="-56" id="8OY-sv-sB1"/>
-                            <constraint firstItem="BgH-es-Ago" firstAttribute="top" secondItem="P4J-AO-Mn5" secondAttribute="bottom" constant="25" id="C8R-3b-ISP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5C9-Zp-71Q" secondAttribute="trailing" constant="40" id="Fha-Sn-TVD"/>
-                            <constraint firstItem="Z14-ul-Alc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jle-xa-huG"/>
-                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lfy-VD-8ss"/>
-                            <constraint firstItem="BgH-es-Ago" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NwZ-yG-QUT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z14-ul-Alc" secondAttribute="trailing" constant="20" id="Tnc-h1-93y"/>
-                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="XRG-g1-kS3"/>
-                            <constraint firstItem="Z14-ul-Alc" firstAttribute="top" secondItem="BV4-n4-itw" secondAttribute="bottom" constant="150" id="YEE-Vl-se1"/>
-                            <constraint firstItem="BV4-n4-itw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZV-lE-Ifs"/>
-                            <constraint firstItem="XOh-aF-hAa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j3C-uz-exU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BV4-n4-itw" secondAttribute="trailing" constant="30" id="mn2-sE-4uN"/>
-                            <constraint firstAttribute="trailing" secondItem="XOh-aF-hAa" secondAttribute="trailing" constant="20" id="piw-wY-hc6"/>
-                            <constraint firstItem="BV4-n4-itw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="unX-uw-iPw"/>
-                            <constraint firstItem="XOh-aF-hAa" firstAttribute="top" secondItem="BgH-es-Ago" secondAttribute="bottom" constant="20" id="uxv-lw-I8k"/>
-                            <constraint firstAttribute="trailing" secondItem="XOh-aF-hAa" secondAttribute="trailing" constant="20" id="zrB-RI-hQN"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0YQ-Dp-1ID"/>
+                            <constraint firstItem="BV4-n4-itw" firstAttribute="top" secondItem="5C9-Zp-71Q" secondAttribute="bottom" constant="5" id="4Kc-t2-6cD"/>
+                            <constraint firstItem="Z14-ul-Alc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="66f-4i-e3Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z14-ul-Alc" secondAttribute="trailing" constant="20" id="8cC-8R-LUz"/>
+                            <constraint firstItem="D59-wK-xcn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GjG-Wx-eWC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5C9-Zp-71Q" secondAttribute="trailing" constant="94" id="HFW-XZ-kWc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BgH-es-Ago" secondAttribute="trailing" constant="20" id="Rii-FV-LEr"/>
+                            <constraint firstItem="D59-wK-xcn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SuV-BX-FEa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XOh-aF-hAa" secondAttribute="bottom" constant="82.329999999999998" id="Y84-85-2sh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XOh-aF-hAa" secondAttribute="trailing" constant="20" id="YMb-iU-lVS"/>
+                            <constraint firstItem="XOh-aF-hAa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bTZ-id-CJ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BV4-n4-itw" secondAttribute="trailing" constant="20" id="do3-rq-Jqf"/>
+                            <constraint firstItem="XOh-aF-hAa" firstAttribute="top" secondItem="BgH-es-Ago" secondAttribute="bottom" constant="19.670000000000002" id="fPZ-XU-Cbp"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="top" secondItem="D59-wK-xcn" secondAttribute="bottom" constant="41" id="ggQ-TA-gK2"/>
+                            <constraint firstItem="BgH-es-Ago" firstAttribute="top" secondItem="Z14-ul-Alc" secondAttribute="bottom" constant="33" id="gvu-rT-rVe"/>
+                            <constraint firstItem="BgH-es-Ago" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="on0-sK-txy"/>
+                            <constraint firstItem="D59-wK-xcn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWM-2z-niN"/>
+                            <constraint firstItem="Z14-ul-Alc" firstAttribute="top" secondItem="BV4-n4-itw" secondAttribute="bottom" constant="128" id="ulW-gY-U75"/>
+                            <constraint firstItem="5C9-Zp-71Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="unj-Xe-ecc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -130,23 +146,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fW-1I-yc5">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Sign In" id="IUj-2x-Nbu">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="akD-4i-Gca">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="hTF-rU-y81" id="5GK-ro-p1C"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-k3-lu7">
-                                <rect key="frame" x="101.66666666666669" y="49" width="211" height="141"/>
+                                <rect key="frame" x="95" y="125" width="225" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="141" id="C0J-j5-f5s"/>
-                                    <constraint firstAttribute="width" constant="211" id="aE4-RK-Xsm"/>
+                                    <constraint firstAttribute="width" constant="225" id="hxj-yF-8br"/>
+                                    <constraint firstAttribute="height" constant="150" id="qSb-8e-qzh"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-f3-eLH">
-                                <rect key="frame" x="20" y="285" width="374" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="494" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XQM-MP-ZYc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignIn:" destination="hTF-rU-y81" eventType="touchUpInside" id="z0S-ir-pUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
+                                <rect key="frame" x="20" y="574" width="374" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetPassword:" destination="hTF-rU-y81" eventType="touchUpInside" id="62W-up-ehj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
+                                <rect key="frame" x="20" y="270" width="374" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-f3-eLH">
+                                <rect key="frame" x="20" y="322" width="374" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-20-A4X" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="bMO-A9-E0f"/>
-                                            <constraint firstAttribute="height" constant="55" id="blQ-sA-uNN"/>
+                                            <constraint firstAttribute="height" constant="50" id="HhF-i2-GD7"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -158,10 +216,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sP5-Kc-pqa" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="63" width="374" height="55"/>
+                                        <rect key="frame" x="0.0" y="58" width="374" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="5Sx-Wd-J11"/>
+                                            <constraint firstAttribute="height" constant="50" id="gWS-cn-osg"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -174,63 +232,28 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-Ug-Nmc" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="498" width="374" height="55"/>
-                                <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="gFx-g9-kpr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="SIGN IN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignIn:" destination="hTF-rU-y81" eventType="touchUpInside" id="z0S-ir-pUu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-Ud-ogK">
-                                <rect key="frame" x="119" y="513" width="139" height="38"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <state key="normal" title="Reset Password">
-                                    <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onResetPassword:" destination="hTF-rU-y81" eventType="touchUpInside" id="62W-up-ehj"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eJ-gN-J9h">
-                                <rect key="frame" x="0.0" y="-1063" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Sign In" id="VV0-kD-mRv">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="B1f-Nl-2hc">
-                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <connections>
-                                                <action selector="unwindToInitial:" destination="hTF-rU-y81" id="9WS-2d-eQD"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02A-5n-AzG">
-                                <rect key="frame" x="57.333333333333343" y="209" width="299.33333333333326" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="top" secondItem="vBe-Ug-Nmc" secondAttribute="bottom" constant="29" id="302-u1-yYw"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="centerX" secondItem="5eJ-gN-J9h" secondAttribute="centerX" id="OZ4-cS-zIS"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="centerX" secondItem="FKu-v4-t6i" secondAttribute="centerX" id="WWG-9t-0ir"/>
-                            <constraint firstItem="02A-5n-AzG" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="19" id="WaH-tI-aWS"/>
-                            <constraint firstItem="02A-5n-AzG" firstAttribute="centerX" secondItem="FKu-v4-t6i" secondAttribute="centerX" id="XBq-8Z-nXW"/>
-                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" constant="29" id="cEj-dC-Lg5"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vXz-Ud-ogK" secondAttribute="trailing" constant="137" id="myw-J4-PWb"/>
-                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="138" id="oX0-fM-gVi"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="bottom" secondItem="vXz-Ud-ogK" secondAttribute="bottom" constant="116" id="rcS-DT-zzI"/>
-                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="vfl-f7-xFA"/>
-                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vBe-Ug-Nmc" secondAttribute="trailing" constant="20" id="zcj-gl-uO1"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="95" id="4Kq-g0-aCO"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="sqY-k3-lu7" secondAttribute="trailing" constant="94" id="5et-Qu-C5A"/>
+                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="top" secondItem="vBe-Ug-Nmc" secondAttribute="bottom" constant="30" id="6nf-DZ-2jR"/>
+                            <constraint firstItem="0fW-1I-yc5" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" id="7Gb-Gk-hmG"/>
+                            <constraint firstItem="0fW-1I-yc5" firstAttribute="trailing" secondItem="mha-RP-4Pt" secondAttribute="trailing" id="APy-hl-S8w"/>
+                            <constraint firstItem="tGv-f3-eLH" firstAttribute="top" secondItem="02A-5n-AzG" secondAttribute="bottom" constant="26" id="Bxs-Hl-QXd"/>
+                            <constraint firstItem="0fW-1I-yc5" firstAttribute="top" secondItem="mha-RP-4Pt" secondAttribute="top" id="D5J-YG-DQF"/>
+                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="EMg-IB-YkZ"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="02A-5n-AzG" secondAttribute="trailing" constant="20" id="FCP-z3-09V"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="tGv-f3-eLH" secondAttribute="trailing" constant="20" id="IOD-kj-wWR"/>
+                            <constraint firstItem="vXz-Ud-ogK" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="JBa-jb-5vy"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="bottom" secondItem="vXz-Ud-ogK" secondAttribute="bottom" constant="124" id="Km1-3R-LAi"/>
+                            <constraint firstItem="tGv-f3-eLH" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="LfP-9R-qIy"/>
+                            <constraint firstItem="tGv-f3-eLH" firstAttribute="top" secondItem="sqY-k3-lu7" secondAttribute="bottom" constant="47" id="XqF-ll-HJn"/>
+                            <constraint firstItem="vBe-Ug-Nmc" firstAttribute="top" secondItem="tGv-f3-eLH" secondAttribute="bottom" constant="64" id="e4Z-Mq-Dxr"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vXz-Ud-ogK" secondAttribute="trailing" constant="20" id="fks-B4-2Kp"/>
+                            <constraint firstItem="02A-5n-AzG" firstAttribute="leading" secondItem="mha-RP-4Pt" secondAttribute="leading" constant="20" id="ifr-fj-7Bh"/>
+                            <constraint firstItem="sqY-k3-lu7" firstAttribute="top" secondItem="0fW-1I-yc5" secondAttribute="bottom" constant="61" id="kcn-AD-WlR"/>
+                            <constraint firstItem="mha-RP-4Pt" firstAttribute="trailing" secondItem="vBe-Ug-Nmc" secondAttribute="trailing" constant="20" id="lgv-so-JJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mha-RP-4Pt"/>
                     </view>
@@ -246,7 +269,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-TW-CE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kfb-NY-jpV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="786.65667166416802"/>
+            <point key="canvasLocation" x="669.56521739130437" y="785.86956521739137"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="fcZ-DX-K6T">
@@ -257,22 +280,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-ze-DQm">
-                                <rect key="frame" x="20" y="79" width="374" height="171"/>
+                                <rect key="frame" x="95" y="106" width="225" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="DiS-UJ-Ywa"/>
+                                    <constraint firstAttribute="width" constant="225" id="EIw-G0-zLr"/>
+                                    <constraint firstAttribute="height" constant="150" id="gRb-Pu-kAC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="POWER UP WITH THE CHANGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
-                                <rect key="frame" x="47" y="244" width="300" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER UP WITH THE CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="821-Iu-G3p">
+                                <rect key="frame" x="20" y="254" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-ZI-dv9" customClass="HBOTextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="10" y="348.33333333333331" width="394" height="50"/>
+                                <rect key="frame" x="20" y="401" width="374" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zRP-hL-qLp"/>
+                                    <constraint firstAttribute="height" constant="50" id="5jg-0R-Y1j"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -283,29 +307,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
-                                <rect key="frame" x="20" y="278" width="374" height="62.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-Uv-7Mg">
-                                <rect key="frame" x="0.0" y="20" width="453" height="44"/>
-                                <items>
-                                    <navigationItem title="Reset Password" id="s8e-gO-XCa">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="aLw-AZ-JHM">
-                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <connections>
-                                                <action selector="unwindToInitial:" destination="fD7-qe-1ua" id="4nf-lw-eeb"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYj-RP-4OR" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="443.33333333333331" width="374" height="50"/>
+                                <rect key="frame" x="20" y="485" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7W9-rS-Trr"/>
+                                    <constraint firstAttribute="height" constant="50" id="BQG-tr-Vb2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="RESET PASSWORD">
@@ -315,26 +321,49 @@
                                     <action selector="onResetPassword:" destination="fD7-qe-1ua" eventType="touchUpInside" id="ocP-Q1-HT1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address associated with NIBM Events, In order to receive password reset instructions." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAE-3k-G0z">
+                                <rect key="frame" x="20" y="317" width="374" height="62.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWK-Uv-7Mg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Reset Password" id="s8e-gO-XCa">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="aLw-AZ-JHM">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="fD7-qe-1ua" id="dZQ-nm-oNw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yYj-RP-4OR" firstAttribute="top" secondItem="3I4-ZI-dv9" secondAttribute="bottom" constant="45" id="7RI-QS-b3f"/>
-                            <constraint firstItem="yYj-RP-4OR" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="DjG-Hm-Zbn"/>
-                            <constraint firstItem="bAE-3k-G0z" firstAttribute="centerX" secondItem="SAL-Pz-NHy" secondAttribute="centerX" id="Gtc-Af-Vlx"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="SAL-Pz-NHy" secondAttribute="top" constant="79" id="Mpw-hV-bic"/>
-                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="top" secondItem="bAE-3k-G0z" secondAttribute="bottom" constant="8" id="NdK-Fc-AEv"/>
-                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="821-Iu-G3p" secondAttribute="bottom" constant="8" id="TJ9-PR-GuD"/>
-                            <constraint firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" constant="20" id="Trt-Xq-a4J"/>
-                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="10" id="VYD-kW-jwL"/>
-                            <constraint firstItem="bAE-3k-G0z" firstAttribute="leading" secondItem="SAL-Pz-NHy" secondAttribute="leading" constant="20" id="X0a-qO-EKb"/>
-                            <constraint firstItem="yYj-RP-4OR" firstAttribute="centerX" secondItem="SAL-Pz-NHy" secondAttribute="centerX" id="ZBi-8O-ME4"/>
-                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="yYj-RP-4OR" secondAttribute="trailing" constant="20" id="aXK-Or-kyh"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="centerX" secondItem="iWK-Uv-7Mg" secondAttribute="centerX" id="dIG-23-mYR"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="15" id="hBW-hp-8Xy"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="leading" secondItem="bAE-3k-G0z" secondAttribute="leading" id="kFf-rR-nMC"/>
-                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="NOC-ze-DQm" secondAttribute="bottom" constant="28" id="sFZ-wb-3wR"/>
-                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="3I4-ZI-dv9" secondAttribute="trailing" constant="10" id="vli-4h-1bT"/>
-                            <constraint firstItem="NOC-ze-DQm" firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" id="xXj-bM-JBx"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="42" id="3FH-Se-pHB"/>
+                            <constraint firstItem="iWK-Uv-7Mg" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" id="4Eb-L0-blm"/>
+                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="4i4-qE-qxt"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="NOC-ze-DQm" secondAttribute="trailing" constant="94" id="5Bk-Bc-oZs"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="3I4-ZI-dv9" secondAttribute="trailing" constant="20" id="5yo-fS-daA"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="bottom" secondItem="yYj-RP-4OR" secondAttribute="bottom" constant="201" id="8hl-B2-aR9"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="821-Iu-G3p" secondAttribute="bottom" constant="37" id="AO2-8W-gfl"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="SAL-Pz-NHy" secondAttribute="top" constant="106" id="BuV-o3-19r"/>
+                            <constraint firstItem="821-Iu-G3p" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="E41-a4-Pha"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="821-Iu-G3p" secondAttribute="trailing" constant="20" id="EhS-hB-yqk"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="yYj-RP-4OR" secondAttribute="trailing" constant="20" id="KHx-8z-Rxy"/>
+                            <constraint firstItem="iWK-Uv-7Mg" firstAttribute="trailing" secondItem="rmG-21-Npj" secondAttribute="trailing" id="Wud-ki-PQF"/>
+                            <constraint firstItem="yYj-RP-4OR" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="Xf3-AA-xMK"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="top" secondItem="iWK-Uv-7Mg" secondAttribute="bottom" constant="42" id="bIK-ZT-SKS"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="top" secondItem="NOC-ze-DQm" secondAttribute="bottom" constant="61" id="bMa-7k-1VU"/>
+                            <constraint firstItem="bAE-3k-G0z" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="20" id="exE-wo-lMn"/>
+                            <constraint firstItem="yYj-RP-4OR" firstAttribute="top" secondItem="3I4-ZI-dv9" secondAttribute="bottom" constant="34" id="g6T-Sa-e3q"/>
+                            <constraint firstItem="iWK-Uv-7Mg" firstAttribute="top" secondItem="rmG-21-Npj" secondAttribute="top" id="oaj-LR-m9h"/>
+                            <constraint firstItem="3I4-ZI-dv9" firstAttribute="top" secondItem="bAE-3k-G0z" secondAttribute="bottom" constant="21.670000000000002" id="wZX-UD-Vrp"/>
+                            <constraint firstItem="rmG-21-Npj" firstAttribute="trailing" secondItem="bAE-3k-G0z" secondAttribute="trailing" constant="20" id="xQv-qu-1dj"/>
+                            <constraint firstItem="NOC-ze-DQm" firstAttribute="leading" secondItem="rmG-21-Npj" secondAttribute="leading" constant="95" id="z2x-mB-F6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rmG-21-Npj"/>
                     </view>
@@ -348,7 +377,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfW-3w-ZWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="PTc-Vy-J68" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-119.2" y="1545.8770614692655"/>
+            <point key="canvasLocation" x="-120.28985507246378" y="1544.8369565217392"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="iRb-lK-TMO">
@@ -358,30 +387,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-qD-xWe" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="23" y="617" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="SIGNUP NOW">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignUp:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="qcK-Ne-uMy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECustomSwipButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="23" y="575" width="19" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Ih-1bl" customClass="NECustomSwipButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="599" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0qR-dM-VrX"/>
+                                    <constraint firstAttribute="width" constant="20" id="n3z-CB-H3u"/>
+                                </constraints>
                                 <state key="normal" image="checkbox-deselected"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectImage" value="checkbox-selected"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="deSelectImage" value="checkbox-deselected"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-9U-gGa">
-                                <rect key="frame" x="49" y="561" width="346" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your information below. Your email address and password will become part of your profile." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlR-fx-n6o">
+                                <rect key="frame" x="20" y="212" width="374" height="62.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62.329999999999998" id="6tg-Oj-33J"/>
+                                    <constraint firstAttribute="width" constant="374" id="zda-fD-iX3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-jt-WAe">
+                                <rect key="frame" x="20" y="408.33333333333331" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-Wz-bgs" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-5Z-e0y" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EQd-cK-URe"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-JZ-hgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="345.33333333333331" width="374" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XRG-fb-Qrc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="29r-2o-imM">
+                                <rect key="frame" x="20" y="282.33333333333331" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-H4-Gdu" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-IC-ZOm" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="REj-67-ybZ"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-oT-RYI" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="471.33333333333331" width="374" height="49.999999999999943"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="0PB-x9-ZTO"/>
+                                    <constraint firstAttribute="height" constant="50" id="Kpe-g3-mx4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-Lz-bGh">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Registration" id="Vke-5a-tD7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="ucz-xY-TQ5">
+                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <connections>
+                                                <action selector="unwindToInitial:" destination="kAi-IV-0Jv" id="ccS-Bi-dWB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-9U-gGa">
+                                <rect key="frame" x="47" y="595.33333333333337" width="347" height="28.666666666666629"/>
                                 <attributedString key="attributedText">
                                     <fragment content="I agree to NIBM Events™ ">
                                         <attributes>
@@ -423,41 +560,54 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your information below. Your email address and password will become part of your profile." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlR-fx-n6o">
-                                <rect key="frame" x="21" y="163" width="374" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-Wz-bgs" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="381" width="188" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vQ3-5Z-e0y" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="208" y="381" width="187" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-Fb-pwO">
-                                <rect key="frame" x="140" y="141" width="136" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ujs-e3-Yvy">
+                                <rect key="frame" x="20" y="534.33333333333337" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Batch" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-gR-8yi" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Facebook Identifier" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-RI-vgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7VA-if-0Ln"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-qD-xWe" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="640" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.63529411759999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HW3-fn-euG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="SIGNUP NOW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="qcK-Ne-uMy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-Fb-pwO">
+                                <rect key="frame" x="20" y="169" width="374" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Add Profile Photo">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -466,115 +616,54 @@
                                     <action selector="onAddPhoto:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="FLK-Lx-pJ2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-Af-Qy9">
-                                <rect key="frame" x="54" y="673" width="313" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="Already have an NIBM Events™ account">
-                                    <color key="titleColor" red="0.20000000000000001" green="0.63529411764705879" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignIn:" destination="kAi-IV-0Jv" eventType="touchUpInside" id="GSM-qx-24N"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Y0-gF8">
-                                <rect key="frame" x="177" y="73" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Y0-gF8">
+                                <rect key="frame" x="167" y="81" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DhN-rD-TZv"/>
+                                    <constraint firstAttribute="width" constant="80" id="gdv-Il-fq7"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-JZ-hgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="309" width="373" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-H4-Gdu" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="256" width="187" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-IC-ZOm" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="208" y="256" width="187" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-oT-RYI" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="452" width="373" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Facebook Identifier" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-RI-vgp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="208" y="506" width="187" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Batch" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-gR-8yi" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="22" y="506" width="187" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-Lz-bGh">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Registration" id="Vke-5a-tD7">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="ucz-xY-TQ5">
-                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <connections>
-                                                <action selector="unwindToInitial:" destination="kAi-IV-0Jv" id="m4x-qN-2Oo"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="AHl-jt-WAe" secondAttribute="trailing" constant="20" id="4vT-Bx-fas"/>
+                            <constraint firstItem="trQ-qD-xWe" firstAttribute="top" secondItem="0A1-Ih-1bl" secondAttribute="bottom" constant="24" id="5sD-3x-HXZ"/>
+                            <constraint firstItem="U7A-9U-gGa" firstAttribute="top" secondItem="ujs-e3-Yvy" secondAttribute="bottom" constant="11" id="6C8-uF-vel"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="8H0-JZ-hgp" secondAttribute="trailing" constant="20" id="8Td-Av-G7C"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="pTF-oT-RYI" secondAttribute="trailing" constant="20" id="8Xm-qe-Rdi"/>
+                            <constraint firstItem="c7a-Lz-bGh" firstAttribute="trailing" secondItem="nBp-D8-UsZ" secondAttribute="trailing" id="ASE-r4-UvQ"/>
+                            <constraint firstItem="29r-2o-imM" firstAttribute="top" secondItem="YlR-fx-n6o" secondAttribute="bottom" constant="8" id="DUx-Mz-ij6"/>
+                            <constraint firstItem="8H0-JZ-hgp" firstAttribute="top" secondItem="29r-2o-imM" secondAttribute="bottom" constant="13" id="DjZ-94-B54"/>
+                            <constraint firstItem="c7a-Lz-bGh" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" id="FDr-Ua-CjT"/>
+                            <constraint firstItem="Drs-Fb-pwO" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="KL5-g8-lSo"/>
+                            <constraint firstItem="Drs-Fb-pwO" firstAttribute="top" secondItem="gIE-Y0-gF8" secondAttribute="bottom" constant="8" id="Nus-JH-4Kh"/>
+                            <constraint firstItem="0A1-Ih-1bl" firstAttribute="top" secondItem="ujs-e3-Yvy" secondAttribute="bottom" constant="11.67" id="Onk-wK-JMO"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="ujs-e3-Yvy" secondAttribute="trailing" constant="20" id="PCQ-2k-ca1"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="bottom" secondItem="trQ-qD-xWe" secondAttribute="bottom" constant="46" id="PqE-dA-p7U"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="trQ-qD-xWe" secondAttribute="trailing" constant="20" id="QSV-6C-ARL"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="U7A-9U-gGa" secondAttribute="trailing" constant="20" id="T10-Hs-cRq"/>
+                            <constraint firstItem="AHl-jt-WAe" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="UkF-Sm-Mbl"/>
+                            <constraint firstItem="c7a-Lz-bGh" firstAttribute="top" secondItem="nBp-D8-UsZ" secondAttribute="top" id="aJd-cv-nCp"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="gIE-Y0-gF8" secondAttribute="trailing" constant="167" id="at8-aX-8ym"/>
+                            <constraint firstItem="gIE-Y0-gF8" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="167" id="cb7-76-Oph"/>
+                            <constraint firstItem="29r-2o-imM" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="f0M-0N-NB6"/>
+                            <constraint firstItem="trQ-qD-xWe" firstAttribute="top" secondItem="U7A-9U-gGa" secondAttribute="bottom" constant="16" id="fue-a1-xFu"/>
+                            <constraint firstItem="AHl-jt-WAe" firstAttribute="top" secondItem="8H0-JZ-hgp" secondAttribute="bottom" constant="13" id="gWf-IG-KlL"/>
+                            <constraint firstItem="8H0-JZ-hgp" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="jF5-ih-jH7"/>
+                            <constraint firstItem="YlR-fx-n6o" firstAttribute="top" secondItem="Drs-Fb-pwO" secondAttribute="bottom" constant="8" id="jXa-GP-MnQ"/>
+                            <constraint firstItem="U7A-9U-gGa" firstAttribute="leading" secondItem="0A1-Ih-1bl" secondAttribute="trailing" constant="7" id="jo3-he-7Yy"/>
+                            <constraint firstItem="0A1-Ih-1bl" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="m2n-vf-VAc"/>
+                            <constraint firstItem="YlR-fx-n6o" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="mhm-Pm-N6P"/>
+                            <constraint firstItem="pTF-oT-RYI" firstAttribute="top" secondItem="AHl-jt-WAe" secondAttribute="bottom" constant="13" id="qev-dD-v47"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="29r-2o-imM" secondAttribute="trailing" constant="20" id="rz5-pF-Oau"/>
+                            <constraint firstItem="trQ-qD-xWe" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="ssa-P1-L6Z"/>
+                            <constraint firstItem="ujs-e3-Yvy" firstAttribute="top" secondItem="pTF-oT-RYI" secondAttribute="bottom" constant="13" id="tWL-w5-kT0"/>
+                            <constraint firstItem="pTF-oT-RYI" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="udE-dI-L11"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="Drs-Fb-pwO" secondAttribute="trailing" constant="20" id="uoQ-ge-ukc"/>
+                            <constraint firstItem="gIE-Y0-gF8" firstAttribute="top" secondItem="c7a-Lz-bGh" secondAttribute="bottom" constant="17" id="x99-9n-3rA"/>
+                            <constraint firstItem="ujs-e3-Yvy" firstAttribute="leading" secondItem="nBp-D8-UsZ" secondAttribute="leading" constant="20" id="yCw-HE-Klt"/>
+                            <constraint firstItem="nBp-D8-UsZ" firstAttribute="trailing" secondItem="YlR-fx-n6o" secondAttribute="trailing" constant="20" id="yis-2T-YyQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nBp-D8-UsZ"/>
                     </view>
                     <connections>
@@ -596,7 +685,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVG-Lp-Tlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zC2-Sk-P2m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4163.768115942029" y="46.467391304347828"/>
+            <point key="canvasLocation" x="2677" y="403"/>
         </scene>
         <!--Auth Bio Metrics Blocked View Controller-->
         <scene sceneID="VES-gD-fTn">
@@ -606,37 +695,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NIBM Events is Locked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-oq-hKe">
-                                <rect key="frame" x="70" y="297" width="275" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unlock with BioMetric to open NIBM Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-Vy-e8V">
-                                <rect key="frame" x="28" y="357" width="359" height="23.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-AZ-4bO">
-                                <rect key="frame" x="98" y="151" width="219" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-Qp-r7E">
+                                <rect key="frame" x="20" y="307" width="374" height="369"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBM Events is Locked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-oq-hKe">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock with BioMetric" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-Vy-e8V">
+                                        <rect key="frame" x="0.0" y="60.666666666666679" width="374" height="23.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-u8-Kdi">
+                                        <rect key="frame" x="0.0" y="112.33333333333331" width="374" height="256.66666666666669"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Use Bio Metric">
+                                            <color key="titleColor" red="0.2022456229" green="0.59510076050000005" blue="0.85695862769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReAuthenticate:" destination="bay-Th-1pC" eventType="touchUpInside" id="WBz-c0-3S6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-AZ-4bO">
+                                <rect key="frame" x="20" y="159" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="nzE-q2-rOA"/>
+                                    <constraint firstAttribute="height" constant="100" id="tTb-xl-NTx"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-u8-Kdi">
-                                <rect key="frame" x="153" y="410" width="109" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="Use BioMetric">
-                                    <color key="titleColor" red="0.2022456229" green="0.59510076050000005" blue="0.85695862769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onReAuthenticate:" destination="bay-Th-1pC" eventType="touchUpInside" id="WBz-c0-3S6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92495459319999995" green="0.94122463460000005" blue="0.94532805679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6tq-7s-GpM" firstAttribute="trailing" secondItem="Or2-AZ-4bO" secondAttribute="trailing" constant="20" id="1sF-kL-OsS"/>
+                            <constraint firstItem="6tq-7s-GpM" firstAttribute="trailing" secondItem="6Mc-Qp-r7E" secondAttribute="trailing" constant="20" id="JIS-V0-ntn"/>
+                            <constraint firstItem="Or2-AZ-4bO" firstAttribute="leading" secondItem="6tq-7s-GpM" secondAttribute="leading" constant="20" id="KQm-UC-1Fa"/>
+                            <constraint firstItem="6Mc-Qp-r7E" firstAttribute="leading" secondItem="6tq-7s-GpM" secondAttribute="leading" constant="20" id="OPd-S1-Ss7"/>
+                            <constraint firstItem="6Mc-Qp-r7E" firstAttribute="top" secondItem="Or2-AZ-4bO" secondAttribute="bottom" constant="48" id="aZs-Ra-uMD"/>
+                            <constraint firstItem="6Mc-Qp-r7E" firstAttribute="top" secondItem="Or2-AZ-4bO" secondAttribute="bottom" constant="48" id="mhT-ji-aG2"/>
+                            <constraint firstItem="Or2-AZ-4bO" firstAttribute="top" secondItem="6tq-7s-GpM" secondAttribute="top" constant="139" id="qOj-ax-Z1y"/>
+                            <constraint firstItem="6tq-7s-GpM" firstAttribute="bottom" secondItem="6Mc-Qp-r7E" secondAttribute="bottom" constant="60" id="qa2-F7-jCN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6tq-7s-GpM"/>
                     </view>
                     <connections>
@@ -652,13 +756,11 @@
     </scenes>
     <resources>
         <image name="checkbox-deselected" width="64" height="64"/>
-        <image name="default-user" width="512" height="512"/>
         <image name="events-logo" width="1200" height="1200"/>
         <image name="padlock" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3FL-Ue-MYr"/>
-        <segue reference="aPh-om-mnu"/>
+        <segue reference="cxo-7x-TjM"/>
         <segue reference="Am1-uc-cbn"/>
     </inferredMetricsTieBreakers>
 </document>

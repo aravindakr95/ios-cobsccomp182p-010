@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+
 import DateTimePicker
 import SVProgressHUD
 import FirebaseFirestore
@@ -32,8 +33,9 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func onAddDateTime(_ sender: NEButton) {
+        let date = Date()
         let picker = DateTimePicker.show()
-        picker.is12HourFormat = true
+        picker.is12HourFormat = false
         picker.timeZone = TimeZone.current
         picker.completionHandler = { date in
             self.dateTime = Timestamp(date: Date())
@@ -82,8 +84,15 @@ class AddEventViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func onAddLocation(_ sender: NEButton) {
-        
-        self.btnEventLocation.setTitle("Colombo", for: .normal) // As per LocationPicker gives me a error (cannot comple objective c library)
+        let locationManager = LocationManager()
+        btnEventLocation.showLoading()
+        locationManager.getPlace { [weak self](location) in
+            guard let `self` = self else { return }
+            if location != nil {
+                self.btnEventLocation.hideLoading()
+                self.btnEventLocation.setTitle(location?.locality, for: .normal)
+            }
+        }
     }
 
     @IBAction func onAddEventPhoto(_ sender: UIButton) {

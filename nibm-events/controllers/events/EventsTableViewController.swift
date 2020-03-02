@@ -65,7 +65,6 @@ class EventsTableViewController: UITableViewController {
                                                               collection: "events") { [weak self] (events, error) in
             guard let `self` = self else { return }
             guard let events = events else {
-                print("Error fetching snapshot results: \(error!)")
                 return
             }
             self.eventsData = events

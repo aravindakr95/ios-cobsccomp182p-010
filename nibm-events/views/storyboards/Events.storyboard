@@ -67,7 +67,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="160.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-8f-gxw">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-8f-gxw">
                                             <rect key="frame" x="16" y="56" width="90" height="90"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="9Pm-Rk-vWr"/>
@@ -102,6 +102,7 @@
                                         <constraint firstItem="HM3-JN-FMg" firstAttribute="leading" secondItem="zda-U4-COv" secondAttribute="leadingMargin" id="ye6-23-ACw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="imgEvent" destination="DeN-8f-gxw" id="Zx4-eq-yDq"/>
                                     <outlet property="lblEventBody" destination="sS4-tO-Xos" id="mof-Xi-hmD"/>
@@ -158,36 +159,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event Title" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-ar-u4o" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="464" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-rV-hqp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="517" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sJ-Jw-X5O" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="332" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IjW-5B-BX0">
+                                <rect key="frame" x="20" y="461" width="374" height="99"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Event Title" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-ar-u4o" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rsy-Aa-58J"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Contact Number" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-rV-hqp" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TJf-Qk-M9K"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sJ-Jw-X5O" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="342" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L06-pL-o0w"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="EVENT LOCATION">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,10 +208,12 @@
                                     <action selector="onChangeLocation:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="KV2-kr-Q4b"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-En-li5" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580" width="373" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-En-li5" customClass="NETextField" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="580" width="374" height="135"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="grh-se-3QJ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -209,10 +223,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfq-Qh-6Jz" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
-                                <rect key="frame" x="20" y="394" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfq-Qh-6Jz" customClass="NEButton" customModule="NIBM_Events" customModuleProvider="target">
+                                <rect key="frame" x="20" y="399" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.19912401769999999" green="0.63589063670000001" blue="0.83071567359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HaU-Cz-OxE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="DATE AND TIME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,13 +237,8 @@
                                     <action selector="onChangeDateTime:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="Xw2-Li-OZY"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-9X-gil">
-                                <rect key="frame" x="107" y="69" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slW-1q-Mon">
-                                <rect key="frame" x="167" y="289" width="78" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slW-1q-Mon">
+                                <rect key="frame" x="20" y="277" width="374" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Edit Photo">
                                     <color key="titleColor" red="0.19907060269999999" green="0.63619083170000001" blue="0.83204686640000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,8 +247,38 @@
                                     <action selector="btnEditEventPhoto:" destination="1ZG-BG-5HP" eventType="touchUpInside" id="wyd-Jz-pzn"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events-logo" translatesAutoresizingMaskIntoConstraints="NO" id="3W1-9X-gil">
+                                <rect key="frame" x="107" y="69" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EzJ-1g-LHr"/>
+                                    <constraint firstAttribute="width" constant="200" id="QGl-TS-o4V"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92658263439999999" green="0.94222563510000001" blue="0.94585055110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3W1-9X-gil" firstAttribute="top" secondItem="UdX-vn-2LB" secondAttribute="top" constant="5" id="0CW-Rx-jAD"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="bottom" secondItem="JXS-En-li5" secondAttribute="bottom" constant="21" id="0Ul-8D-H4V"/>
+                            <constraint firstItem="Yfq-Qh-6Jz" firstAttribute="top" secondItem="1sJ-Jw-X5O" secondAttribute="bottom" constant="7" id="0eG-wa-v4O"/>
+                            <constraint firstItem="3W1-9X-gil" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="107" id="3lu-vg-5Cp"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="IjW-5B-BX0" secondAttribute="trailing" constant="20" id="8IB-pg-shM"/>
+                            <constraint firstItem="1sJ-Jw-X5O" firstAttribute="top" secondItem="slW-1q-Mon" secondAttribute="bottom" constant="30" id="EIX-8p-xJR"/>
+                            <constraint firstItem="JXS-En-li5" firstAttribute="top" secondItem="IjW-5B-BX0" secondAttribute="bottom" constant="20" id="EZ2-go-Zql"/>
+                            <constraint firstItem="IjW-5B-BX0" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="20" id="GGn-S9-S7M"/>
+                            <constraint firstItem="JXS-En-li5" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="20" id="KRn-n1-gHt"/>
+                            <constraint firstItem="Yfq-Qh-6Jz" firstAttribute="top" secondItem="1sJ-Jw-X5O" secondAttribute="bottom" constant="7" id="Kde-m4-ZZx"/>
+                            <constraint firstItem="IjW-5B-BX0" firstAttribute="top" secondItem="Yfq-Qh-6Jz" secondAttribute="bottom" constant="12" id="VlG-qr-qUJ"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="Yfq-Qh-6Jz" secondAttribute="trailing" constant="20" id="YAk-uK-UQD"/>
+                            <constraint firstItem="slW-1q-Mon" firstAttribute="top" secondItem="3W1-9X-gil" secondAttribute="bottom" constant="8" id="aXL-AT-5mH"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="JXS-En-li5" secondAttribute="trailing" constant="20" id="alU-Zb-thR"/>
+                            <constraint firstItem="slW-1q-Mon" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="20" id="btp-b8-VpZ"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="slW-1q-Mon" secondAttribute="trailing" constant="20" id="czU-q5-URU"/>
+                            <constraint firstItem="1sJ-Jw-X5O" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="20" id="eKE-TM-M7n"/>
+                            <constraint firstItem="Yfq-Qh-6Jz" firstAttribute="leading" secondItem="UdX-vn-2LB" secondAttribute="leading" constant="20" id="eb7-Cv-cHP"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="1sJ-Jw-X5O" secondAttribute="trailing" constant="20" id="n11-x5-hKi"/>
+                            <constraint firstItem="1sJ-Jw-X5O" firstAttribute="top" secondItem="slW-1q-Mon" secondAttribute="bottom" constant="30" id="oqP-vP-LqF"/>
+                            <constraint firstItem="UdX-vn-2LB" firstAttribute="trailing" secondItem="3W1-9X-gil" secondAttribute="trailing" constant="107" id="ur7-mQ-krl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UdX-vn-2LB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit My Event" id="Oqc-wf-Yi7">
@@ -265,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pii-pu-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="903"/>
+            <point key="canvasLocation" x="457.97101449275368" y="902.44565217391312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7jp-U5-CUD">
@@ -289,8 +330,8 @@
     <resources>
         <image name="close" width="30" height="30"/>
         <image name="complete" width="30" height="30"/>
-        <image name="default-user" width="512" height="512"/>
         <image name="edit" width="30" height="30"/>
         <image name="event-tab" width="30" height="30"/>
+        <image name="events-logo" width="1200" height="1200"/>
     </resources>
 </document>

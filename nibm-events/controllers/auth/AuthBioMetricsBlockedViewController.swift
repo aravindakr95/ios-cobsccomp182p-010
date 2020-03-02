@@ -29,7 +29,7 @@ class AuthBioMetricsBlockedViewController: UIViewController {
 
     private func setBioMetricsLable() {
         self.btnBioMetric.setTitle(self.bioMetricType, for: .normal)
-        self.lblDescription.text = "Unlock with \(self.bioMetricType) to open NIBM Events"
+        self.lblDescription.text = "Unlock with \(self.bioMetricType)"
     }
 
     private func isAuthorized() {

@@ -20,8 +20,12 @@ final class DatabaseManager {
 
     func insertDocument(collection: String,
                         data: [String: Any],
+                        isRegistration: Bool? = false,
                         completion: @escaping (_ success: Bool?, _ error: String?)
         -> Void) {
+        if isRegistration! {
+            UserDefaults.standard.set(data, forKey: "userProfile")
+        }
 
         self.database.collection(collection).addDocument(data: data) { (error) in
             if error != nil {

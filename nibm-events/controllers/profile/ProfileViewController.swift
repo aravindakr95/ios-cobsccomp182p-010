@@ -86,7 +86,7 @@ class ProfileViewController: UIViewController {
         self.profileImageView.kf.setImage(with: imgUrl)
 
         self.lblEmail.text = AuthManager.sharedInstance.user.email
-        self.lblFullName!.text = profile.firstName + profile.lastName
+        self.lblFullName!.text = profile.firstName + " " + profile.lastName
         self.lblContactNumber.text = profile.contactNumber
 
         self.btnFacebookIdentifier.setTitle("@\(profile.facebookIdentifier)", for: .normal)

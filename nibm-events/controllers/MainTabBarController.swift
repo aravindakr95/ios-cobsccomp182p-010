@@ -9,20 +9,15 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    private var tabBarItemOne: UITabBarItem = UITabBarItem()
-    private var tabBarItemTwo: UITabBarItem = UITabBarItem()
     private var isGuest: Bool?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.enableGuestFunctions()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-
-        tabBarItemOne.isEnabled = true
-        tabBarItemTwo.isEnabled = true
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     private func enableGuestFunctions() {
