@@ -1,4 +1,4 @@
-<img src="assets/logo-banner.png" height="140" width="380">
+<img src="Assets/logo-banner.png" height="140" width="380">
 
 # NIBM Events
 
