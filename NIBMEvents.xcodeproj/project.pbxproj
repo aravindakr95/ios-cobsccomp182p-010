@@ -121,7 +121,7 @@
 		7090F7F7240FB2F400041058 /* NIBMEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7090F7F9240FB2F400041058 /* NIBMEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsTests.swift; sourceTree = "<group>"; };
 		7090F7FB240FB2F400041058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		709B0A0823FF8C6500488BD2 /* NIBMEvents-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "NIBMEvents-Dev.app"; path = "NIBM Events-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		709B0A0823FF8C6500488BD2 /* NIBMEvents-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBMEvents-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		709B0A1023FF8C6500488BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
