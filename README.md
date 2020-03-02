@@ -14,7 +14,6 @@ Language                   	| Swift 5.0
 Unit Testing Framework     	| XCTest                                         
 Build Tool                 	| Xcodebuild                                         
 Logger                    	| SwiftyBeaver
-Logger                        | SwiftLint
 Stream Communication               | RxSwift
 Database                    | FireStore
 Keyboard Manager            | IQKeyboardManagerSwift

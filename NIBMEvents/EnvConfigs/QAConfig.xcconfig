@@ -1,0 +1,18 @@
+//
+//  QAConfig.xcconfig
+//  nibm-events
+//
+//  Created by Aravinda Rathnayake on 2/21/20.
+//  Copyright © 2020 Aravinda Rathnayake. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-NIBMEvents/Pods-NIBMEvents.qa.xcconfig"
+
+NE_APPLICATION_NAME=QA
+NE_APP_NAME = NIBMEvents-QA
+NE_APP_VERSION = 1.0
+NE_APP_BUNDLE_ID = com.aravindakr95.NIBMEvents.qa
+NE_APP_ICON = AppIconQA

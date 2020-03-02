@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212D93D012280AC808749A39 /* Pods_NIBMEvents_NIBMEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC3A1A8BBC50A03EB4CC00 /* Pods_NIBMEvents_NIBMEventsUITests.framework */; };
 		3AF61A9F45F16AD69C91E7BF /* Pods_NIBMEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8ADCC6808BD1F69C40DFB /* Pods_NIBMEvents.framework */; };
 		70045621240920350021CB3A /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70045620240920350021CB3A /* AddEventViewController.swift */; };
 		70160849240AB76B00DA127A /* UIEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70160848240AB76B00DA127A /* UIEffects.swift */; };
 		7016084B240ACECC00DA127A /* UploadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7016084A240ACECC00DA127A /* UploadType.swift */; };
+		70199C6E24134488008CCDA9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70199C6D24134488008CCDA9 /* README.md */; };
+		70199C72241344B9008CCDA9 /* NIBMEvents.trace.zip in Resources */ = {isa = PBXBuildFile; fileRef = 70199C70241344B9008CCDA9 /* NIBMEvents.trace.zip */; };
+		70199C73241344B9008CCDA9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 70199C71241344B9008CCDA9 /* LICENSE */; };
+		70199C77241346F5008CCDA9 /* SignInTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70199C76241346F5008CCDA9 /* SignInTest.swift */; };
 		70310BD42402D08C004C81ED /* NEButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD32402D08C004C81ED /* NEButton.swift */; };
 		70310BD62402D097004C81ED /* NETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310BD52402D097004C81ED /* NETextField.swift */; };
 		704BE49C2409A202007D1570 /* logo-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 704BE49B2409A202007D1570 /* logo-banner.png */; };
@@ -37,8 +40,10 @@
 		7072CCB3240416E2004F0A58 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB2240416E2004F0A58 /* FieldValidator.swift */; };
 		7072CCB62405964C004F0A58 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB52405964C004F0A58 /* EventsTableViewController.swift */; };
 		7072CCB82405965E004F0A58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072CCB72405965E004F0A58 /* ProfileViewController.swift */; };
-		7090F7EB240FB2D700041058 /* NIBMEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090F7EA240FB2D700041058 /* NIBMEventsUITests.swift */; };
-		7090F7FA240FB2F400041058 /* NIBMEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090F7F9240FB2F400041058 /* NIBMEventsTests.swift */; };
+		708FD6AA2412E38600902606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 708FD6A92412E38600902606 /* GoogleService-Info.plist */; };
+		708FD6B22412F23200902606 /* NIBMEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FD6B12412F23200902606 /* NIBMEventsUITests.swift */; };
+		708FD6C12412F23D00902606 /* NIBMEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FD6C02412F23D00902606 /* NIBMEventsTests.swift */; };
+		708FD6CA2412F25F00902606 /* SignInTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FD6C92412F25F00902606 /* SignInTest.swift */; };
 		709B0A0C23FF8C6500488BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */; };
 		709B0A0E23FF8C6500488BD2 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */; };
 		709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709B0A0F23FF8C6500488BD2 /* Auth.storyboard */; };
@@ -54,22 +59,20 @@
 		70A4BE95240B69A8005A9C55 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE94240B69A8005A9C55 /* Publisher.swift */; };
 		70A4BE97240B7EED005A9C55 /* PublisherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */; };
 		70A4BE99240B9198005A9C55 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4BE98240B9198005A9C55 /* EditEventViewController.swift */; };
-		70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */; };
 		70F2C5C02408286500529625 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5BF2408286500529625 /* MainTabBarController.swift */; };
 		70F2C5C62408359A00529625 /* NETextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2C5C52408359900529625 /* NETextFieldExtension.swift */; };
 		70F9066E240E962400BB8705 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F9066D240E962400BB8705 /* EventDetailsViewController.swift */; };
-		9625948A116AB616BCBFC735 /* Pods_NIBMEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586E1BA67D043DAB0B2FA0B7 /* Pods_NIBMEventsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7090F7ED240FB2D700041058 /* PBXContainerItemProxy */ = {
+		708FD6B42412F23200902606 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 709B0A0023FF8C6500488BD2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 709B0A0723FF8C6500488BD2;
 			remoteInfo = NIBMEvents;
 		};
-		7090F7FC240FB2F400041058 /* PBXContainerItemProxy */ = {
+		708FD6C32412F23D00902606 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 709B0A0023FF8C6500488BD2 /* Project object */;
 			proxyType = 1;
@@ -90,6 +93,10 @@
 		70045620240920350021CB3A /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		70160848240AB76B00DA127A /* UIEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEffects.swift; sourceTree = "<group>"; };
 		7016084A240ACECC00DA127A /* UploadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadType.swift; sourceTree = "<group>"; };
+		70199C6D24134488008CCDA9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		70199C70241344B9008CCDA9 /* NIBMEvents.trace.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = NIBMEvents.trace.zip; sourceTree = "<group>"; };
+		70199C71241344B9008CCDA9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		70199C76241346F5008CCDA9 /* SignInTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTest.swift; sourceTree = "<group>"; };
 		70310BD32402D08C004C81ED /* NEButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEButton.swift; sourceTree = "<group>"; };
 		70310BD52402D097004C81ED /* NETextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETextField.swift; sourceTree = "<group>"; };
 		704BE49B2409A202007D1570 /* logo-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-banner.png"; sourceTree = "<group>"; };
@@ -115,12 +122,14 @@
 		7072CCB2240416E2004F0A58 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		7072CCB52405964C004F0A58 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		7072CCB72405965E004F0A58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		7090F7E8240FB2D600041058 /* NIBMEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7090F7EA240FB2D700041058 /* NIBMEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsUITests.swift; sourceTree = "<group>"; };
-		7090F7EC240FB2D700041058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7090F7F7240FB2F400041058 /* NIBMEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7090F7F9240FB2F400041058 /* NIBMEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsTests.swift; sourceTree = "<group>"; };
-		7090F7FB240FB2F400041058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708FD6A92412E38600902606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		708FD6AF2412F23200902606 /* NIBMEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		708FD6B12412F23200902606 /* NIBMEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsUITests.swift; sourceTree = "<group>"; };
+		708FD6B32412F23200902606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708FD6BE2412F23D00902606 /* NIBMEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		708FD6C02412F23D00902606 /* NIBMEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsTests.swift; sourceTree = "<group>"; };
+		708FD6C22412F23D00902606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708FD6C92412F25F00902606 /* SignInTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTest.swift; sourceTree = "<group>"; };
 		709B0A0823FF8C6500488BD2 /* NIBMEvents-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBMEvents-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709B0A0D23FF8C6500488BD2 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -138,15 +147,9 @@
 		70A4BE94240B69A8005A9C55 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherProfileViewController.swift; sourceTree = "<group>"; };
 		70A4BE98240B9198005A9C55 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
-		70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70F2C5BF2408286500529625 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		70F2C5C52408359900529625 /* NETextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NETextFieldExtension.swift; sourceTree = "<group>"; };
 		70F9066D240E962400BB8705 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		70F90675240EC77100BB8705 /* NIBMEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsUITests.swift; sourceTree = "<group>"; };
-		70F90677240EC77100BB8705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70F90684240EC77A00BB8705 /* NIBMEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMEventsTests.swift; sourceTree = "<group>"; };
-		70F90686240EC77A00BB8705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70F9068F240EC8DB00BB8705 /* SignInTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTest.swift; sourceTree = "<group>"; };
 		8CE028BEA74EF9B5425359E5 /* Pods-NIBMEventsTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMEventsTests.qa.xcconfig"; path = "Target Support Files/Pods-NIBMEventsTests/Pods-NIBMEventsTests.qa.xcconfig"; sourceTree = "<group>"; };
 		9AC6BAC393565CF8ED6BB84F /* Pods-NIBMEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMEventsTests.debug.xcconfig"; path = "Target Support Files/Pods-NIBMEventsTests/Pods-NIBMEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC2CFDFDB290CC0745EF2C3 /* Pods_NIBMEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBMEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,19 +165,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7090F7E5240FB2D600041058 /* Frameworks */ = {
+		708FD6AC2412F23200902606 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212D93D012280AC808749A39 /* Pods_NIBMEvents_NIBMEventsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7090F7F4240FB2F400041058 /* Frameworks */ = {
+		708FD6BB2412F23D00902606 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9625948A116AB616BCBFC735 /* Pods_NIBMEventsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,28 +190,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70310BCF2402D01A004C81ED /* views */ = {
+		70199C6F241344B9008CCDA9 /* Profiling */ = {
 			isa = PBXGroup;
 			children = (
-				70310BD12402D038004C81ED /* storyboards */,
-				70310BD02402D031004C81ED /* custom */,
+				70199C70241344B9008CCDA9 /* NIBMEvents.trace.zip */,
 			);
-			path = views;
+			path = Profiling;
 			sourceTree = "<group>";
 		};
-		70310BD02402D031004C81ED /* custom */ = {
+		70310BCF2402D01A004C81ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70310BD12402D038004C81ED /* Storyboards */,
+				70310BD02402D031004C81ED /* Custom */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70310BD02402D031004C81ED /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				70310BD32402D08C004C81ED /* NEButton.swift */,
 				70310BD52402D097004C81ED /* NETextField.swift */,
 				70575ECA2402F54C005264E5 /* NECustomSwipButton.swift */,
-				706A22822408E1A10079E9D0 /* home */,
-				706A22832408E1AF0079E9D0 /* events */,
+				706A22822408E1A10079E9D0 /* Home */,
+				706A22832408E1AF0079E9D0 /* Events */,
 			);
-			path = custom;
+			path = Custom;
 			sourceTree = "<group>";
 		};
-		70310BD12402D038004C81ED /* storyboards */ = {
+		70310BD12402D038004C81ED /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				709B0A0F23FF8C6500488BD2 /* Auth.storyboard */,
@@ -219,75 +228,75 @@
 				706A22782408DF1D0079E9D0 /* Events.storyboard */,
 				706A227A2408DF5D0079E9D0 /* Profile.storyboard */,
 			);
-			path = storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		70310BD22402D047004C81ED /* controllers */ = {
+		70310BD22402D047004C81ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				709B0A0B23FF8C6500488BD2 /* AppDelegate.swift */,
 				70F2C5BF2408286500529625 /* MainTabBarController.swift */,
-				706A227D2408E0E70079E9D0 /* profile */,
-				706A227C2408E0E00079E9D0 /* events */,
-				7072CCA92403A625004F0A58 /* auth */,
-				7072CCAA2403A639004F0A58 /* home */,
+				706A227D2408E0E70079E9D0 /* Profile */,
+				706A227C2408E0E00079E9D0 /* Events */,
+				7072CCA92403A625004F0A58 /* Auth */,
+				7072CCAA2403A639004F0A58 /* Home */,
 			);
-			path = controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		704BE4982409A11D007D1570 /* assets */ = {
+		704BE4982409A11D007D1570 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				704BE49B2409A202007D1570 /* logo-banner.png */,
 			);
-			path = assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
-		70575EC32402E121005264E5 /* extensions */ = {
+		70575EC32402E121005264E5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				70F2C5C52408359900529625 /* NETextFieldExtension.swift */,
 			);
-			path = extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		706A227C2408E0E00079E9D0 /* events */ = {
+		706A227C2408E0E00079E9D0 /* Events */ = {
 			isa = PBXGroup;
 			children = (
 				7072CCB52405964C004F0A58 /* EventsTableViewController.swift */,
 				70A4BE98240B9198005A9C55 /* EditEventViewController.swift */,
 			);
-			path = events;
+			path = Events;
 			sourceTree = "<group>";
 		};
-		706A227D2408E0E70079E9D0 /* profile */ = {
+		706A227D2408E0E70079E9D0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				7072CCB72405965E004F0A58 /* ProfileViewController.swift */,
 				706A22842408F7DC0079E9D0 /* ProfileEditViewController.swift */,
 			);
-			path = profile;
+			path = Profile;
 			sourceTree = "<group>";
 		};
-		706A22822408E1A10079E9D0 /* home */ = {
+		706A22822408E1A10079E9D0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				709BD47C240674AB0032E739 /* EventHeaderCell.swift */,
 				709BD47E240674BF0032E739 /* EventBodyCell.swift */,
 			);
-			path = home;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		706A22832408E1AF0079E9D0 /* events */ = {
+		706A22832408E1AF0079E9D0 /* Events */ = {
 			isa = PBXGroup;
 			children = (
 				706A227E2408E18A0079E9D0 /* MyEventHeaderCell.swift */,
 				706A22802408E1990079E9D0 /* MyEventBodyCell.swift */,
 			);
-			path = events;
+			path = Events;
 			sourceTree = "<group>";
 		};
-		7072CC9E240370A6004F0A58 /* managers */ = {
+		7072CC9E240370A6004F0A58 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				70667091240D2E14005CBA10 /* LocationManager.swift */,
@@ -296,10 +305,10 @@
 				7072CCA52403A06F004F0A58 /* NotificationManager.swift */,
 				7072CCAD2403A9DE004F0A58 /* DatabaseManager.swift */,
 			);
-			path = managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		7072CCA92403A625004F0A58 /* auth */ = {
+		7072CCA92403A625004F0A58 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				70575ECE24030690005264E5 /* AuthBioMetricsBlockedViewController.swift */,
@@ -308,10 +317,10 @@
 				70575EC82402ED37005264E5 /* SignUpViewController.swift */,
 				70575ECC2402F9E6005264E5 /* ResetPasswordViewController.swift */,
 			);
-			path = auth;
+			path = Auth;
 			sourceTree = "<group>";
 		};
-		7072CCAA2403A639004F0A58 /* home */ = {
+		7072CCAA2403A639004F0A58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				7072CCAB2403A652004F0A58 /* HomeTableViewController.swift */,
@@ -319,32 +328,34 @@
 				70A4BE96240B7EED005A9C55 /* PublisherProfileViewController.swift */,
 				70F9066D240E962400BB8705 /* EventDetailsViewController.swift */,
 			);
-			path = home;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		7072CCB1240416D0004F0A58 /* utilities */ = {
+		7072CCB1240416D0004F0A58 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				7072CCB2240416E2004F0A58 /* FieldValidator.swift */,
 				70160848240AB76B00DA127A /* UIEffects.swift */,
 			);
-			path = utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		7090F7E9240FB2D700041058 /* NIBMEventsUITests */ = {
+		708FD6B02412F23200902606 /* NIBMEventsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7090F7EA240FB2D700041058 /* NIBMEventsUITests.swift */,
-				7090F7EC240FB2D700041058 /* Info.plist */,
+				708FD6B12412F23200902606 /* NIBMEventsUITests.swift */,
+				708FD6C92412F25F00902606 /* SignInTest.swift */,
+				708FD6B32412F23200902606 /* Info.plist */,
 			);
 			path = NIBMEventsUITests;
 			sourceTree = "<group>";
 		};
-		7090F7F8240FB2F400041058 /* NIBMEventsTests */ = {
+		708FD6BF2412F23D00902606 /* NIBMEventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				7090F7F9240FB2F400041058 /* NIBMEventsTests.swift */,
-				7090F7FB240FB2F400041058 /* Info.plist */,
+				708FD6C02412F23D00902606 /* NIBMEventsTests.swift */,
+				708FD6C22412F23D00902606 /* Info.plist */,
+				70199C76241346F5008CCDA9 /* SignInTest.swift */,
 			);
 			path = NIBMEventsTests;
 			sourceTree = "<group>";
@@ -352,12 +363,13 @@
 		709B09FF23FF8C6500488BD2 = {
 			isa = PBXGroup;
 			children = (
-				704BE4982409A11D007D1570 /* assets */,
 				709B0A0A23FF8C6500488BD2 /* NIBMEvents */,
-				70F90674240EC77100BB8705 /* NIBMEventsUITests */,
-				70F90683240EC77A00BB8705 /* NIBMEventsTests */,
-				7090F7E9240FB2D700041058 /* NIBMEventsUITests */,
-				7090F7F8240FB2F400041058 /* NIBMEventsTests */,
+				708FD6B02412F23200902606 /* NIBMEventsUITests */,
+				708FD6BF2412F23D00902606 /* NIBMEventsTests */,
+				70199C6F241344B9008CCDA9 /* Profiling */,
+				70199C6D24134488008CCDA9 /* README.md */,
+				70199C71241344B9008CCDA9 /* LICENSE */,
+				704BE4982409A11D007D1570 /* Assets */,
 				709B0A0923FF8C6500488BD2 /* Products */,
 				FF5A668321F45836ACCC55EB /* Pods */,
 				9501B89E4BB2A35E0B8251C4 /* Frameworks */,
@@ -368,8 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				709B0A0823FF8C6500488BD2 /* NIBMEvents-Dev.app */,
-				7090F7E8240FB2D600041058 /* NIBMEventsUITests.xctest */,
-				7090F7F7240FB2F400041058 /* NIBMEventsTests.xctest */,
+				708FD6AF2412F23200902606 /* NIBMEventsUITests.xctest */,
+				708FD6BE2412F23D00902606 /* NIBMEventsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,39 +389,39 @@
 		709B0A0A23FF8C6500488BD2 /* NIBMEvents */ = {
 			isa = PBXGroup;
 			children = (
-				709BD477240673900032E739 /* models */,
-				7072CCB1240416D0004F0A58 /* utilities */,
-				7072CC9E240370A6004F0A58 /* managers */,
-				70575EC32402E121005264E5 /* extensions */,
-				70310BD22402D047004C81ED /* controllers */,
-				70310BCF2402D01A004C81ED /* views */,
-				709B0A4023FF8DBC00488BD2 /* env-configs */,
+				709BD477240673900032E739 /* Models */,
+				7072CCB1240416D0004F0A58 /* Utilities */,
+				7072CC9E240370A6004F0A58 /* Managers */,
+				70575EC32402E121005264E5 /* Extensions */,
+				70310BD22402D047004C81ED /* Controllers */,
+				70310BCF2402D01A004C81ED /* Views */,
+				709B0A4023FF8DBC00488BD2 /* EnvConfigs */,
 				709B0A1523FF8C6700488BD2 /* Assets.xcassets */,
-				709B0A4723FF92A000488BD2 /* supporting-files */,
+				709B0A4723FF92A000488BD2 /* SupportingFiles */,
 			);
 			path = NIBMEvents;
 			sourceTree = "<group>";
 		};
-		709B0A4023FF8DBC00488BD2 /* env-configs */ = {
+		709B0A4023FF8DBC00488BD2 /* EnvConfigs */ = {
 			isa = PBXGroup;
 			children = (
 				709B0A4123FF8E0900488BD2 /* DevConfig.xcconfig */,
 				709B0A4323FF8E1E00488BD2 /* QAConfig.xcconfig */,
 				709B0A4523FF8E2C00488BD2 /* ProdConfig.xcconfig */,
 			);
-			path = "env-configs";
+			path = EnvConfigs;
 			sourceTree = "<group>";
 		};
-		709B0A4723FF92A000488BD2 /* supporting-files */ = {
+		709B0A4723FF92A000488BD2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				708FD6A92412E38600902606 /* GoogleService-Info.plist */,
 				709B0A1A23FF8C6700488BD2 /* Info.plist */,
-				70F2C5BB2407DF8600529625 /* GoogleService-Info.plist */,
 			);
-			path = "supporting-files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		709BD477240673900032E739 /* models */ = {
+		709BD477240673900032E739 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				709BD478240673A20032E739 /* UserProfile.swift */,
@@ -419,26 +431,7 @@
 				7066708C240CEBC8005CBA10 /* CustomEvent.swift */,
 				7066708E240D15C2005CBA10 /* TableViewIdentifiers.swift */,
 			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		70F90674240EC77100BB8705 /* NIBMEventsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70F90675240EC77100BB8705 /* NIBMEventsUITests.swift */,
-				70F90677240EC77100BB8705 /* Info.plist */,
-				70F9068F240EC8DB00BB8705 /* SignInTest.swift */,
-			);
-			path = NIBMEventsUITests;
-			sourceTree = "<group>";
-		};
-		70F90683240EC77A00BB8705 /* NIBMEventsTests */ = {
-			isa = PBXGroup;
-			children = (
-				70F90684240EC77A00BB8705 /* NIBMEventsTests.swift */,
-				70F90686240EC77A00BB8705 /* Info.plist */,
-			);
-			path = NIBMEventsTests;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9501B89E4BB2A35E0B8251C4 /* Frameworks */ = {
@@ -478,43 +471,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7090F7E7240FB2D600041058 /* NIBMEventsUITests */ = {
+		708FD6AE2412F23200902606 /* NIBMEventsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7090F7EF240FB2D700041058 /* Build configuration list for PBXNativeTarget "NIBMEventsUITests" */;
+			buildConfigurationList = 708FD6B62412F23200902606 /* Build configuration list for PBXNativeTarget "NIBMEventsUITests" */;
 			buildPhases = (
-				5C75E57AD52FB6A3A43F5A5B /* [CP] Check Pods Manifest.lock */,
-				7090F7E4240FB2D600041058 /* Sources */,
-				7090F7E5240FB2D600041058 /* Frameworks */,
-				7090F7E6240FB2D600041058 /* Resources */,
-				AC792C16876285D6CBB02918 /* [CP] Embed Pods Frameworks */,
+				708FD6AB2412F23200902606 /* Sources */,
+				708FD6AC2412F23200902606 /* Frameworks */,
+				708FD6AD2412F23200902606 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7090F7EE240FB2D700041058 /* PBXTargetDependency */,
+				708FD6B52412F23200902606 /* PBXTargetDependency */,
 			);
 			name = NIBMEventsUITests;
 			productName = NIBMEventsUITests;
-			productReference = 7090F7E8240FB2D600041058 /* NIBMEventsUITests.xctest */;
+			productReference = 708FD6AF2412F23200902606 /* NIBMEventsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		7090F7F6240FB2F400041058 /* NIBMEventsTests */ = {
+		708FD6BD2412F23D00902606 /* NIBMEventsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7090F7FE240FB2F400041058 /* Build configuration list for PBXNativeTarget "NIBMEventsTests" */;
+			buildConfigurationList = 708FD6C52412F23D00902606 /* Build configuration list for PBXNativeTarget "NIBMEventsTests" */;
 			buildPhases = (
-				8E640A66165B239DEA8DEAD2 /* [CP] Check Pods Manifest.lock */,
-				7090F7F3240FB2F400041058 /* Sources */,
-				7090F7F4240FB2F400041058 /* Frameworks */,
-				7090F7F5240FB2F400041058 /* Resources */,
+				708FD6BA2412F23D00902606 /* Sources */,
+				708FD6BB2412F23D00902606 /* Frameworks */,
+				708FD6BC2412F23D00902606 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7090F7FD240FB2F400041058 /* PBXTargetDependency */,
+				708FD6C42412F23D00902606 /* PBXTargetDependency */,
 			);
 			name = NIBMEventsTests;
 			productName = NIBMEventsTests;
-			productReference = 7090F7F7240FB2F400041058 /* NIBMEventsTests.xctest */;
+			productReference = 708FD6BE2412F23D00902606 /* NIBMEventsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		709B0A0723FF8C6500488BD2 /* NIBMEvents */ = {
@@ -547,11 +537,11 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Aravinda Rathnayake";
 				TargetAttributes = {
-					7090F7E7240FB2D600041058 = {
+					708FD6AE2412F23200902606 = {
 						CreatedOnToolsVersion = 10.3;
 						TestTargetID = 709B0A0723FF8C6500488BD2;
 					};
-					7090F7F6240FB2F400041058 = {
+					708FD6BD2412F23D00902606 = {
 						CreatedOnToolsVersion = 10.3;
 						TestTargetID = 709B0A0723FF8C6500488BD2;
 					};
@@ -574,21 +564,21 @@
 			projectRoot = "";
 			targets = (
 				709B0A0723FF8C6500488BD2 /* NIBMEvents */,
-				7090F7E7240FB2D600041058 /* NIBMEventsUITests */,
-				7090F7F6240FB2F400041058 /* NIBMEventsTests */,
+				708FD6AE2412F23200902606 /* NIBMEventsUITests */,
+				708FD6BD2412F23D00902606 /* NIBMEventsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7090F7E6240FB2D600041058 /* Resources */ = {
+		708FD6AD2412F23200902606 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7090F7F5240FB2F400041058 /* Resources */ = {
+		708FD6BC2412F23D00902606 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -599,45 +589,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */,
-				70F2C5BC2407DF8600529625 /* GoogleService-Info.plist in Resources */,
 				706A227B2408DF5D0079E9D0 /* Profile.storyboard in Resources */,
 				709B0A4623FF8E2C00488BD2 /* ProdConfig.xcconfig in Resources */,
 				709B0A4423FF8E1E00488BD2 /* QAConfig.xcconfig in Resources */,
-				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
-				706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */,
 				709B0A4223FF8E0900488BD2 /* DevConfig.xcconfig in Resources */,
+				708FD6AA2412E38600902606 /* GoogleService-Info.plist in Resources */,
+				709B0A1623FF8C6700488BD2 /* Assets.xcassets in Resources */,
+				70199C6E24134488008CCDA9 /* README.md in Resources */,
+				709B0A1923FF8C6700488BD2 /* LaunchScreen.storyboard in Resources */,
 				709B0A1123FF8C6500488BD2 /* Auth.storyboard in Resources */,
-				704BE49C2409A202007D1570 /* logo-banner.png in Resources */,
+				70199C72241344B9008CCDA9 /* NIBMEvents.trace.zip in Resources */,
+				70199C73241344B9008CCDA9 /* LICENSE in Resources */,
 				7072CCA82403A31D004F0A58 /* Home.storyboard in Resources */,
+				706A22792408DF1D0079E9D0 /* Events.storyboard in Resources */,
+				704BE49C2409A202007D1570 /* logo-banner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C75E57AD52FB6A3A43F5A5B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NIBMEvents-NIBMEventsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7072CCB42405014F004F0A58 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -654,45 +625,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		8E640A66165B239DEA8DEAD2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NIBMEventsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC792C16876285D6CBB02918 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NIBMEvents-NIBMEventsUITests/Pods-NIBMEvents-NIBMEventsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NIBMEvents-NIBMEventsUITests/Pods-NIBMEvents-NIBMEventsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NIBMEvents-NIBMEventsUITests/Pods-NIBMEvents-NIBMEventsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		B57E278BB8BDE7CEF02838C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -736,19 +668,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7090F7E4240FB2D600041058 /* Sources */ = {
+		708FD6AB2412F23200902606 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7090F7EB240FB2D700041058 /* NIBMEventsUITests.swift in Sources */,
+				708FD6B22412F23200902606 /* NIBMEventsUITests.swift in Sources */,
+				708FD6CA2412F25F00902606 /* SignInTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7090F7F3240FB2F400041058 /* Sources */ = {
+		708FD6BA2412F23D00902606 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7090F7FA240FB2F400041058 /* NIBMEventsTests.swift in Sources */,
+				708FD6C12412F23D00902606 /* NIBMEventsTests.swift in Sources */,
+				70199C77241346F5008CCDA9 /* SignInTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,15 +732,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7090F7EE240FB2D700041058 /* PBXTargetDependency */ = {
+		708FD6B52412F23200902606 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 709B0A0723FF8C6500488BD2 /* NIBMEvents */;
-			targetProxy = 7090F7ED240FB2D700041058 /* PBXContainerItemProxy */;
+			targetProxy = 708FD6B42412F23200902606 /* PBXContainerItemProxy */;
 		};
-		7090F7FD240FB2F400041058 /* PBXTargetDependency */ = {
+		708FD6C42412F23D00902606 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 709B0A0723FF8C6500488BD2 /* NIBMEvents */;
-			targetProxy = 7090F7FC240FB2F400041058 /* PBXContainerItemProxy */;
+			targetProxy = 708FD6C32412F23D00902606 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -830,9 +764,8 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7090F7F0240FB2D700041058 /* Debug */ = {
+		708FD6B72412F23200902606 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58D1397E56DBF55F9C14D05C /* Pods-NIBMEvents-NIBMEventsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
@@ -851,9 +784,8 @@
 			};
 			name = Debug;
 		};
-		7090F7F1240FB2D700041058 /* QA */ = {
+		708FD6B82412F23200902606 /* QA */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A98FF95D65B39DC8F858C8EC /* Pods-NIBMEvents-NIBMEventsUITests.qa.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
@@ -872,9 +804,8 @@
 			};
 			name = QA;
 		};
-		7090F7F2240FB2D700041058 /* Release */ = {
+		708FD6B92412F23200902606 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37A25C7F71DF116270F5D61B /* Pods-NIBMEvents-NIBMEventsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
@@ -893,9 +824,8 @@
 			};
 			name = Release;
 		};
-		7090F7FF240FB2F400041058 /* Debug */ = {
+		708FD6C62412F23D00902606 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AC6BAC393565CF8ED6BB84F /* Pods-NIBMEventsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -911,13 +841,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBM Events-Dev.app/NIBM Events-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBMEvents-Dev.app/NIBMEvents-Dev";
 			};
 			name = Debug;
 		};
-		7090F800240FB2F400041058 /* QA */ = {
+		708FD6C72412F23D00902606 /* QA */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA6E10B874AB1CAABDC28C25 /* Pods-NIBMEventsTests.qa.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -933,13 +862,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBM Events-Dev.app/NIBM Events-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBMEvents-Dev.app/NIBMEvents-Dev";
 			};
 			name = QA;
 		};
-		7090F801240FB2F400041058 /* Release */ = {
+		708FD6C82412F23D00902606 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0282F5B1F4560F1B9996D364 /* Pods-NIBMEventsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -955,7 +883,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBM Events-Dev.app/NIBM Events-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBMEvents-Dev.app/NIBMEvents-Dev";
 			};
 			name = Release;
 		};
@@ -1086,7 +1014,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
-				INFOPLIST_FILE = "NIBMEvents/supporting-files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NIBMEvents/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1106,7 +1034,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
-				INFOPLIST_FILE = "NIBMEvents/supporting-files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NIBMEvents/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1189,7 +1117,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(NE_APP_ICON)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F27WR2NMVN;
-				INFOPLIST_FILE = "NIBMEvents/supporting-files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NIBMEvents/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1205,22 +1133,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7090F7EF240FB2D700041058 /* Build configuration list for PBXNativeTarget "NIBMEventsUITests" */ = {
+		708FD6B62412F23200902606 /* Build configuration list for PBXNativeTarget "NIBMEventsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7090F7F0240FB2D700041058 /* Debug */,
-				7090F7F1240FB2D700041058 /* QA */,
-				7090F7F2240FB2D700041058 /* Release */,
+				708FD6B72412F23200902606 /* Debug */,
+				708FD6B82412F23200902606 /* QA */,
+				708FD6B92412F23200902606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7090F7FE240FB2F400041058 /* Build configuration list for PBXNativeTarget "NIBMEventsTests" */ = {
+		708FD6C52412F23D00902606 /* Build configuration list for PBXNativeTarget "NIBMEventsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7090F7FF240FB2F400041058 /* Debug */,
-				7090F800240FB2F400041058 /* QA */,
-				7090F801240FB2F400041058 /* Release */,
+				708FD6C62412F23D00902606 /* Debug */,
+				708FD6C72412F23D00902606 /* QA */,
+				708FD6C82412F23D00902606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
